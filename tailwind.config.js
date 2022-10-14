@@ -2,12 +2,16 @@
 module.exports = {
   content: ["./src/**/*.{html,js,ts,tsx}"],
   theme: {
+    screens: {
+      sm: "480px",
+      md: "768px",
+      lg: "976px",
+      xl: "1440px",
+    },
     fontFamily: {
       sans: ["Playfair Display", "system-ui"],
       serif: ["Merriweather", "Georgia"],
-      mono: ["ui-monospace", "SFMono-Regular"],
-      display: ["Oswald"],
-      body: ['"Open Sans"'],
+      body: ["Merriweather"],
     },
     extend: {},
   },
