@@ -1,4 +1,4 @@
-import Home from "./Layout/HomeSection/Home";
+import Home from "./Layout/Home/Home";
 import About from "./Layout/AboutSection/About";
 import OurWork from "./Layout/OurWorkSection/OurWork";
 import Testimonials from "./Layout/TestimonialSection/Testimonials";

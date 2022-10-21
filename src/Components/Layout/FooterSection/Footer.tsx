@@ -1,5 +1,5 @@
 function Footer(): JSX.Element {
-  return <div>Footer</div>;
+  return <div>FOOTER</div>;
 }
 
 export default Footer;
