@@ -1,5 +1,4 @@
- 
-/* XS MOBILE */ 
+/* XS MOBILE */
 /* @media (max-width: 479px) {
   #hero {
     background: linear-gradient(
@@ -14,7 +13,7 @@
   }
 } */
 
-/* MOBILE */ 
+/* MOBILE */
 /* @media (min-width: 480px) and (max-width: 639px) {
   #hero {
     margin: auto;
