@@ -1,6 +1,6 @@
  
 /* XS MOBILE */ 
-@media (max-width: 480px) {
+/* @media (max-width: 479px) {
   #hero {
     background: linear-gradient(
         180deg,
@@ -12,10 +12,10 @@
     transform: matrix(1, 0, 0, 1, 0, 0);
     filter: contrast(110%);
   }
-}
+} */
 
 /* MOBILE */ 
-@media (min-width: 480px) and (max-width: 639px) {
+/* @media (min-width: 480px) and (max-width: 639px) {
   #hero {
     margin: auto;
     background: linear-gradient(
@@ -27,7 +27,7 @@
     transform: matrix(1, 0, 0, 1, 0, 0);
     filter: contrast(110%);
   }
-}
+} */
 
 /* TABLET */
 /* @media (min-width: 640px) and (max-width: 767px) {
