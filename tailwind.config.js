@@ -4,16 +4,14 @@ module.exports = {
   theme: {
     screens: {
       sm: "480px",
-      // => @media (min-width: 640px) { ... }
 
-      md: "768px",
-      // => @media (min-width: 768px) { ... }
+      md: "640px",
 
-      lg: "976px",
-      // => @media (min-width: 1024px) { ... }
+      lg: "768px",
 
-      xl: "1440px",
-      // => @media (min-width: 1280px) { ... }
+      xl: "1024px",
+      
+      '2xl': "1440px",
     },
     fontSize: {
       "9xl": "6.9rem",

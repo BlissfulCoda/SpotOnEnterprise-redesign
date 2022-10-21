@@ -1,3 +1,5 @@
+ 
+/* XS MOBILE */ 
 @media (max-width: 480px) {
   #hero {
     background: linear-gradient(
@@ -12,7 +14,8 @@
   }
 }
 
-@media (min-width: 480px) and (max-width: 578px) {
+/* MOBILE */ 
+@media (min-width: 480px) and (max-width: 639px) {
   #hero {
     margin: auto;
     background: linear-gradient(
@@ -26,9 +29,10 @@
   }
 }
 
-@media (min-width: 578px) and (max-width: 768px) {
+/* TABLET */
+/* @media (min-width: 640px) and (max-width: 767px) {
   #hero {
-    margin: auto;;
+    margin: auto;
     background: linear-gradient(
         180deg,
         rgba(255, 255, 255, 0) 79.12%,
@@ -38,4 +42,4 @@
     transform: matrix(1, 0, 0, 1, 0, 0);
     filter: contrast(110%);
   }
-}
+} */

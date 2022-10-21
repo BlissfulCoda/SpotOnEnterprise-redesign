@@ -11,7 +11,7 @@ export default function Home(): JSX.Element {
   return (
     <section
       id="hero"
-      className="h-[850px] w-[480px] mb-24 relative   md:bg-green-300 md:w-full lg:bg-yellow-300 xl:bg-white "
+      className="h-[850px] w-[480px] mb-24 relative  md:w-full md:bg-orange-300 lg:bg-green-300 xl:bg-blue-300 2xl:bg-white"
     >
       <div className="container max-w-7xl mx-auto p-3  sm:w-[560px] md:w-full xl:max-w-9xl">
         <nav className="flex items-center justify-between font-serif text-gray-900  lg:px-2">
@@ -64,21 +64,21 @@ export default function Home(): JSX.Element {
         </nav>
 
         {/* Mobile Menu */}
-        <div className=" absolute z-20 pt-24 pl-[88px] w-[460px] md:-mt-2 md:pl-[30px] mx-auto mt-24 space-y-40 md:-mt-8 lg:font-black lg:w-[650px] xl:pl-16">
-          <div className="space-y-14">
-            <div className="lg:pl-0 space-y-0 flex flex-col ">
-              <div className="-space-y-8 font-serif font-normal text-white text-[55px] md:text-black md:font-semibold md:text-[80px] lg:text-[95px] md:-space-y-12 lg:-space-y-16 xl:text-9xl xl:-space-y-16">
+        <div className=" absolute z-20 pt-24 pl-[88px] w-[460px] md:-mt-2 md:pl-[60px] mx-auto mt-24 md:space-y-28 space-y-40 md:-mt-8 lg:font-black lg:w-[650px] xl:pl-16">
+          <div className="space-y-14 md:space-y-14">
+            <div className="lg:pl-0 md:space-y-2 flex flex-col ">
+              <div className="-space-y-8 font-serif font-normal text-white text-[55px] md:text-black md:font-semibold md:text-[65px] lg:text-[90px] md:-space-y-10 lg:-space-y-16 xl:text-9xl xl:-space-y-16">
                 <h1>Bespoke</h1>
                 <h1>Garments</h1>
               </div>
 
-              <p className="text-[12px] w-[250px] text-left text-white leading-5 opacity-80 md:flex md:w-[370px] lg:font-serif lg:text-[16px] lg:leading-7 lg:font-thin lg:text-slate-800 lg:w-[450px] lg:text-zinc-600">
+              <p className="text-[12px] w-[250px] text-left text-white leading-5 opacity-80 md:flex md:w-[300px] md:text-[10px]lg:font-serif lg:text-[16px] lg:leading-7 lg:font-thin lg:text-slate-800 lg:w-[450px] lg:text-zinc-600">
                 We Specialise in producing bespoke, custom made garments for
                 every special occasion, with the best customer service next to
                 none.
               </p>
             </div>
-            <button className="bg-gradient-to-r from-[#E34CCE] to-[#E39B57] text-[14px]  hover:scale-105 rounded-sm ml-4 py-3 px-20 text-white duration-500 md:ml-0 md:px-16 md:px-12 md:text-[12px] lg:px-14 lg:py-3 lg:opacity-100 drop-shadow-lg shadow-2xl font-serif font-light">
+            <button className="bg-gradient-to-r from-[#E34CCE] to-[#E39B57] text-[14px]  hover:scale-105 rounded-sm ml-4 py-3 px-20 text-white duration-500 md:ml-0 md:px-8 md:py-2 md:text-[8px] lg:px-14 lg:py-3 lg:opacity-100 drop-shadow-lg shadow-2xl font-serif font-light">
               Get in touch
             </button>
           </div>
@@ -90,12 +90,12 @@ export default function Home(): JSX.Element {
           </div>
         </div>
       </div>
-       <div className="absolute hidden md:flex xl:flex z-10 h-screen -mt-16 md:top-0 md:right-0 md:-mt-4 xl:right-40 xl:h-[900px] xl:-mt-8">
+       <div className="absolute hidden md:flex xl:flex z-10 h-screen md:h-[560px] md:right-8 -mt-16 md:top-10  md:mt-0 lg:right-10 lg:mt-0 xl:right-12 xl:h-[700px] xl:-mt-4">
         <img src={HeroImage} alt="Hero Image" className="contrast-125" />
       </div>
       <div
-        className="absolute -rotate-90 -left-12 bottom-96
-       text-[125px] lg:text-[135px] w-[780px] md:text-[120px] md:left-96 md:bottom-[410px] font-serif font-black pt-24 opacity-5 lg:w-[1000px] xl:left-[610px] xl:bottom-[430px]"
+        className="absolute -rotate-90 -left-12 top-[130px]
+       text-[115px] w-[780px] font-serif font-black pt-24 opacity-10 md:text-[100px] md:left-48 md:top-16 lg:text-[115px] lg:left-[400px] lg:top-[130px] xl:left-[450px] xl:text-[100px] "
       >
         Tailor Made
       </div>
