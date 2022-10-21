@@ -64,7 +64,7 @@ export default function Home(): JSX.Element {
         </nav>
 
         {/* Mobile Menu */}
-        <div className=" absolute z-20 pt-24 pl-[88px] w-[460px] md:-mt-2 md:pl-[60px] mx-auto mt-24 md:space-y-28 space-y-40 md:-mt-8 lg:font-black lg:w-[650px] xl:pl-16">
+        <div className=" absolute z-20 pt-24 md:-mt-2 md:pl-[60px] mx-auto mt-24 md:space-y-28 space-y-40 md:-mt-8 lg:font-black lg:w-[650px] xl:pl-16">
           <div className="space-y-14 md:space-y-12">
             <div className="lg:pl-0 flex flex-col ">
               <div className="-space-y-8 lg:-space-y-12 font-serif font-normal text-white text-[55px] md:text-black md:font-semibold md:text-[70px] md:-space-y-10 lg:text-[75px]">
@@ -95,7 +95,7 @@ export default function Home(): JSX.Element {
       </div>
       <div
         className="absolute -rotate-90 -left-12 top-[230px]
-       text-[135px] w-[780px] font-serif font-black pt-24 opacity-5 md:text-[100px] md:left-48 md:top-16 lg:left-56"
+       text-[135px] w-[780px] font-serif font-black pt-24 opacity-20 md:text-[100px] md:left-48 md:top-16 lg:left-56"
       >
         Tailor Made
       </div>

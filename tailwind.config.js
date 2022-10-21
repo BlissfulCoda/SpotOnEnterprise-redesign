@@ -23,7 +23,7 @@ module.exports = {
     extend: {
       colors: {
         bgPurple: "#E635ED",
-        darkBackground: 'hsl(231,22%,17%)'
+        darkModeColor: 'hsl(231,22%,17%)'
       },
       backgroundImage: (theme) => ({
         'dark-mode': "url('./src/Components/assets/Logos/DarkLogo.png')",
