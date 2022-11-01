@@ -2,18 +2,18 @@
 
 module.exports = {
   content: ["./src/**/*.{html,js,ts,tsx}"],
-  darkMode: 'class',
+  darkMode: "class",
   theme: {
     screens: {
       sm: "480px",
 
-      md: '640px',
+      tablet: "768px",
 
-      lg: "768px",
+      laptop: "1024px",
 
-      xl: "1024px",
+      desktop: "1200px",
 
-      '2xl': "1440px",
+      "2xl": "1440px",
     },
     fontFamily: {
       serif: ["Playfair Display", "system-ui"],
@@ -23,18 +23,18 @@ module.exports = {
     extend: {
       colors: {
         bgPurple: "#E635ED",
-        darkModeColor: 'hsl(231,22%,17%)'
+        darkMode: "hsla(223, 40%, 9%, 1)",
       },
       backgroundImage: (theme) => ({
-        'dark-mode': "url('./src/Components/assets/Logos/DarkLogo.png')",
-        'light-mode': "url('./src/Components/assets/Logos/LightLogo.png')",
-      })
+        "dark-mode": "url('./src/Components/assets/Logos/DarkLogo.png')",
+        "light-mode": "url('./src/Components/assets/Logos/LightLogo.png')",
+      }),
     },
   },
   variants: {
     extend: {
-      backgroundImage: ['dark']
-    }
+      backgroundImage: ["dark"],
+    },
   },
-  plugins: [require("daisyui")],
+  plugins: [require("daisyui"), require("@tailwindcss/aspect-ratio")],
 };

@@ -2,7 +2,7 @@ import MainSection from "./Components/MainSection";
 
 function App() {
   return (
-    <div className="">
+    <div className="text-black bg-white dark ">
       <MainSection />
     </div>
   );

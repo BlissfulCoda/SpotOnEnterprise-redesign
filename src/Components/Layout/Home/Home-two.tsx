@@ -13,50 +13,50 @@ export default function Home(): JSX.Element {
       id="hero"
       className="h-[850px] w-[480px] mb-24 relative  md:w-full md:bg-orange-300 lg:bg-green-300  2xl:bg-white "
     >
-      <header className="container max-w-7xl mx-auto p-3   md:w-full lg:w-full xl:max-w-9xl">
-        <nav className="flex items-center justify-between font-serif text-gray-900  lg:px-2">
+      <header className="container p-3 mx-auto max-w-7xl md:w-full lg:w-full xl:max-w-9xl">
+        <nav className="flex items-center justify-between font-serif text-gray-900 lg:px-2">
           {/* Logo */}
           <img
             src={DarkLogo}
             alt="image of a dark logo"
-            className="w-44 h-12 sm:w-50 sm:h-14 sm:-ml-4 contrast-100 brightness-100 xl:w-44 xl:h-12 cursor-pointer"
+            className="h-12 cursor-pointer w-44 sm:w-50 sm:h-14 sm:-ml-4 contrast-100 brightness-100 xl:w-44 xl:h-12"
           />
           {/* MENU */}
-          <div className="hidden pt-2 p-2 h-10 font-light  xl:flex md:space-x-8 ">
+          <div className="hidden h-10 p-2 pt-2 font-light xl:flex md:space-x-8 ">
             <div className="group ">
-              <a href="#" className="cursor-pointer text-xs opacity-60">
+              <a href="#" className="text-xs cursor-pointer opacity-60">
                 Home
               </a>
               <div className="mx-2 group-hover:border-b group-hover:border-strongPurple"></div>
             </div>
             <div className="group">
-              <a href="#" className="cursor-pointer text-xs opacity-60">
+              <a href="#" className="text-xs cursor-pointer opacity-60">
                 About
               </a>
               <div className="mx-2 group-hover:border-b group-hover:border-strongPurple"></div>
             </div>
             <div className="group">
-              <a href="#" className="cursor-pointer text-xs opacity-60">
+              <a href="#" className="text-xs cursor-pointer opacity-60">
                 Work
               </a>
               <div className="mx-2 group-hover:border-b group-hover:border-strongPurple"></div>
             </div>
             <div className="group">
-              <a href="#" className="cursor-pointer text-xs opacity-60">
+              <a href="#" className="text-xs cursor-pointer opacity-60">
                 Testimonials
               </a>
               <div className="mx-2 group-hover:border-b group-hover:border-strongPurple"></div>
             </div>
             <div className="group">
-              <a href="#" className="cursor-pointer text-xs opacity-60">
+              <a href="#" className="text-xs cursor-pointer opacity-60">
                 Contact
               </a>
               <div className="mx-2 group-hover:border-b group-hover:border-strongPurple"></div>
             </div>
           </div>
-          <div className="hidden md:flex lg:flex pt-3 flex space-x-2">
+          <div className="flex hidden pt-3 space-x-2 md:flex lg:flex">
             <FaPhone className="text-yellow-400 " />
-            <h4 className="text-bgPurple text-xs font-body">
+            <h4 className="text-xs text-bgPurple font-body">
               +(44) 753 823 6771
             </h4>
           </div>
@@ -66,7 +66,7 @@ export default function Home(): JSX.Element {
         {/* Mobile Menu */}
         <div className=" absolute z-20 pt-24 md:-mt-2 md:pl-[60px] mx-auto mt-24 md:space-y-28 space-y-40 md:-mt-8 lg:font-black lg:w-[650px] xl:pl-16">
           <div className="space-y-14 md:space-y-12">
-            <div className="lg:pl-0 flex flex-col ">
+            <div className="flex flex-col lg:pl-0 ">
               <div className="-space-y-8 lg:-space-y-12 font-serif font-normal text-white text-[55px] md:text-black md:font-semibold md:text-[70px] md:-space-y-10 lg:text-[75px]">
                 <h1>Bespoke</h1>
                 <h1>Garments</h1>
@@ -83,7 +83,7 @@ export default function Home(): JSX.Element {
             </button>
           </div>
           {/* Social Media */}
-          <div className="hidden md:flex md:pl-0 lg:flex flex space-x-2 ">
+          <div className="flex hidden space-x-2 md:flex md:pl-0 lg:flex ">
             <img src={Instagram} alt="" className="w-5 h-5 cursor-pointer" />
             <img src={Location} alt="" className="w-5 h-5 cursor-pointer" />
             <img src={Fingerprint} alt="" className="w-5 h-5 cursor-pointer" />
