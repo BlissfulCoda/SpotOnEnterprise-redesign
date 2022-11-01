@@ -25,6 +25,14 @@ module.exports = {
         bgPurple: "#E635ED",
         darkMode: "hsla(223, 40%, 9%, 1)",
       },
+
+      backgroundColor: {
+        bgGradient: "bg-gradient-to-r from-[#E34CCE] to-[#E39B57]",
+      },
+
+      boxShadow: {
+        "3xl": "5px 5px 23px rgba(0, 0, 0, 0.2)",
+      },
       backgroundImage: (theme) => ({
         "dark-mode": "url('./src/Components/assets/Logos/DarkLogo.png')",
         "light-mode": "url('./src/Components/assets/Logos/LightLogo.png')",

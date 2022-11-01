@@ -27,10 +27,10 @@ export default function Home(): JSX.Element {
         <img
           src={DarkLogo}
           alt="image of a dark logo"
-          className="h-12 cursor-pointer w-44 contrast-100 brightness-150 laptop:h-14 laptop:w-48"
+          className="h-12 cursor-pointer w-44 contrast-100 brightness-150 "
         />
         {/* MENU */}
-        <nav className="hidden h-10 pt-3 text-sm font-normal opacity-80 laptop:flex tablet:space-x-8 desktop:space-x-9">
+        <nav className="hidden h-10 pt-3 text-sm font-normal desktop:text-[15px] opacity-80 laptop:flex tablet:space-x-8 desktop:space-x-9">
           <div className="group">
             <a href="#" className="cursor-pointer">
               Home
@@ -64,7 +64,7 @@ export default function Home(): JSX.Element {
         </nav>
         {/* PHONE */}
         <div className="flex hidden pt-0 pr-10 space-x-2 tablet:flex laptop:pl-12">
-          <FaPhone size={13} className="text-yellow-400 " />
+          <FaPhone size={18} className="text-yellow-400 " />
           <h4 className="text-sm text-bgPurple font-body tablet:font-black ">
             +(44) 753 823 6771
           </h4>
@@ -96,25 +96,25 @@ export default function Home(): JSX.Element {
 
       {/* HEADING TITLE */}
       <div className="container mx-auto laptop:px-6">
-        <div className="absolute z-20 top-72 w-[460px] sm:pl-12 tablet:pl-4 tablet:space-y-28 space-y-40 tablet:left-6 tablet:-mt-32 laptop:space-y-36 laptop:left-16 mx-12 desktop:left-16 ">
-          <div className="space-y-24 text-white tablet:space-y-10 laptop:space-y-12 tablet:text-black ">
-            <div className="flex flex-col space-y-4 sm:px-6 tablet:px-0 tablet:space-y-6 laptop:space-y-6">
-              <div className="font-serif text-6xl font-medium tablet:font-bold tablet:text-[84px] tablet:-space-y-3 laptop:text-8xl desktop:text-[105px] desktop:-space-y-5 desktop:tracking-wide">
-                <h1>Bespoke</h1>
-                <h1>Garments</h1>
+        <div className="absolute z-20 top-[290px] sm:top-[270px] w-[460px] pl-2 sm:pl-14 tablet:pl-4 tablet:space-y-32 space-y-40 tablet:left-6 tablet:-mt-32 laptop:-mt-28 laptop:space-y-36 laptop:left-20 mx-12 desktop:left-24">
+          <div className="space-y-20 text-white tablet:space-y-12 laptop:space-y-14 tablet:text-black ">
+            <div className="flex flex-col sm:px-4 tablet:px-0 tablet:space-y-0 sm:space-y-2 tablet:space-y-4 laptop:space-y-4">
+              <div className="font-serif text-[55px] -space-y-4 sm:-space-y-1 font-medium  tablet:font-bold tablet:-space-y-4 laptop:-space-y-4 desktop:text-[100px] desktop:-space-y-4">
+                <h1 className="text-6xl sm:text-6xl tablet:text-7xl laptop:text-8xl desktop:text-[105px]">
+                  Bespoke
+                </h1>
+                <h1 className="sm:text-6xl tablet:text-7xl laptop:text-8xl desktop:text-[105px]">
+                  Garments
+                </h1>
               </div>
 
-              <p className="hidden tablet:flex text-[12px] w-[250px] font-medium tablet:leading-5 opacity-80 tablet:flex tablet:w-3/4 tablet:text-justify tablet:text-xs laptop:w-[400px] laptop:leading-6 laptop:text-sm opacity-50 desktop:w-[460px] desktop:text-[16px] font-serif">
+              <p className="tablet:flex text-[12px] w-2/4  sm:w-[200px] font-light tablet:leading-5 tablet:opacity-50 tablet:flex tablet:w-3/4 text-justify tablet:text-xs laptop:w-[400px] laptop:leading-6 laptop:text-sm desktop:text-[15px] opacity-70 desktop:w-[420px] font-serif">
                 We Specialise in producing bespoke, custom made garments for
                 every special occasion, with the best customer service next to
                 none.
               </p>
-              <p className="w-3/5 text-xs leading-6 text-white opacity-80 tablet:hidden">
-                We specialise in helping you find the right fit for every
-                special occasion
-              </p>
             </div>
-            <button className="bg-gradient-to-r from-[#E34CCE] to-[#E39B57] text-xs  hover:scale-105 rounded-sm ml-4 py-3 px-16 text-white duration-500 drop-shadow-laptop shadow-2xl font-serif font-light tablet:ml-0 tablet:px-10 tablet:py-2 tablet:text-[10px] laptop:px-12 laptop:py-3 laptop:text-sm shadow-2xl">
+            <button className="text-xs hover:scale-105 rounded-sm ml-4 py-3 px-20 duration-500 font-serif font-light tablet:ml-0 tablet:px-10 tablet:py-2 tablet:text-[10px] laptop:px-12 laptop:py-3 laptop:text-sm shadow shadow-3xl border border-slate-100">
               Get in touch
             </button>
           </div>
@@ -131,10 +131,10 @@ export default function Home(): JSX.Element {
           id="hero-image"
           src={HeroImage}
           alt="Hero Image"
-          className="absolute z-10 h-screen -mt-12 duration-500 contrast-125 sm:absolute-none sm:h-full tablet:right-6 tablet:-mt-12 tablet:h-[650px] laptop:h-[750px] laptop:-mt-20 laptop:right-16 desktop:right-36 object-cover"
+          className="absolute z-10 h-screen -mt-8 duration-500 contrast-125 sm:absolute-none sm:h-full tablet:right-6 tablet:-mt-12 tablet:h-[630px] laptop:h-[760px] laptop:-mt-20 laptop:right-16 desktop:right-32 object-cover"
         />
 
-        <div className="absolute -rotate-90 -left-[72px] top-72 font-serif font-bold w-[800px] opacity-5 text-[140px] sm:text-9xl sm:left-3 tablet:text-[110px] tablet:left-[300px] tablet:top-[180px] laptop:left-2/4 laptop:text-[125px] laptop:top-[250px]">
+        <div className="absolute -rotate-90 -left-[72px] top-72 sm:top-[270px] font-serif font-bold w-[800px] opacity-5 text-[140px] sm:text-9xl sm:left-3 tablet:text-[105px] tablet:left-[300px] tablet:top-[150px] laptop:left-2/4 laptop:text-[125px] laptop:top-[250px]">
           Tailor Made
         </div>
       </div>
