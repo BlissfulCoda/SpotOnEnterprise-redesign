@@ -19,7 +19,7 @@ export default function Home(): JSX.Element {
   return (
     <section
       id="hero"
-      className="container relative h-screen px-2 py-2 mx-auto mb-20 overflow-hidden duration-500 max-w-7xl "
+      className="container relative h-screen px-2 py-2 mx-auto mb-24 overflow-hidden duration-500 max-w-7xl h-[930px] tablet:h-[750px] "
     >
       {/* HEADER */}
       <header className="flex items-center justify-between font-serif laptop:px-8">
@@ -96,7 +96,7 @@ export default function Home(): JSX.Element {
 
       {/* HEADING TITLE */}
       <div className="container mx-auto laptop:px-6">
-        <div className="absolute z-20 top-[290px] sm:top-[270px] w-[460px] pl-2 sm:pl-14 tablet:pl-4 tablet:space-y-32 space-y-40 tablet:left-6 tablet:-mt-32 laptop:-mt-28 laptop:space-y-36 laptop:left-20 mx-12 desktop:left-24">
+        <div className="absolute z-20 top-[290px] w-[460px] pl-4 sm:pl-12 tablet:pl-4 tablet:space-y-32 space-y-40 tablet:left-6 tablet:-mt-32 laptop:-mt-28 laptop:space-y-36 laptop:left-20 mx-12 desktop:left-24">
           <div className="space-y-20 text-white tablet:space-y-12 laptop:space-y-14 tablet:text-black ">
             <div className="flex flex-col sm:px-4 tablet:px-0 tablet:space-y-0 sm:space-y-2 tablet:space-y-4 laptop:space-y-4">
               <div className="font-serif text-[55px] -space-y-4 sm:-space-y-1 font-medium  tablet:font-bold tablet:-space-y-4 laptop:-space-y-4 desktop:text-[100px] desktop:-space-y-4">
@@ -108,11 +108,11 @@ export default function Home(): JSX.Element {
                 </h1>
               </div>
 
-              <p className="tablet:flex text-[12px] w-2/4  sm:w-[200px] font-light tablet:leading-5 tablet:opacity-50 tablet:flex tablet:w-3/4 text-justify tablet:text-xs laptop:w-[400px] laptop:leading-6 laptop:text-sm desktop:text-[15px] opacity-70 desktop:w-[420px] font-serif">
+              <h4 className="tablet:flex text-[12px] w-2/4  sm:w-[200px] font-light tablet:leading-5 tablet:opacity-50 tablet:flex tablet:w-3/4 text-justify tablet:text-xs laptop:w-[400px] laptop:leading-6 laptop:text-sm desktop:text-[15px] opacity-70 desktop:w-[420px] font-serif">
                 We Specialise in producing bespoke, custom made garments for
                 every special occasion, with the best customer service next to
                 none.
-              </p>
+              </h4>
             </div>
             <button className="text-xs hover:scale-105 rounded-sm ml-4 py-3 px-20 duration-500 font-serif font-light tablet:ml-0 tablet:px-10 tablet:py-2 tablet:text-[10px] laptop:px-12 laptop:py-3 laptop:text-sm shadow shadow-3xl border border-slate-100">
               Get in touch
@@ -131,10 +131,10 @@ export default function Home(): JSX.Element {
           id="hero-image"
           src={HeroImage}
           alt="Hero Image"
-          className="absolute z-10 h-screen -mt-8 duration-500 contrast-125 sm:absolute-none sm:h-full tablet:right-6 tablet:-mt-12 tablet:h-[630px] laptop:h-[760px] laptop:-mt-20 laptop:right-16 desktop:right-32 object-cover"
+          className="absolute z-10 h-[850px] -mt-8 duration-500 contrast-125 sm:absolute-none tablet:right-6 tablet:-mt-12 tablet:h-[630px] laptop:h-[760px] laptop:-mt-20 laptop:right-16 desktop:right-32 object-cover"
         />
 
-        <div className="absolute -rotate-90 -left-[72px] top-72 sm:top-[270px] font-serif font-bold w-[800px] opacity-5 text-[140px] sm:text-9xl sm:left-3 tablet:text-[105px] tablet:left-[300px] tablet:top-[150px] laptop:left-2/4 laptop:text-[125px] laptop:top-[250px]">
+        <div className="absolute -rotate-90 -left-[72px] top-[270px] font-serif font-bold w-[800px] opacity-10 text-[140px] sm:text-9xl sm:left-3 tablet:text-[105px] tablet:left-[300px] tablet:top-[150px] laptop:left-2/4 laptop:text-[125px] laptop:top-[250px]">
           Tailor Made
         </div>
       </div>
