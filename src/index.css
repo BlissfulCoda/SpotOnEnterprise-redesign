@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Merriweather&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
 
@@ -14,15 +14,28 @@
 
 @layer base {
   h2 {
-    @apply text-bgPurple font-serif font-semibold text-center text-3xl 
+    @apply text-bgPurple font-serif font-semibold text-center text-3xl;
   }
 
   h3 {
-    @apply text-center font-medium text-xl font-serif font-medium tablet:text-lg tablet:text-base
+    @apply text-center font-medium text-xl font-serif font-medium tablet:text-lg tablet:text-base;
   }
 
   p {
-    @apply text-xs sm:text-sm sm:leading-7 font-body text-justify leading-6  laptop:text-lg laptop:leading-9 font-serif 
+    @apply text-xs sm:text-sm sm:leading-7 font-body text-justify leading-6  laptop:text-lg laptop:leading-9 font-serif;
   }
+
 }
 
+
+.section-container {
+  @apply container sm:max-w-lg mx-auto max-w-7xl tablet:max-w-3xl laptop:max-w-5xl desktop:max-w-6xl;
+}
+
+.grid-container {
+  @apply grid gap-2 tablet:grid-cols-2 laptop:grid-cols-3 desktop:grid-cols-4 sm:max-w-lg mx-auto tablet:max-w-2xl laptop:p-12 laptop:max-w-5xl desktop:max-w-6xl;
+}
+
+.image {
+  @apply tablet:object-cover w-full h-full ;
+}

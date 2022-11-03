@@ -1,17 +1,18 @@
 import Conversation from "../../assets/Gifs/Conversation.gif";
 import Gift from "../../assets/Gifs/Gift.gif";
-import lady from "../../assets/Images/lady.png";
+import ladyLight from "../../assets/Images/ladyLight.png";
+import ladyDark from "../../assets/Images/ladyDark.png";
 
 function About(): JSX.Element {
   return (
     <section
       id="about"
-      className="container max-w-6xl p-6 mx-auto mb-24 sm:p-8 "
+      className="container p-6 mx-auto mb-6 max-w-7xl sm:p-14 "
     >
       <div className=" tablet:space-y-6">
         <div className="container mx-auto space-y-4 tablet:py-6 laptop:px-24 tablet:px-28 laptop:px-52">
           <h2>ABOUT US</h2>
-          <p className="text-center sm:px-2">
+          <p className="text-center sm:px-2 tablet:leading-6">
             We offer a selection of attractive, diverse products and a quality
             designs to ensure maximum client satifaction.
           </p>
@@ -20,8 +21,8 @@ function About(): JSX.Element {
         {/* SERVICES */}
         <section className="container flex flex-col mx-auto space-y-12 tablet:space-y-0 tablet:flex-row tablet:justify-between tablet:max-w-3xl tablet:px-8 laptop:px-2">
           {/*  IMAGE */}
-          <div className="hidden tablet:flex h-[400px] laptop:h-[450px]">
-            <img src={lady} alt="tailor image" />
+          <div className="hidden tablet:flex h-[400px] laptop:h-[450px] saturate-150">
+            <img src={ladyLight} alt="tailor image" />
           </div>
 
           {/* SERVICES + WOMEN & CHILDREN  */}
@@ -53,7 +54,7 @@ function About(): JSX.Element {
                 className="w-8 h-8 "
               />
               <div className="space-y-4 tablet:space-y-6">
-                <h3 className="mx-16 sm:mx-24 tablet:mx-12">
+                <h3 className="mx-14 sm:mx-24 tablet:mx-12">
                   WOMEN & CHILDREN SERVICES
                 </h3>
                 <p className="tablet:text-xs tablet:leading-6 laptop:text-sm laptop:leading-7">

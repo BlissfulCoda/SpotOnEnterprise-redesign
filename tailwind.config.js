@@ -11,9 +11,9 @@ module.exports = {
 
       laptop: "1024px",
 
-      desktop: "1200px",
+      desktop: "1280px",
 
-      "2xl": "1440px",
+      "2xl": "1536px",
     },
     fontFamily: {
       serif: ["Playfair Display", "system-ui"],
@@ -21,9 +21,12 @@ module.exports = {
       body: ["Poppins"],
     },
     extend: {
+      fontSize: {
+        "9xl": "8.2rem",
+      },
       colors: {
         bgPurple: "#E635ED",
-        darkMode: "hsla(223, 40%, 9%, 1)",
+        darkMode: "hsla(225, 35%, 12%, 1)",
       },
 
       backgroundColor: {

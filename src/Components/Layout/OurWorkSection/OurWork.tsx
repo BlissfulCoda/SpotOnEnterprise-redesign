@@ -9,11 +9,22 @@ import img8 from "../../assets/Images/img-8.png";
 
 function OurWork(): JSX.Element {
   return (
-    <section id="work" className="container p-6 mx-auto mb-24">
-      <div className="container mx-auto ">
-        <h2>OUR WORK</h2>
-        <p className="text-center">A collection from some of our happy customers</p>
-      </div>
+    <section
+      id="work"
+      className="container px-6 py-8 mx-auto mb-24 space-y-8 duration-1000 tablet:px-0 sm:p-4 "
+    >
+      <h2>OUR WORK</h2>
+
+      <section className="relative group grid-container">
+        <img src={img2} alt="" className="image" />
+        <img src={img7} alt="" className="image" />
+        <img src={img4} alt="" className="image" />
+        <img src={img3} alt="" className="image" />
+        <img src={img1} alt="" className="image" />
+        <img src={img5} alt="" className="object-left image" />
+        <img src={img6} alt="" className="image" />
+        <img src={img8} alt="" className="image" />
+      </section>
     </section>
   );
 }
