@@ -11,10 +11,15 @@ function OurWork(): JSX.Element {
   return (
     <section
       id="work"
-      className="container px-6 py-8 mx-auto mb-24 space-y-8 duration-1000 tablet:px-0 sm:p-4 "
+      className="container px-6 py-8 mx-auto mb-24 space-y-10 duration-1000 tablet:px-0 sm:p-4 laptop:space-y-0 "
     >
-      <h2>OUR WORK</h2>
-
+      <div className="container mx-auto space-y-4 tablet:py-6 laptop:px-24 tablet:px-40 laptop:px-52">
+        <h2>WHAT WE OFFER</h2>
+        <p className="text-sm leading-6 text-center sm:px-2 tablet:leading-6 laptop:text-base laptop:px-12 desktop:text-lg desktop:px-32">
+          Diversity of attractive products and quality design to ensure maximum
+          client satifaction.
+        </p>
+      </div>
       <section className="relative group grid-container">
         <img src={img2} alt="" className="image" />
         <img src={img7} alt="" className="image" />

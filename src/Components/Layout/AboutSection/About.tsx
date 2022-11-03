@@ -7,21 +7,20 @@ function About(): JSX.Element {
   return (
     <section
       id="about"
-      className="container p-6 mx-auto mb-6 max-w-7xl sm:p-14 "
+      className="container p-6 mx-auto mb-20 max-w-7xl sm:p-14 "
     >
-      <div className=" tablet:space-y-6">
+      <div className=" tablet:space-y-10">
         <div className="container mx-auto space-y-4 tablet:py-6 laptop:px-24 tablet:px-28 laptop:px-52">
           <h2>ABOUT US</h2>
-          <p className="text-center sm:px-2 tablet:leading-6">
-            We offer a selection of attractive, diverse products and a quality
-            designs to ensure maximum client satifaction.
+          <p className="text-lg text-center sm:text-2xl opacity-20">
+            Experienced and Friendly
           </p>
         </div>
 
         {/* SERVICES */}
-        <section className="container flex flex-col mx-auto space-y-12 tablet:space-y-0 tablet:flex-row tablet:justify-between tablet:max-w-3xl tablet:px-8 laptop:px-2">
+        <section className="container flex flex-col mx-auto space-y-12 tablet:space-y-0 tablet:flex-row tablet:justify-between tablet:max-w-3xl tablet:px-4 laptop:px-10 laptop:max-w-4xl desktop:px-6">
           {/*  IMAGE */}
-          <div className="hidden tablet:flex h-[400px] laptop:h-[450px] saturate-150">
+          <div className="hidden tablet:flex h-[400px] laptop:h-[450px] saturate-100 brightness-100">
             <img src={ladyLight} alt="tailor image" />
           </div>
 
@@ -54,7 +53,7 @@ function About(): JSX.Element {
                 className="w-8 h-8 "
               />
               <div className="space-y-4 tablet:space-y-6">
-                <h3 className="mx-14 sm:mx-24 tablet:mx-12">
+                <h3 className="mx-16 sm:mx-24 tablet:mx-8 laptop:mx-20">
                   WOMEN & CHILDREN SERVICES
                 </h3>
                 <p className="tablet:text-xs tablet:leading-6 laptop:text-sm laptop:leading-7">

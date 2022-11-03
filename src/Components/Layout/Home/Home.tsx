@@ -125,11 +125,11 @@ export default function Home(): JSX.Element {
 
             {/* LAPTOP BUTTONS */}
             <div className="flex flex-col hidden tablet:flex tablet:flex-row laptop:space-x-1 laptop:flex ">
-              <button className="px-10 py-3 font-serif text-xs text-white font-light duration-500 border border-none rounded-sm rounded-br-full shadow rounded-tr-3xl hover:scale-105 shadow-3xl cursor-pointer desktop:px-14 border-slate-100 bg-gradient-to-r from-[#E34CCE] to-[#E39B57]">
+              <button className="px-10 py-3 laptop:px-12 font-serif text-xs text-white font-light duration-500 border border-none rounded-sm rounded-br-full shadow rounded-tr-3xl hover:scale-105 shadow-3xl cursor-pointer desktop:px-14 border-slate-100 bg-gradient-to-r from-[#E34CCE] to-[#E39B57]">
                 Get in touch
               </button>
-              <button className="px-10 py-3 font-serif text-xs font-light duration-500 border rounded-sm rounded-tl-full shadow cursor-pointer rounded-bl-3xl hover:scale-105 shadow-3xl desktop:px-14 flex gap-1"> <FaBell className="top-"/>
-                 Collection
+              <button className="flex gap-1 px-10 py-3 font-serif text-xs font-light duration-500 border border-none rounded-sm rounded-tl-full shadow cursor-pointer laptop:px-12 rounded-bl-3xl hover:scale-105 shadow-3xl desktop:px-14">
+                View Collection
               </button>
             </div>
           </div>
