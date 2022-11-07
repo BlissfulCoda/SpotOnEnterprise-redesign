@@ -1,12 +1,12 @@
 interface ButtonProps {
   children: React.ReactNode;
   type: "button" | "reset" | "submit";
-  version: string;
+  className: string;
 }
 
-export default function Button({ children, type, version }: ButtonProps) {
+export default function Button({ children, type, className }: ButtonProps) {
   return (
-    <button type={type} className={version}>
+    <button type={type} className={className}>
       {children}
     </button>
   );

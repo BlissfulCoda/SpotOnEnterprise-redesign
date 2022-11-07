@@ -1,7 +1,7 @@
 import { useState } from "react";
 import {FaBell} from 'react-icons/fa'
 
-import "./Home.css";
+import Button from "../Shared/Button";
 import { FaPhone } from "react-icons/fa";
 import DarkLogo from "../../assets/Logos/DarkLogo.png";
 import LightLogo from "../../assets/Logos/LightLogo.png";
@@ -20,10 +20,10 @@ export default function Home(): JSX.Element {
   return (
     <section
       id="hero"
-      className=" relative h-screen px-3 py-3 section-container mb-16 overflow-hidden duration-500 h-[930px] tablet:h-[650px] laptop:h-[800px] laptop:px-0"
+      className=" relative h-screen px-3 py-3 section-container  overflow-hidden duration-500 h-[930px] tablet:h-[650px] laptop:h-[800px] laptop:px-0"
     >
       {/* HEADER */}
-      <header className="flex items-center justify-between px-1 font-serif laptop:px-0 desktop:px-2">
+      <header className="flex items-center justify-between px-1 font-serif laptop:px-0 desktop:px-2 ">
         {/* Logo */}
         <img
           src={DarkLogo}
@@ -31,7 +31,7 @@ export default function Home(): JSX.Element {
           className="h-12 cursor-pointer w-44 contrast-100 brightness-150 "
         />
         {/* MENU */}
-        <nav className="hidden h-10 pt-3 text-sm font-medium opacity-80 laptop:flex laptop:space-x-6 desktop:space-x-7 desktop:text-[16px] opacity-50 ">
+        <nav className="hidden h-10 pt-3 text-sm font-medium opacity-50 laptop:flex laptop:space-x-6 desktop:space-x-7 ">
           <div className="group">
             <a href="#" className="cursor-pointer">
               Home
@@ -67,7 +67,7 @@ export default function Home(): JSX.Element {
         <div className="flex hidden pr-16 space-x-2 tablet:flex laptop:pr-0">
           <FaPhone
             size={18}
-            className="text-yellow-400 delay-500 animate-ping"
+            className="text-yellow-400 delay-500 animate-pulse"
           />
           <h4 className="text-sm text-bgPurple font-body tablet:font-black ">
             +(44) 753 823 6771
@@ -101,7 +101,7 @@ export default function Home(): JSX.Element {
       {/* MAIN SECTION */}
       <div className="container mx-auto ">
         <div className="absolute z-20 top-72 w-[460px] pl-7 sm:pl-16 tablet:pl-4 tablet:space-y-32 space-y-40 tablet:top-36 laptop:space-y-36 laptop:left-6 mx-10 desktop:left-10 ">
-          <div className="space-y-20 text-white tablet:space-y-12 laptop:space-y-16 tablet:text-black ">
+          <div className="space-y-20 text-white tablet:space-y-12 laptop:space-y-16 tablet:text-black " style={{}}>
             <div className="flex flex-col space-y-3 sm:px-4 tablet:px-0 tablet:space-y-0 sm:space-y-3 tablet:space-y-4 laptop:space-y-6">
               {/* BESPOKE GARMENTS */}
               <div
@@ -111,7 +111,7 @@ export default function Home(): JSX.Element {
                 <h1>Bespoke Garments</h1>
               </div>
 
-              <h4 className="tablet:flex text-[12px] w-3/5   font-light tablet:leading-5 tablet:opacity-50 tablet:flex tablet:w-3/4 text-justify tablet:text-xs laptop:w-[390px] laptop:leading-6 laptop:text-sm desktop:text-[15px] opacity-70 desktop:w-[480px] desktop:text-[17px] font-serif desktop:leading-7">
+              <h4 className="tablet:flex text-[12px] w-3/5   font-light tablet:leading-4 tablet:opacity-50 tablet:flex tablet:w-2/3 text-justify tablet:text-[10.5px] laptop:w-[380px] laptop:leading-5 laptop:text-sm desktop:text-[15px] opacity-70 desktop:w-[440px] desktop:text-[16px] font-serif desktop:leading-6">
                 We Specialise in producing bespoke, custom made garments for
                 every special occasion, with the best customer service next to
                 none.
@@ -119,18 +119,18 @@ export default function Home(): JSX.Element {
             </div>
 
             {/* MOBILE BUTTON */}
-            <button className="text-xs tablet:hidden hover:scale-105 rounded-sm ml-4 py-3 px-20 duration-500 font-serif font-light tablet:ml-0 tablet:px-10 tablet:py-2 tablet:text-[10px] laptop:px-12 laptop:py-3 laptop:text-sm shadow shadow-3xl border border-slate-100 ">
+            <Button className="text-xs tablet:hidden hover:scale-105 rounded-sm ml-4 py-3 px-20 duration-500 font-serif font-light tablet:ml-0 tablet:px-10 tablet:py-2 tablet:text-[10px] laptop:px-12 laptop:py-3 laptop:text-sm shadow shadow-3xl border border-slate-100 " type="button">
               Get in touch
-            </button>
+            </Button>
 
             {/* LAPTOP BUTTONS */}
             <div className="flex flex-col hidden tablet:flex tablet:flex-row laptop:space-x-1 laptop:flex ">
-              <button className="px-10 py-3 laptop:px-12 font-serif text-xs text-white font-light duration-500 border border-none rounded-sm rounded-br-full shadow rounded-tr-3xl hover:scale-105 shadow-3xl cursor-pointer desktop:px-14 border-slate-100 bg-gradient-to-r from-[#E34CCE] to-[#E39B57]">
+              <Button type="button" className="px-10 py-3 laptop:px-12 font-serif text-xs text-white font-light duration-500 border border-none rounded-sm rounded-br-full shadow rounded-tr-3xl hover:scale-105 shadow-3xl cursor-pointer desktop:px-14 border-slate-100 bg-gradient-to-r from-[#E34CCE] to-[#E39B57]">
                 Get in touch
-              </button>
-              <button className="flex gap-1 px-10 py-3 font-serif text-xs font-light duration-500 border border-none rounded-sm rounded-tl-full shadow cursor-pointer laptop:px-12 rounded-bl-3xl hover:scale-105 shadow-3xl desktop:px-14">
+              </Button>
+              <Button type="button" className="flex gap-1 px-10 py-3 font-serif text-xs font-light duration-500 border border-none rounded-sm rounded-tl-full shadow cursor-pointer laptop:px-12 rounded-bl-3xl hover:scale-105 shadow-3xl desktop:px-14">
                 View Collection
-              </button>
+              </Button>
             </div>
           </div>
           {/* Social Media */}
@@ -146,7 +146,7 @@ export default function Home(): JSX.Element {
           id="hero-image"
           src={HeroImage}
           alt="Hero Image"
-          className="absolute z-10 h-[780px] -mt-10 duration-500 contrast-125 sm:absolute-none tablet:right-9 tablet:-mt-12 tablet:h-[600px] laptop:h-[730px] laptop:-mt-20 laptop:right-6 desktop:right-12 
+          className="absolute z-10 h-[790px] -mt-10 duration-500 contrast-125 sm:absolute-none tablet:right-9 tablet:-mt-12 tablet:h-[600px] laptop:h-[730px] laptop:-mt-20 laptop:right-6 desktop:right-12 
           desktop:-mt-20 object-cover object-center"
         />
 

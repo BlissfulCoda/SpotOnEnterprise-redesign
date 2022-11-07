@@ -7,7 +7,7 @@ import Footer from "./Layout/FooterSection/Footer";
 
 export default function MainSection(): JSX.Element {
   return (
-    <div>
+    <div className="">
       <Home />
       <About />
       <OurWork />

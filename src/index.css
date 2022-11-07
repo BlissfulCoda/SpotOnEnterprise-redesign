@@ -14,28 +14,30 @@
 
 @layer base {
   h2 {
-    @apply text-bgPurple font-serif font-semibold text-center text-3xl;
+    @apply text-bgPurple font-serif font-semibold text-center text-2xl tracking-wider;
   }
 
   h3 {
-    @apply text-center font-medium text-xl font-serif font-medium tablet:text-xl ;
+    @apply text-center font-medium text-xl font-serif font-medium tablet:text-xl;
   }
 
   p {
-    @apply text-xs sm:text-sm sm:leading-7 font-body text-justify leading-6  laptop:text-lg  font-serif;
+    @apply text-xs sm:text-sm tablet:text-[10.5px] sm:leading-6 font-sans text-justify leading-6 tablet:leading-5 font-serif laptop:text-[14px] laptop:leading-7 opacity-70;
   }
-
 }
-
 
 .section-container {
   @apply container sm:max-w-lg mx-auto max-w-7xl tablet:max-w-3xl laptop:max-w-5xl desktop:max-w-6xl;
 }
 
 .grid-container {
-  @apply grid gap-2 tablet:grid-cols-2 laptop:grid-cols-4 sm:max-w-lg mx-auto tablet:max-w-2xl laptop:p-12 laptop:max-w-5xl desktop:max-w-6xl;
+  @apply grid gap-1 tablet:grid-cols-2 laptop:grid-cols-4 sm:max-w-lg mx-auto tablet:max-w-2xl laptop:p-12 laptop:max-w-5xl desktop:max-w-6xl;
 }
 
 .image {
-  @apply tablet:object-cover w-full h-full ;
+  @apply tablet:object-cover w-full h-full hover:cursor-pointer;
+}
+
+.quotations {
+  @apply inline absolute bottom-3
 }
