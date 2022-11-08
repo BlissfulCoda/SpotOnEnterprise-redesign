@@ -9,7 +9,7 @@ import img7 from "../../assets/Images/img-7.png";
 
 function Testimonials(): JSX.Element {
   return (
-    <section className="px-6 py-8 mb-56 space-y-8 section-container">
+    <section className="px-6 py-8 mb-56 space-y-8 section-container ">
       <div className="space-y-2">
         <h2>TESTIMONIALS</h2>
         {/* <h4 className="text-center text-md opacity-30">
@@ -19,7 +19,7 @@ function Testimonials(): JSX.Element {
 
       <Card className="flex flex-col pr-1 space-y-2 shadow shadow-2xl tablet:flex-row section-container tablet:max-w-2xl laptop:max-w-4xl desktop:max-w-5xl tablet:h-full tablet:pr-0">
         {/* LEFT SIDE */}
-        <Card className="flex items-center justify-center w-full h-80 bg-[#071C3E] bg-zinc-20 rounded-br-3xl py-20 px-40 tablet:w-1/2 tablet:h-96 laptop:h-[450px]">
+        <Card className="flex items-center justify-center w-full h-80 bg-[#071C3E] bg-zinc-20 rounded-br-3xl py-20 px-40 tablet:w-1/2 tablet:h-96 laptop:h-[460px] desktop:h-[480px] biggest:h-[520px]">
           {/* inner container */}
           <div className="relative max-w-xs font-serif text-white ">
             {/* ICON CONTAINER */}
@@ -29,20 +29,20 @@ function Testimonials(): JSX.Element {
               className="absolute text-green-400 -top-1 -left-2"
               size={9}
             />
-            <h3 className="text-2xl font-bold leading-8 tracking-wide text-left laptop:text-3xl desktop:text-4xl desktop:leading-10">
+            <h3 className="text-2xl font-bold leading-8 tracking-wide text-left laptop:text-3xl desktop:text-4xl desktop:leading-tight">
               What Our Customers Are Saying
             </h3>
           </div>
         </Card>
 
         {/* RIGHT SIDE - IMAGES + CUSTOMER FEEDBACK */}
-        <Card className="w-full px-6 py-10 mx-auto tablet:w-1/2 tablet:p-4 desktop:p-4">
+        <Card className="w-full px-6 py-10 mx-auto tablet:w-1/2 tablet:p-4 desktop:p-4 ">
           <div className="px-2 tablet:px-14 tablet:py-16 laptop:px-20 laptop:py-20 desktop:px-24 desktop:py-24">
             <div className=" pb-8 space-y-4 border-b-[1px] tablet:pb-4 tablet:space-y-2 laptop:pb-6 laptop:space-y-5">
               <h4 className="relative mx-auto text-lg leading-7 text-center tablet:text-[16px] laptop:text-xl desktop:text-2xl">
                 A pleasure to work with
               </h4>
-              <p className="font-sans text-[10px] leading-5 tracking-tight text-justify sm:text-xs opacity-40 sm:leading-6 tablet:text-[6px] tablet:leading-3 laptop:text-[8px] laptop:leading-4 ">
+              <p className="font-sans text-[10px] leading-5 tracking-tight text-justify sm:text-xs opacity-40 sm:leading-6 tablet:text-[6px] tablet:leading-3 laptop:text-[8px] laptop:leading-4 biggest:leading-5  biggest:text-[10px]">
                 Excellent tailoring. Neka and Turay are both very humble and
                 skilled at providing an excellent service. They offered the
                 right advice and the best way to approach the design i had in

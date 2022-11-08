@@ -14,11 +14,19 @@
 
 @layer base {
   h2 {
-    @apply text-bgPurple font-serif font-semibold text-center text-2xl tracking-wider;
+    @apply text-bgPurple font-serif font-semibold text-center text-2xl tracking-wider pb-3;
   }
 
   h3 {
     @apply text-center font-medium text-xl font-serif font-medium tablet:text-xl;
+  }
+
+  h4 {
+    @apply font-bold text-xl  laptop:text-base desktop:text-xl text-sm
+  }
+
+  h5 {
+    @apply text-[10px] opacity-50 sm:text-[10px] desktop:text-sm
   }
 
   p {
@@ -27,11 +35,11 @@
 }
 
 .section-container {
-  @apply container sm:max-w-lg mx-auto max-w-7xl tablet:max-w-3xl laptop:max-w-5xl desktop:max-w-6xl;
+  @apply container sm:max-w-lg mx-auto max-w-7xl tablet:max-w-3xl laptop:max-w-5xl desktop:max-w-6xl biggest:max-w-7xl;
 }
 
 .grid-container {
-  @apply grid gap-1 tablet:grid-cols-2 laptop:grid-cols-4 sm:max-w-lg mx-auto tablet:max-w-2xl laptop:p-12 laptop:max-w-5xl desktop:max-w-6xl;
+  @apply grid gap-1 tablet:grid-cols-2 laptop:grid-cols-4 sm:max-w-lg mx-auto tablet:max-w-2xl laptop:p-12 laptop:max-w-5xl desktop:max-w-6xl biggest:max-w-7xl;
 }
 
 .image {
@@ -40,4 +48,8 @@
 
 .quotations {
   @apply inline absolute bottom-3
+}
+
+.footer-border {
+  @apply w-12 border-b-4 border-b-bgPurple opacity-50 
 }

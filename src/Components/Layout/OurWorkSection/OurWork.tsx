@@ -11,7 +11,7 @@ function OurWork(): JSX.Element {
   return (
     <section
       id="work"
-      className="container px-6 py-12 mx-auto space-y-6 duration-1000 tablet:px-0 sm:p-2 laptop:-space-y-4 "
+      className="container px-6 py-12 mx-auto space-y-6 duration-1000 tablet:px-0 sm:p-2 laptop:-space-y-4 biggest:max-w-6xl"
     >
       <div className="container mx-auto laptop:px-24 tablet:px-40 laptop:px-52">
         <h2>WHAT WE OFFER</h2>

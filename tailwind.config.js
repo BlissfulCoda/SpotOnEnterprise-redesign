@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 
 module.exports = {
-  content: ["./src/**/*.{html,js,ts,tsx}"],
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
   darkMode: "class",
   theme: {
     screens: {
@@ -13,7 +13,7 @@ module.exports = {
 
       desktop: "1280px",
 
-      "2xl": "1536px",
+      biggest: "1440px",
     },
     fontFamily: {
       serif: ["Playfair Display", "system-ui"],
@@ -37,8 +37,10 @@ module.exports = {
         "3xl": "5px 5px 23px rgba(0, 0, 0, 0.2)",
       },
       backgroundImage: (theme) => ({
-        "dark-mode": "url('./src/Components/assets/Logos/DarkLogo.png')",
-        "light-mode": "url('./src/Components/assets/Logos/LightLogo.png')",
+        "light-logo-mode":
+          "url('../src/Components/assets/Logos/LightLogo.png')",
+        "logo-dark-mode": "url('../src/Components/assets/Logos/LogoDark.png')",
+        "text-photo": "url('../src/Components/assets/Images/HeroImage.png')",
       }),
     },
   },
