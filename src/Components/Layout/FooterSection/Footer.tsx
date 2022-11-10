@@ -1,8 +1,3 @@
-import { FaFacebookF } from "react-icons/fa";
-
-import DarkLogo from "../../assets/Logos/DarkLogo.png";
-import LightLogo from "../../assets/Logos/LightLogo.png";
-
 
 
 function Footer(): JSX.Element {

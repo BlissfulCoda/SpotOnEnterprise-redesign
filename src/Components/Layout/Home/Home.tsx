@@ -1,25 +1,24 @@
-import { useState } from "react";
+import { useContext } from "react";
+import { DarkModeDataInterface } from "../../../Data/DarkModeData";
+import DarkModeContext from "../../../Context/DarkModeContext";
 
 import Button from "../Shared/Button";
 import { FaPhone } from "react-icons/fa";
 
 import HeroImage from "../../assets/Images/HeroImage.png";
 
-import DarkLogo from "../../assets/Logos/DarkLogo.png";
-import LightLogo from "../../assets/Logos/LightLogo.png";
-
 import Location from "../../assets/Gifs/Location.gif";
 import Instagram from "../../assets/Gifs/Instagram.gif";
+
+import DarkLogo from "../../assets/Logos/DarkLogo.png";
+import LightLogo from "../../assets/Logos/LightLogo.png";
 import Night from "../../assets/Gifs/Night.gif";
 import Fingerprint from "../../assets/Gifs/Fingerprint.gif";
 
-interface HomeProps {
-  toggleDarkMode: () => void;
-}
-
-export default function Home({ toggleDarkMode }: HomeProps): JSX.Element {
-  const [toggleLogo, SetToggleLogo] = useState<Boolean>(false);
-  const [gif, SetGif] = useState<boolean>(false);
+export default function Home(): JSX.Element {
+  const { gif, toggleLogo, handleChange} = useContext(
+    DarkModeContext
+  ) as DarkModeDataInterface;
 
   const SPOTONENTERPRISE_INSTAGRAM =
     "https://www.instagram.com/spotonenterprise/";
@@ -30,19 +29,6 @@ export default function Home({ toggleDarkMode }: HomeProps): JSX.Element {
   // Toggle Nav menu
   const handleMenu = (e: React.MouseEvent<HTMLInputElement>) => {
     console.log(123);
-  };
-
-  // Change Logo
-  const handleLogo = () => SetToggleLogo(!toggleLogo);
-
-  // Change Gif
-  const toggleGif = () => SetGif(!gif);
-
-  // Change Gif, Logo, DarkMode
-  const handleChange = () => {
-    toggleDarkMode();
-    toggleGif();
-    handleLogo();
   };
 
   return (
