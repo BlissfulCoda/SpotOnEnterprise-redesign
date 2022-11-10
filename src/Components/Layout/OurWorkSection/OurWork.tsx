@@ -17,7 +17,7 @@ function OurWork(): JSX.Element {
         <h2>WHAT WE OFFER</h2>
         
       </div>
-      <section className="relative group grid-container">
+      <section className="relative grid-container">
         <img src={img2} alt="" className="image" />
         <img src={img7} alt="" className="image" />
         <img src={img4} alt="" className="image" />

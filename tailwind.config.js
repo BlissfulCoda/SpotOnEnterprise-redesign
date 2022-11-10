@@ -37,10 +37,7 @@ module.exports = {
         "3xl": "5px 5px 23px rgba(0, 0, 0, 0.2)",
       },
       backgroundImage: (theme) => ({
-        "light-logo-mode":
-          "url('../src/Components/assets/Logos/LightLogo.png')",
-        "logo-dark-mode": "url('../src/Components/assets/Logos/LogoDark.png')",
-        "text-photo": "url('../src/Components/assets/Images/HeroImage.png')",
+        "photo": "url('../src/Components/assets/Images/HeroImage.png')",
       }),
     },
   },

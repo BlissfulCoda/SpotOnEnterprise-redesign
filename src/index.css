@@ -18,7 +18,7 @@
   }
 
   h3 {
-    @apply text-center font-medium text-xl font-serif font-medium tablet:text-xl;
+    @apply font-medium text-2xl tablet:text-3xl font-serif   font-bold opacity-90;
   }
 
   h4 {
@@ -30,7 +30,7 @@
   }
 
   p {
-    @apply text-xs sm:text-sm tablet:text-[10.5px] sm:leading-6 font-sans text-justify leading-6 tablet:leading-5 font-serif laptop:text-[14px] laptop:leading-7 opacity-70;
+    @apply text-xs leading-6 tablet:leading-5 font-sans text-justify font-serif laptop:text-sm laptop:leading-6 opacity-70;
   }
 }
 
@@ -39,11 +39,11 @@
 }
 
 .grid-container {
-  @apply grid gap-1 tablet:grid-cols-2 laptop:grid-cols-4 sm:max-w-lg mx-auto tablet:max-w-2xl laptop:p-12 laptop:max-w-5xl desktop:max-w-6xl biggest:max-w-7xl;
+  @apply grid gap-2 tablet:grid-cols-2 laptop:grid-cols-4 sm:max-w-lg mx-auto tablet:max-w-2xl laptop:p-12 laptop:max-w-5xl desktop:max-w-6xl biggest:max-w-7xl;
 }
 
 .image {
-  @apply tablet:object-cover w-full h-full hover:cursor-pointer;
+  @apply tablet:object-cover w-full h-full hover:cursor-pointer rounded-lg shadow-lg;
 }
 
 .quotations {
@@ -51,5 +51,17 @@
 }
 
 .footer-border {
-  @apply w-12 border-b-4 border-b-bgPurple opacity-50 
+  @apply w-12 border-b-[1px] border-b-gray-900 opacity-50 mb-2 opacity-30
+}
+
+.change-transitions {
+  @apply transition duration-1000 ease-in-out
+}
+
+.about-gif {
+  @apply h-8 w-8 tablet:w-5 tablet:h-5 tablet:hidden
+}
+
+.about-span {
+  @apply font-bold
 }

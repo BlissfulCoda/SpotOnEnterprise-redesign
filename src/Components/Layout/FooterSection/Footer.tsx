@@ -3,9 +3,7 @@ import { FaFacebookF } from "react-icons/fa";
 import DarkLogo from "../../assets/Logos/DarkLogo.png";
 import LightLogo from "../../assets/Logos/LightLogo.png";
 
-import Location from "../../assets/Gifs/Location.gif";
-import Email from "../../assets/Gifs/Email.gif";
-import Instagram from "../../assets/Gifs/Instagram.gif";
+
 
 function Footer(): JSX.Element {
   const year: number = new Date().getUTCFullYear();
@@ -55,7 +53,7 @@ function Footer(): JSX.Element {
               <div className="footer-border"></div>
             </div>
             {/* instagram */}
-            <div className="space-y-4 tablet:space-y-3 laptop:space-y-3">
+            <div className="space-y-2 tablet:space-y-3 laptop:space-y-3">
               <h5>Instagram</h5>
               <h5>Facebook</h5>
             </div>
