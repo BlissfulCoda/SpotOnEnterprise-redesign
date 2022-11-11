@@ -1,3 +1,17 @@
+interface SpotOnEntepriseContactInterface {
+  SPOTONENTERPRISE_INSTAGRAM: string;
+  SPOTONENTERPRISE_LOCATION: string;
+}
+
+export const SpotOnEntepriseContact: SpotOnEntepriseContactInterface = {
+  SPOTONENTERPRISE_LOCATION:
+    "https://www.google.com/maps/place/111+East+St,+London/@51.4890573,-0.0916229,17z/data=!4m5!3m4!1s0x4876036188999255:0xc28bbd3db39f349c!8m2!3d51.4890403!4d-0.0916112",
+  SPOTONENTERPRISE_INSTAGRAM: "https://www.instagram.com/spotonenterprise/",
+};
+
+
+
+
 export interface Testimonial {
   id: number;
   text: string;

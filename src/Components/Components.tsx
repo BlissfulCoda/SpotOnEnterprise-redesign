@@ -9,18 +9,28 @@ import Testimonials from "../Components/Layout/TestimonialSection/Testimonials";
 import Contact from "../Components/Layout/ContactSection/Contact";
 import Footer from "./Layout/FooterSection/FooterSection";
 
+import MobileMenu from "../Components/Layout/Home/HomeComponents/MobileMenu";
+
 function Components(): JSX.Element {
-    const  {darkMode} = useContext(DarkModeContext) as DarkModeDataInterface;
-    
+  const { darkMode, checked } = useContext(
+    DarkModeContext
+  ) as DarkModeDataInterface;
+
   return (
     <section className={darkMode ? "dark" : ""}>
       <div className="space-y-4 tablet:space-y-12 laptop:space-y-12 dark:bg-darkMode dark:text-white scroll-smooth">
-        <Home />
-        <About />
-        <OurWork />
-        <Testimonials />
-        <Contact />
-        <Footer />
+        {checked ? (
+          <MobileMenu />
+        ) : (
+          <>
+            <Home />
+            <About />
+            <OurWork />
+            <Testimonials />
+            <Contact />
+            <Footer />
+          </>
+        )}
       </div>
     </section>
   );

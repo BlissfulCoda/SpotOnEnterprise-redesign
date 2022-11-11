@@ -12,17 +12,16 @@ import Night from "../../../assets/Gifs/Night.gif";
 import Fingerprint from "../../../assets/Gifs/Fingerprint.gif";
 
 export default function MainSection(): JSX.Element {
-     const { gif, handleChange } = useContext(
-       DarkModeContext
-     ) as DarkModeDataInterface;
+  const { gif, handleChange } = useContext(
+    DarkModeContext
+  ) as DarkModeDataInterface;
 
-     const SPOTONENTERPRISE_INSTAGRAM =
-       "https://www.instagram.com/spotonenterprise/";
+  const SPOTONENTERPRISE_INSTAGRAM =
+    "https://www.instagram.com/spotonenterprise/";
 
-     const SPOTONENTERPRISE_LOCATION =
-       "https://www.google.com/maps/place/111+East+St,+London/@51.4890573,-0.0916229,17z/data=!4m5!3m4!1s0x4876036188999255:0xc28bbd3db39f349c!8m2!3d51.4890403!4d-0.0916112";
+  const SPOTONENTERPRISE_LOCATION =
+    "https://www.google.com/maps/place/111+East+St,+London/@51.4890573,-0.0916229,17z/data=!4m5!3m4!1s0x4876036188999255:0xc28bbd3db39f349c!8m2!3d51.4890403!4d-0.0916112";
 
-     
   return (
     <div className="container mx-auto ">
       <div className="absolute z-20 top-72 w-[460px] pl-5 sm:pl-16 tablet:pl-4 tablet:space-y-32 space-y-40 tablet:top-28 laptop:space-y-32 laptop:left-12 mx-10 desktop:left-12 biggest:left-28">
@@ -71,13 +70,13 @@ export default function MainSection(): JSX.Element {
           <div className="flex flex-col hidden tablet:flex tablet:flex-row laptop:space-x-2 laptop:flex ">
             <Button
               type="button"
-              className="px-9  font-serif text-xs text-white font-light  border border-none rounded-sm rounded-br-full shadow rounded-tr-3xl hover:scale-105 shadow-3xl cursor-pointer border-slate-400 bg-gradient-to-r from-[#E34CCE] to-[#E39B57]"
+              className="px-9  font-serif text-xs text-white font-light  border border-none rounded-sm rounded-br-full shadow rounded-tr-3xl hover:scale-105 shadow-3xl cursor-pointer border-slate-400 bg-gradient-to-r from-[#E34CCE] to-[#E39B57] duration-500"
             >
               Get in touch
             </Button>
             <Button
               type="button"
-              className="flex gap-1 py-3 font-serif text-xs font-light border border-none rounded-sm rounded-tl-full shadow cursor-pointer px-9 rounded-bl-3xl hover:scale-105 shadow-3xl dark:shadow-gray-100/5 "
+              className="flex gap-1 py-3 font-serif text-xs font-light duration-500 border border-none rounded-sm rounded-tl-full shadow cursor-pointer px-9 rounded-bl-3xl hover:scale-105 shadow-3xl dark:shadow-gray-100/5"
             >
               View Collection
             </Button>
@@ -117,9 +116,9 @@ export default function MainSection(): JSX.Element {
 
       {/* Tailor Made */}
       <div
-        className="absolute -rotate-90 -left-[72px] top-[230px] font-serif font-bold w-[800px] opacity-5 text-9xl sm:left-3 tablet:text-[105px] tablet:left-64 tablet:top-[100px] laptop:left-[510px] laptop:text-[125px] laptop:top-[205px]
-        desktop:left-[610px] 
-        biggest:left-[680px]"
+        className="absolute -rotate-90 -left-[72px] top-[230px] font-serif font-bold w-[800px] opacity-5 text-9xl sm:left-3 tablet:text-[105px] tablet:left-64 tablet:top-[100px] laptop:left-[510px] laptop:text-[125px] laptop:top-[200px]
+        desktop:left-[570px] 
+        biggest:left-[670px]"
       >
         Tailor Made
       </div>

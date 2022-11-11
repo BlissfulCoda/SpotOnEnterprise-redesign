@@ -10,7 +10,7 @@ export default function MainImage(): JSX.Element {
             biggest:right-24
           desktop:-mt-20 object-cover object-center"
       />
-      <div className="absolute top-0 bottom-0 left-0 right-0 bg-gradient-to-b from-transparent to-blue-900"></div>
+      
     </div>
   );
 }

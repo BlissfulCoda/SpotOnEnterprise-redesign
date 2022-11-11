@@ -30,7 +30,7 @@
   }
 
   p {
-    @apply text-xs leading-6 tablet:leading-5 font-sans text-justify font-serif laptop:text-sm laptop:leading-6 opacity-70;
+    @apply text-xs leading-6 tablet:leading-5 font-sans text-justify font-serif laptop:text-sm laptop:leading-6 opacity-60;
   }
 }
 
@@ -63,7 +63,7 @@
 }
 
 .about-span {
-  @apply font-bold 
+  @apply font-bold opacity-100
 }
 
 .footer-links {

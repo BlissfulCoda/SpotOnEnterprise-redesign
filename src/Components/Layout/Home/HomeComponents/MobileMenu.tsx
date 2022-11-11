@@ -4,6 +4,8 @@ import DarkModeContext from "../../../../Context/DarkModeContext";
 
 import { FaPhone } from "react-icons/fa";
 
+import { SpotOnEntepriseContact } from "../../../../Data/ComponentData";
+
 import DarkLogo from "../../../assets/Logos/DarkLogo.png";
 import LightLogo from "../../../assets/Logos/LightLogo.png";
 
@@ -12,28 +14,28 @@ import Instagram from "../../../assets/Gifs/Instagram.gif";
 import Night from "../../../assets/Gifs/Night.gif";
 import Fingerprint from "../../../assets/Gifs/Fingerprint.gif";
 
+import HamburgeMenu from "../../Shared/HamburgeMenu";
+
 export default function MobileMenu(): JSX.Element {
   const { toggleLogo, handleChange, gif } = useContext(
     DarkModeContext
   ) as DarkModeDataInterface;
 
-  const SPOTONENTERPRISE_INSTAGRAM =
-    "https://www.instagram.com/spotonenterprise/";
-
-  const SPOTONENTERPRISE_LOCATION =
-    "https://www.google.com/maps/place/111+East+St,+London/@51.4890573,-0.0916229,17z/data=!4m5!3m4!1s0x4876036188999255:0xc28bbd3db39f349c!8m2!3d51.4890403!4d-0.0916112";
+  const { SPOTONENTERPRISE_INSTAGRAM, SPOTONENTERPRISE_LOCATION } =
+    SpotOnEntepriseContact;
 
   const year: number = new Date().getUTCFullYear();
 
   return (
     <section
       id="mobile-menu"
-      className="relative flex flex-col justify-center w-full h-screen text-xl "
+      className="relative flex flex-col justify-center w-full h-screen text-xl laptop:hidden "
     >
+      <HamburgeMenu />
       <div className="min-h-screen">
         <img
           src={toggleLogo ? DarkLogo : LightLogo}
-          className="absolute h-12 ml-2 w-44 brightness-150 contrast-200 change-transitions top-1"
+          className="absolute h-12 ml-2 w-44 brightness-150 contrast-200 change-transitions top-4 left-2"
           alt="SpotOnEnterprise Logo"
         />
 
