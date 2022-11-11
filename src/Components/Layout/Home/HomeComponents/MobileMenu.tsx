@@ -4,15 +4,10 @@ import DarkModeContext from "../../../../Context/DarkModeContext";
 
 import { FaPhone } from "react-icons/fa";
 
-import { SpotOnEntepriseContact } from "../../../../Data/ComponentData";
-
-import DarkLogo from "../../../assets/Logos/DarkLogo.png";
-import LightLogo from "../../../assets/Logos/LightLogo.png";
-
-import Location from "../../../assets/Gifs/Location.gif";
-import Instagram from "../../../assets/Gifs/Instagram.gif";
-import Night from "../../../assets/Gifs/Night.gif";
-import Fingerprint from "../../../assets/Gifs/Fingerprint.gif";
+import {
+  SpotOnEntepriseContact,
+  SpotOnEntepriseGifsAndLogos,
+} from "../../../../Data/ComponentData";
 
 import HamburgeMenu from "../../Shared/HamburgeMenu";
 
@@ -23,6 +18,9 @@ export default function MobileMenu(): JSX.Element {
 
   const { SPOTONENTERPRISE_INSTAGRAM, SPOTONENTERPRISE_LOCATION } =
     SpotOnEntepriseContact;
+
+  const { Night, DarkLogo, LightLogo, Instagram, Location, FingerPrint} =
+    SpotOnEntepriseGifsAndLogos;
 
   const year: number = new Date().getUTCFullYear();
 
@@ -104,7 +102,7 @@ export default function MobileMenu(): JSX.Element {
             </a>
             <a href="#" className="h-6 w-9" onClick={handleChange}>
               <img
-                src={gif ? Fingerprint : Night}
+                src={gif ? FingerPrint : Night}
                 alt="Button to change to darkmode"
                 className="cursor-pointer -rotate-12 transition-1000"
               />

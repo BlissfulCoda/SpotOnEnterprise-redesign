@@ -1,3 +1,11 @@
+import DarkLogo from "../Components/assets/Logos/DarkLogo.png";
+import LightLogo from "../Components/assets/Logos/LightLogo.png";
+
+import Location from "../Components/assets/Gifs/Location.gif";
+import Night from "../Components/assets/Gifs/Night.gif";
+import Instagram from "../Components/assets/Gifs/Instagram.gif";
+import FingerPrint from "../Components/assets/Gifs/Fingerprint.gif";
+
 interface SpotOnEntepriseContactInterface {
   SPOTONENTERPRISE_INSTAGRAM: string;
   SPOTONENTERPRISE_LOCATION: string;
@@ -9,8 +17,28 @@ export const SpotOnEntepriseContact: SpotOnEntepriseContactInterface = {
   SPOTONENTERPRISE_INSTAGRAM: "https://www.instagram.com/spotonenterprise/",
 };
 
+interface SpotOnEntepriseGifsAndLogosInterface {
+  Location: string;
+  Night: string;
+  Instagram: string;
+  FingerPrint: string;
+  DarkLogo: string;
+  LightLogo: string;
+}
 
+export const SpotOnEntepriseGifsAndLogos: SpotOnEntepriseGifsAndLogosInterface =
+  {
+    DarkLogo,
+    LightLogo,
+    Location,
+    Instagram,
+    Night,
+    FingerPrint,
+  };
 
+function getStuff(): JSX.Element {
+  return <div></div>;
+}
 
 export interface Testimonial {
   id: number;

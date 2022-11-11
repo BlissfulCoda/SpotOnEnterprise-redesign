@@ -2,17 +2,18 @@ import { useContext } from "react";
 import { FaPhone } from "react-icons/fa";
 import { DarkModeDataInterface } from "../../../Data/DarkModeData";
 import DarkModeContext from "../../../Context/DarkModeContext";
-
 import HamburgeMenu from "../Shared/HamburgeMenu";
 
 import MainSection from "./HomeComponents/MainSection";
 import MobileMenu from "./HomeComponents/MobileMenu";
 
-import DarkLogo from "../../assets/Logos/DarkLogo.png";
-import LightLogo from "../../assets/Logos/LightLogo.png";
+import { SpotOnEntepriseGifsAndLogos } from "../../../Data/ComponentData";
+
 
 export default function Home(): JSX.Element {
   const { toggleLogo, checked} = useContext(DarkModeContext) as DarkModeDataInterface;
+
+  const {DarkLogo, LightLogo} = SpotOnEntepriseGifsAndLogos;
 
 
   return (
