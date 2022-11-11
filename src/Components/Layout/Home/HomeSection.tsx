@@ -92,7 +92,7 @@ export default function Home(): JSX.Element {
                   size={18}
                   className="text-yellow-400 delay-500 animate-pulse"
                 />
-                <h4 className="text-sm text-bgPurple font-body tablet:font-black ">
+                <h4 className="text-sm text-bgPurple font-body ">
                   +(44) 753 823 6771
                 </h4>
               </div>
