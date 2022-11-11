@@ -26,7 +26,7 @@ function About(): JSX.Element {
             <img
               src={ladyLight}
               alt="tailor image"
-              className="hidden mx-auto tablet:pl-12 laptop:pl-12 h-80 laptop:h-96 tablet:flex saturate-150 brightness-100"
+              className="hidden mx-auto tablet:pl-12 laptop:pl-12 h-80 laptop:h-96 tablet:flex saturate-150 brightness-100 dark:brightness-50"
             />
 
             {/* SERVICES + WOMEN & CHILDREN  */}

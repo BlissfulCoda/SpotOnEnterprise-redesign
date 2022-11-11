@@ -9,7 +9,7 @@ import img7 from "../../assets/Images/img-7.png";
 
 function Testimonials(): JSX.Element {
   return (
-    <section className="px-6 py-8 mb-56 space-y-8 section-container ">
+    <section id="testimonials" className="px-6 py-8 mb-56 space-y-8 section-container ">
       <div className="space-y-2">
         <h2>TESTIMONIALS</h2>
         {/* <h4 className="text-center text-md opacity-30">

@@ -5,9 +5,7 @@ import { DarkModeProvider } from "./Context/DarkModeContext";
 function App() {
   return (
     <DarkModeProvider>
-      <section>
-        <Components />
-      </section>
+      <Components />
     </DarkModeProvider>
   );
 }
