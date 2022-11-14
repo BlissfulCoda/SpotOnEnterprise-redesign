@@ -1,9 +1,9 @@
 import { useContext } from "react";
-import { FaPhone } from "react-icons/fa";
 import { DarkModeDataInterface } from "../../../Data/DarkModeData";
 import DarkModeContext from "../../../Context/DarkModeContext";
-import HamburgeMenu from "../Shared/HamburgeMenu";
 
+import { FaPhone } from "react-icons/fa";
+import HamburgeMenu from "../Shared/HamburgeMenu";
 import MainSection from "./HomeComponents/MainSection";
 import MobileMenu from "./HomeComponents/MobileMenu";
 
@@ -24,7 +24,7 @@ export default function Home(): JSX.Element {
         ) : (
           <section className="duration-300 laptop:relative">
             {/* HEADER */}
-            <header className="flex items-center justify-between px-2 pt-1 font-serif biggest:px-4 laptop:z-10 laptop:-mt-2 laptop:px-0">
+            <header className="flex items-center justify-between px-2 pt-1 font-serif biggest:px-4 laptop:z-20 laptop:-mt-2 laptop:px-0 laptop:absolute laptop:w-full">
               {/* Logo */}
 
               <img
