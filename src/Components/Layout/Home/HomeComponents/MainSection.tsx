@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext} from "react";
 import { DarkModeDataInterface } from "../../../../Data/DarkModeData";
 import DarkModeContext from "../../../../Context/DarkModeContext";
 

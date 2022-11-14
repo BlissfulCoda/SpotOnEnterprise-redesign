@@ -12,7 +12,7 @@ import {
 import HamburgeMenu from "../../Shared/HamburgeMenu";
 
 export default function MobileMenu(): JSX.Element {
-  const { toggleLogo, handleChange, gif } = useContext(
+  const { theme, handleChange, gif, handleNavRemove } = useContext(
     DarkModeContext
   ) as DarkModeDataInterface;
 
@@ -24,15 +24,17 @@ export default function MobileMenu(): JSX.Element {
 
   const year: number = new Date().getUTCFullYear();
 
+  
+
   return (
     <section
       id="mobile-menu"
-      className="relative flex flex-col justify-center w-full h-screen text-xl laptop:hidden "
+      className="container relative flex flex-col justify-center w-full h-screen mx-auto text-xl laptop:hidden section-container"
     >
       <HamburgeMenu />
-      <div className="min-h-screen">
+      <div className="min-h-screen ">
         <img
-          src={toggleLogo ? DarkLogo : LightLogo}
+          src={theme ? DarkLogo : LightLogo}
           className="absolute h-12 ml-2 w-44 brightness-150 contrast-200 change-transitions top-4 left-2"
           alt="SpotOnEnterprise Logo"
         />
@@ -41,24 +43,38 @@ export default function MobileMenu(): JSX.Element {
           aria-label="mobile"
           className="flex flex-col items-center space-y-3 opacity-90 py-28"
         >
-          <a href="#home" className="w-full py-6 text-center hover-opacity-90">
+          <a
+            href="#home"
+            className="w-full py-6 text-center hover-opacity-90"
+            onClick={handleNavRemove}
+          >
             Home
           </a>
-          <a href="#about" className="w-full py-6 text-center hover-opacity-90">
+          <a
+            href="#about"
+            className="w-full py-6 text-center hover-opacity-90"
+            onClick={handleNavRemove}
+          >
             About
           </a>
-          <a href="#work" className="w-full py-6 text-center hover-opacity-90">
+          <a
+            href="#work"
+            className="w-full py-6 text-center hover-opacity-90"
+            onClick={handleNavRemove}
+          >
             Work
           </a>
           <a
             href="#testimonials"
             className="w-full py-6 text-center hover-opacity-90"
+            onClick={handleNavRemove}
           >
             Testimonials
           </a>
           <a
             href="#contact"
             className="w-full py-6 text-center hover-opacity-90"
+            onClick={handleNavRemove}
           >
             Contact
           </a>

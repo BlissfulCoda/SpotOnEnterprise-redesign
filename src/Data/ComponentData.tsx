@@ -36,9 +36,6 @@ export const SpotOnEntepriseGifsAndLogos: SpotOnEntepriseGifsAndLogosInterface =
     FingerPrint,
   };
 
-function getStuff(): JSX.Element {
-  return <div></div>;
-}
 
 export interface Testimonial {
   id: number;

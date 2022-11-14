@@ -15,17 +15,44 @@ function OurWork(): JSX.Element {
     >
       <div className="container mx-auto laptop:px-24 tablet:px-40 laptop:px-52">
         <h2>WHAT WE OFFER</h2>
-        
       </div>
       <section className="relative grid-container">
-        <img src={img2} alt="" className="image" />
-        <img src={img7} alt="" className="image" />
-        <img src={img4} alt="" className="image" />
-        <img src={img3} alt="" className="image" />
-        <img src={img1} alt="" className="image" />
-        <img src={img5} alt="" className="object-left image" />
-        <img src={img6} alt="" className="image" />
-        <img src={img8} alt="" className="image" />
+        <img src={img2} alt="Image of a client" className="image" />
+        <img
+          src={img7}
+          alt="Image of a client in our clothes"
+          className="image"
+        />
+        <img
+          src={img4}
+          alt="Image of a client in our clothes"
+          className="image"
+        />
+        <img
+          src={img3}
+          alt="Image of a client in our clothes"
+          className="image"
+        />
+        <img
+          src={img1}
+          alt="Image of a client in our clothes"
+          className="image"
+        />
+        <img
+          src={img5}
+          alt="Image of a client in our clothes"
+          className="object-left image"
+        />
+        <img
+          src={img6}
+          alt="Image of a client in our clothes"
+          className="image"
+        />
+        <img
+          src={img8}
+          alt="Image of a client in our clothes"
+          className="image"
+        />
       </section>
     </section>
   );

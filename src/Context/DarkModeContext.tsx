@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { createContext, useState, useEffect } from "react";
 import { DarkModeDataInterface } from "../Data/DarkModeData";
 
 interface DarkModeContextInterface {
@@ -7,24 +7,33 @@ interface DarkModeContextInterface {
 
 const DarkModeContext = createContext<DarkModeDataInterface | null>(null);
 
-export function DarkModeProvider({ children }: DarkModeContextInterface): JSX.Element {
+export function DarkModeProvider({
+  children,
+}: DarkModeContextInterface): JSX.Element {
+  const root: HTMLElement = document.documentElement;
 
   // HamburgeMenu
   const [checked, setChecked] = useState<boolean>(false);
 
   // DarkMode state
-  const [darkMode, setDarkMode] = useState<boolean>(false);
+  const [theme, setTheme] = useState<boolean>(false);
+
+  const [flag, setFlag] = useState(false);
 
   // Toggle Light / Dark Logo
   const [toggleLogo, SetToggleLogo] = useState<boolean>(false);
+
+  // Toggle Light / Dark Gifs
   const [gif, SetGif] = useState<boolean>(false);
 
   // Handle Nav Menu
-  const handleMenu = (e: React.ChangeEvent<HTMLInputElement>) => setChecked(e.target.checked);
+  const handleMenu = (e: React.ChangeEvent<HTMLInputElement>) =>
+    setChecked(e.target.checked);
 
-
-  // DarkMode Toggle
-  const toggleDarkMode = () => setDarkMode(!darkMode);
+  // Remove Nav
+  const handleNavRemove = (e: React.MouseEvent<HTMLElement>) => {
+    setChecked(false);
+  };
 
   // Change Logo
   const handleLogo = () => SetToggleLogo(!toggleLogo);
@@ -32,25 +41,46 @@ export function DarkModeProvider({ children }: DarkModeContextInterface): JSX.El
   // Change Gif
   const toggleGif = () => SetGif(!gif);
 
+  useEffect(() => {
+    const preference = localStorage.getItem("theme");
+    if (preference) {
+      setTheme(JSON.parse(preference));
+    }
+    setFlag(true)
+  }, [])
+
+
+
+  useEffect(() => {
+    if (flag) {
+      localStorage.setItem("theme", JSON.stringify(theme));
+      root.classList.toggle("dark", theme)
+    }
+  }, [theme, flag]);
+
   // Change Gif, Logo, DarkMode
   const handleChange = () => {
-    toggleDarkMode();
-    toggleGif();
-    handleLogo();
+    console.log(root);
+    if (!theme) {
+      root.classList.add("dark");
+      setTheme(true);
+    } else {
+      root.classList.remove("dark");
+      setTheme(false)
+    }
   };
 
   return (
     <DarkModeContext.Provider
       value={{
         checked,
-        darkMode,
-        toggleLogo,
+        theme,
         gif,
-        toggleDarkMode,
         handleLogo,
         handleMenu,
         toggleGif,
         handleChange,
+        handleNavRemove,
       }}
     >
       {children}

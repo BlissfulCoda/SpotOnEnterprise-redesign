@@ -11,10 +11,9 @@ import { SpotOnEntepriseGifsAndLogos } from "../../../Data/ComponentData";
 
 
 export default function Home(): JSX.Element {
-  const { toggleLogo, checked} = useContext(DarkModeContext) as DarkModeDataInterface;
+  const { theme, checked} = useContext(DarkModeContext) as DarkModeDataInterface;
 
   const {DarkLogo, LightLogo} = SpotOnEntepriseGifsAndLogos;
-
 
   return (
     <section id="hero" className=" change-transitions">
@@ -23,13 +22,13 @@ export default function Home(): JSX.Element {
         {checked ? (
           <MobileMenu />
         ) : (
-          <section className="laptop:relative">
+          <section className="duration-300 laptop:relative">
             {/* HEADER */}
             <header className="flex items-center justify-between px-2 pt-1 font-serif biggest:px-4 laptop:z-10 laptop:-mt-2 laptop:px-0">
               {/* Logo */}
 
               <img
-                src={toggleLogo ? DarkLogo : LightLogo}
+                src={theme ? DarkLogo : LightLogo}
                 className="h-12 w-44 brightness-150 contrast-200 change-transitions"
                 alt="SpotOnEnterprise Logo"
               />

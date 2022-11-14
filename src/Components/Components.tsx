@@ -12,13 +12,15 @@ import Footer from "./Layout/FooterSection/FooterSection";
 import MobileMenu from "../Components/Layout/Home/HomeComponents/MobileMenu";
 
 function Components(): JSX.Element {
-  const { darkMode, checked } = useContext(
+  const { checked } = useContext(
     DarkModeContext
   ) as DarkModeDataInterface;
 
+
+
   return (
-    <section className={darkMode ? "dark" : ""}>
-      <div className="space-y-4 tablet:space-y-12 laptop:space-y-12 dark:bg-darkMode dark:text-white scroll-smooth">
+    <section>
+      <div className="space-y-4 duration-300 ease-in-out tablet:space-y-12 laptop:space-y-12 dark:bg-darkMode dark:text-white scroll-smooth">
         {checked ? (
           <MobileMenu />
         ) : (

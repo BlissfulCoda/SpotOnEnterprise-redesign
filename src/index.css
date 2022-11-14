@@ -18,7 +18,7 @@
   }
 
   h3 {
-    @apply font-medium text-2xl tablet:text-3xl font-serif   font-bold opacity-90;
+    @apply font-medium text-2xl tablet:text-3xl font-serif   font-bold opacity-90 duration-500;
   }
 
   h4 {
@@ -55,7 +55,7 @@
 }
 
 .change-transitions {
-  @apply transition duration-1000 ease-in-out
+  @apply transition  duration-500 ease-in-out
 }
 
 .about-gif {

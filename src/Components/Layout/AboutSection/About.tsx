@@ -9,11 +9,11 @@ function About(): JSX.Element {
         <div className=" tablet:space-y-6">
           <div className="container mx-auto space-y-12 tablet:py-6 tablet:px-40 laptop:px-56 desktop:px-60 laptop:space-y-6 ">
             <div className="flex justify-center bg-center bg-cover h-28 ">
-              <h2 className="w-full h-full pt-8 text-transparent bg-white bg-center bg-cover text-9xl bg-clip-text bg-photo">
+              <h2 className="w-full h-full pt-8 text-transparent bg-white bg-center bg-cover text-9xl bg-clip-text bg-photo ">
                 A
               </h2>
             </div>
-            <p className="text-center sm:px-0 desktop:px-12">
+            <p className="text-center duration-500 sm:px-0 desktop:px-12">
               We are experienced in delivering a diversity of attractive
               products and quality design that ensure maximum client
               satifaction.
@@ -39,7 +39,7 @@ function About(): JSX.Element {
                       <div className="footer-border"></div>
                       <h3>SERVICES</h3>
                     </div>
-                    <p className="about-p">
+                    <p className="duration-500 about-p">
                       We design all our garments from scratch, using our
                       expertise to offer our clients affordable tailor-made
                       garments for special occasions, that are not at a premium

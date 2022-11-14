@@ -6,11 +6,11 @@ import DarkLogo from "../../assets/Logos/DarkLogo.png";
 import LightLogo from "../../assets/Logos/LightLogo.png";
 
 function FooterSection(): JSX.Element {
-  const { toggleLogo } = useContext(DarkModeContext) as DarkModeDataInterface;
+  const { theme } = useContext(DarkModeContext) as DarkModeDataInterface;
 
   const year: number = new Date().getUTCFullYear();
   return (
-    // FIXME: fix footer 
+    // FIXME: fix footer
     <section
       className=" border-t-[1px] py-4 space-y-6 laptop:space-y-10 desktop:space-y-12 "
       id="footer"
@@ -18,7 +18,7 @@ function FooterSection(): JSX.Element {
       <div className="flex flex-col max-w-sm px-4 pb-4 space-y-12 tablet:px-6 tablet:max-w-3xl tablet:space-y-6 tablet:space-x-6 tablet:py-4 tablet:space-y-0 tablet:flex-row laptop:space-x-28 laptop:max-w-5xl section-container">
         {/* LOGO  */}
         <img
-          src={toggleLogo ? DarkLogo : LightLogo}
+          src={theme ? DarkLogo : LightLogo}
           className="h-12 text-center w-44 brightness-150 contrast-200 change-transitions"
           alt="SpotOnEnterprise Logo"
         />
