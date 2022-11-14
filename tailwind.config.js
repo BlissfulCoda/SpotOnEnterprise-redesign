@@ -37,8 +37,17 @@ module.exports = {
         "3xl": "5px 5px 23px rgba(0, 0, 0, 0.2)",
       },
       backgroundImage: (theme) => ({
-        "photo": "url('../src/Components/assets/Images/HeroImage.png')",
+        photo: "url('../src/Components/assets/Images/HeroImage.png')",
       }),
+      animation: {
+        loader: "loader 1.5s ease-in-out forwards",
+      },
+      keyframes: {
+        loader: {
+          "0%": { transform: "scale(.5)" },
+          "100%": { transform: "scale(1.4)" },
+        },
+      },
     },
   },
   variants: {
