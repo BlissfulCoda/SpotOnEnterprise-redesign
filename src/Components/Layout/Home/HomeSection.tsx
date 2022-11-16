@@ -9,22 +9,23 @@ import MobileMenu from "./HomeComponents/MobileMenu";
 
 import { SpotOnEntepriseGifsAndLogos } from "../../../Data/ComponentData";
 
-
 export default function Home(): JSX.Element {
-  const { theme, checked} = useContext(DarkModeContext) as DarkModeDataInterface;
+  const { theme, checked } = useContext(
+    DarkModeContext
+  ) as DarkModeDataInterface;
 
-  const {DarkLogo, LightLogo} = SpotOnEntepriseGifsAndLogos;
+  const { DarkLogo, LightLogo } = SpotOnEntepriseGifsAndLogos;
 
   return (
     <section id="hero" className=" change-transitions">
-      <div className="relative h-screen px-2 py-3 section-container  overflow-hidden h-[930px] tablet:h-[650px] laptop:h-[800px] laptop:p-3 relative ">
+      <div className="relative h-screen py-5 section-container overflow-hidden h-[930px] tablet:h-[650px] laptop:h-[800px] laptop:p-4 desktop:p-6">
         <HamburgeMenu />
         {checked ? (
           <MobileMenu />
         ) : (
           <section className="duration-300 laptop:relative">
             {/* HEADER */}
-            <header className="flex items-center justify-between px-2 pt-1 font-serif biggest:px-4 laptop:z-20 laptop:-mt-2 laptop:px-0 laptop:absolute laptop:w-full">
+            <header className="flex items-center justify-between font-serif biggest:px-6 laptop:z-20 laptop:-mt-2 laptop:px-0 laptop:absolute laptop:w-full ">
               {/* Logo */}
 
               <img
@@ -33,7 +34,7 @@ export default function Home(): JSX.Element {
                 alt="SpotOnEnterprise Logo"
               />
               {/* MENU */}
-              <nav className="hidden h-10 pt-2 text-sm font-medium laptop:flex laptop:space-x-6 desktop:space-x-7 biggest:text-base laptop:px-6 laptop:">
+              <nav className="hidden h-10 pt-2 text-sm font-medium opacity-70 laptop:flex laptop:space-x-7 desktop:space-x-8 laptop:px-6 laptop:text-base">
                 <div className="group ">
                   <a href="#home" className="cursor-pointer">
                     Home
@@ -75,7 +76,6 @@ export default function Home(): JSX.Element {
                   +(44) 753 823 6771
                 </h4>
               </div>
-              {/* Hamberger Button */}
             </header>
 
             {/* MAIN SECTION */}

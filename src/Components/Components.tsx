@@ -38,7 +38,7 @@ function Components(): JSX.Element {
             <m.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 1, ease: "easeInOut"}}
+              transition={{ duration: 1, ease: "easeInOut" }}
             >
               <Home />
               <About />

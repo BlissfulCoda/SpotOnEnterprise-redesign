@@ -13,7 +13,7 @@ function About(): JSX.Element {
                 A
               </h2>
             </div>
-            <p className="text-center duration-500 sm:px-0 desktop:px-12">
+            <p className="text-center duration-500 sm:px-0 desktop:px-12 ">
               We are experienced in delivering a diversity of attractive
               products and quality design that ensure maximum client
               satifaction.

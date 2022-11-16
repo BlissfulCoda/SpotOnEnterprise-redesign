@@ -22,20 +22,20 @@
   }
 
   h4 {
-    @apply font-bold text-xl  laptop:text-base desktop:text-xl text-sm
+    @apply font-bold text-xl  laptop:text-base desktop:text-xl text-sm;
   }
 
   h5 {
-    @apply text-xs opacity-50 sm:text-[10px] desktop:text-sm
+    @apply text-xs opacity-50 sm:text-[10px] desktop:text-sm;
   }
 
   p {
-    @apply text-xs leading-6 tablet:leading-5 font-sans text-justify font-serif laptop:text-sm laptop:leading-6 opacity-60;
+    @apply text-xs leading-6 tablet:leading-5 font-sans text-justify font-serif laptop:text-sm laptop:leading-6 opacity-70 desktop:leading-7;
   }
 }
 
 .section-container {
-  @apply container sm:max-w-lg mx-auto max-w-7xl tablet:max-w-3xl laptop:max-w-5xl desktop:max-w-6xl biggest:max-w-7xl;
+  @apply container  mx-auto max-w-sm sm:max-w-md tablet:max-w-3xl laptop:max-w-5xl desktop:max-w-6xl biggest:max-w-7xl;
 }
 
 .grid-container {
@@ -47,29 +47,49 @@
 }
 
 .quotations {
-  @apply inline absolute bottom-3
+  @apply inline absolute bottom-3;
 }
 
 .footer-border {
-  @apply w-12 border-b-[1px] border-b-gray-900 opacity-50 mb-2 opacity-30
+  @apply w-12 border-b-[2px] border-b-gray-900 opacity-50 mb-2 opacity-30;
 }
 
 .change-transitions {
-  @apply transition  duration-500 ease-in-out
+  @apply transition  duration-500 ease-in-out;
 }
 
 .about-gif {
-  @apply h-8 w-8 tablet:w-5 tablet:h-5 tablet:hidden
+  @apply h-8 w-8 tablet:w-5 tablet:h-5 tablet:hidden;
 }
 
 .about-span {
-  @apply font-bold opacity-100
+  @apply font-bold opacity-100;
 }
 
 .footer-links {
-  @apply space-y-3
+  @apply space-y-5;
 }
 
 .footer-subheading {
-  @apply text-lg 
+  @apply text-lg;
+}
+
+.button {
+  @apply py-2 px-6 text-[11px] font-medium font-serif border  hover:scale-105 laptop:px-12 laptop:py-3 flex items-center justify-center border-none;
+}
+
+.gradient-bottom {
+  @apply bg-gradient-to-b from-transparent to-white;
+}
+
+.gradient-right {
+  @apply bg-gradient-to-r from-transparent to-white;
+}
+
+.gradient-left {
+  @apply bg-gradient-to-l from-transparent to-white;
+}
+
+.gradient-top {
+  @apply bg-gradient-to-t from-transparent to-white;
 }

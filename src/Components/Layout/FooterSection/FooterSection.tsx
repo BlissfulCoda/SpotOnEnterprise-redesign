@@ -12,10 +12,10 @@ function FooterSection(): JSX.Element {
   return (
     // FIXME: fix footer
     <section
-      className=" border-t-[1px] py-4 space-y-6 laptop:space-y-10 desktop:space-y-12 "
+      className="py-4 space-y-6 border border-t-slate-200 laptop:space-y-10 desktop:space-y-12 dark:border-t-slate-800"
       id="footer"
     >
-      <div className="flex flex-col max-w-sm px-4 pb-4 space-y-12 tablet:px-6 tablet:max-w-3xl tablet:space-y-6 tablet:space-x-6 tablet:py-4 tablet:space-y-0 tablet:flex-row laptop:space-x-28 laptop:max-w-5xl section-container">
+      <div className="flex flex-col max-w-sm px-4 pb-4 space-y-12 tablet:px-0 tablet:space-y-0 tablet:space-x-10 tablet:py-4 laptop:px-3 tablet:flex-row laptop:space-x-28 desktop:space-x-36 section-container">
         {/* LOGO  */}
         <img
           src={theme ? DarkLogo : LightLogo}
@@ -24,7 +24,7 @@ function FooterSection(): JSX.Element {
         />
 
         {/* lINKS CONTAINER*/}
-        <div className="flex flex-col px-2 py-4 space-y-12 tablet:flex-row tablet:space-y-0 tablet:space-x-16 laptop:space-x-24 tablet:w-full tablet:px-0 ">
+        <div className="flex flex-col px-2 py-4 space-y-12 tablet:flex-row tablet:space-y-0 tablet:space-x-16 laptop:space-x-24 tablet:w-full tablet:px-0 desktop:space-x-36">
           {/* Company */}
           <div className="space-y-6 socials tablet:space-y-6 laptop:space-y-6">
             <div className="space-y-2">
@@ -69,7 +69,7 @@ function FooterSection(): JSX.Element {
       </div>
 
       {/* Footer Rights */}
-      <h5 className="pt-4 text-center border-t-2 opacity-50 text-[8px] laptop:text-xs laptop:pt-6">
+      <h5 className="pt-4 text-center  opacity-50 text-[8px] laptop:text-xs laptop:pt-6">
         ©{year} Spot On Enterprise. All Rights Reserved.
       </h5>
     </section>

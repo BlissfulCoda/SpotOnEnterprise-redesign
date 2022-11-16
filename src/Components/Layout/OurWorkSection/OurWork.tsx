@@ -16,7 +16,7 @@ function OurWork(): JSX.Element {
       <div className="container mx-auto laptop:px-24 tablet:px-40 laptop:px-52">
         <h2>WHAT WE OFFER</h2>
       </div>
-      <section className="relative grid-container">
+      <section className="relative grid-container tablet:px-4">
         <img src={img2} alt="Image of a client" className="image" />
         <img
           src={img7}

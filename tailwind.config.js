@@ -38,14 +38,15 @@ module.exports = {
       },
       backgroundImage: (theme) => ({
         photo: "url('../src/Components/assets/Images/HeroImage.png')",
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
       }),
       animation: {
-        loader: "loader 1.5s ease-in-out forwards",
+        loader: "loader 1s ease-in-out forwards",
       },
       keyframes: {
         loader: {
-          "0%": { transform: "scale(.5)" },
-          "100%": { transform: "scale(1.4)" },
+          "0%": { transform: "scale(.6)" },
+          "100%": { transform: "scale(1.5)" },
         },
       },
     },

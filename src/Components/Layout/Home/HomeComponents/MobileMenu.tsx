@@ -1,3 +1,5 @@
+import { motion as m } from "framer-motion";
+
 import { useContext } from "react";
 import { DarkModeDataInterface } from "../../../../Data/DarkModeData";
 import DarkModeContext from "../../../../Context/DarkModeContext";
@@ -11,6 +13,8 @@ import {
 
 import HamburgeMenu from "../../Shared/HamburgeMenu";
 
+import TailorMade from "../../Shared/TailorMade";
+
 export default function MobileMenu(): JSX.Element {
   const { theme, handleChange, gif, handleNavRemove } = useContext(
     DarkModeContext
@@ -19,29 +23,31 @@ export default function MobileMenu(): JSX.Element {
   const { SPOTONENTERPRISE_INSTAGRAM, SPOTONENTERPRISE_LOCATION } =
     SpotOnEntepriseContact;
 
-  const { Night, DarkLogo, LightLogo, Instagram, Location, FingerPrint} =
+  const { Night, DarkLogo, LightLogo, Instagram, Location, FingerPrint } =
     SpotOnEntepriseGifsAndLogos;
 
   const year: number = new Date().getUTCFullYear();
 
-  
-
   return (
-    <section
+    <m.section
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1, ease: "easeInOut" }}
       id="mobile-menu"
-      className="container relative flex flex-col justify-center w-full h-screen mx-auto text-xl laptop:hidden section-container"
+      className="container relative flex flex-col justify-center w-full h-screen mx-auto laptop:hidden section-container"
     >
       <HamburgeMenu />
-      <div className="min-h-screen ">
+      <TailorMade />
+      <div className="min-h-screen p-2 ">
         <img
           src={theme ? DarkLogo : LightLogo}
-          className="absolute h-12 ml-2 w-44 brightness-150 contrast-200 change-transitions top-4 left-2"
+          className="absolute h-12 w-44 brightness-150 contrast-200 change-transitions top-6 left-1"
           alt="SpotOnEnterprise Logo"
         />
 
         <nav
           aria-label="mobile"
-          className="flex flex-col items-center space-y-3 opacity-90 py-28"
+          className="flex flex-col items-center py-24 space-y-3 text-base opacity-90"
         >
           <a
             href="#home"
@@ -80,10 +86,10 @@ export default function MobileMenu(): JSX.Element {
           </a>
           <div className="flex py-6 space-x-2 tablet:flex laptop:pr-0">
             <FaPhone
-              size={24}
+              size={20}
               className="text-yellow-400 delay-500 animate-pulse"
             />
-            <h4 className="text-lg text-bgPurple font-body">
+            <h4 className="text-base text-bgPurple font-body">
               +(44) 753 823 6771
             </h4>
           </div>
@@ -130,6 +136,6 @@ export default function MobileMenu(): JSX.Element {
           </h5>
         </div>
       </div>
-    </section>
+    </m.section>
   );
 }
