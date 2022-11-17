@@ -11,13 +11,13 @@ function Testimonials(): JSX.Element {
   return (
     <section
       id="testimonials"
-      className="px-3 py-8 mb-24 space-y-4 section-container tablet:px-16"
+      className="px-3 py-8 space-y-4 mb-28 section-container tablet:px-16 laptop:px-12 sm:px-0"
     >
       <div className="space-y-2">
         <h2>TESTIMONIALS</h2>
       </div>
 
-      <Card className="flex flex-col pr-1 space-y-2 shadow shadow-2xl tablet:flex-row section-container tablet:max-w-2xl laptop:max-w-4xl desktop:max-w-5xl tablet:h-full tablet:pr-0 ">
+      <Card className="flex flex-col pr-1 space-y-2 shadow shadow-2xl tablet:flex-row section-container tablet:max-w-2xl laptop:max-w-5xl desktop:max-w-5xl tablet:h-full tablet:pr-0 dark:shadow-gray-100/5">
         {/* LEFT SIDE */}
         <Card className="flex items-center justify-center w-full h-80 bg-[#071C3E] bg-zinc-20 rounded-br-3xl py-20 px-40 tablet:w-1/2 tablet:h-96 laptop:h-[460px] desktop:h-[480px] biggest:h-[520px]">
           {/* inner container */}
@@ -38,11 +38,11 @@ function Testimonials(): JSX.Element {
         {/* RIGHT SIDE - IMAGES + CUSTOMER FEEDBACK */}
         <Card className="w-full px-6 py-10 mx-auto tablet:w-1/2 tablet:p-4 desktop:p-4 ">
           <div className="px-2 tablet:px-14 tablet:py-12 laptop:px-20 laptop:py-20 desktop:px-24 desktop:py-24">
-            <div className=" pb-8 space-y-4 border-b-[1px] tablet:pb-4 tablet:space-y-2 laptop:pb-6 laptop:space-y-5">
+            <div className=" pb-8 space-y-4 border-b-[1px] tablet:pb-4 tablet:space-y-2 laptop:pb-6 laptop:space-y-5 dark:border-b-zinc-600">
               <h4 className="relative mx-auto text-lg leading-7 text-center tablet:text-[16px] laptop:text-xl desktop:text-2xl">
                 Dont Take Our Word For It..
               </h4>
-              <p className="font-sans text-[10px] leading-5 tracking-tight text-justify sm:text-xs opacity-40 sm:leading-6 tablet:text-[6px] tablet:leading-3 laptop:text-[8px] laptop:leading-4 biggest:leading-5  biggest:text-[10px]">
+              <p className="font-sans text-[9px] leading-5 tracking-tight text-justify sm:text-xs opacity-40 sm:leading-6 tablet:text-[6px] tablet:leading-3 laptop:text-[8px] laptop:leading-4 biggest:leading-5  biggest:text-[10px]">
                 Excellent tailoring. Neka and Turay are both very humble and
                 skilled at providing an excellent service. They offered the
                 right advice and the best way to approach the design i had in

@@ -17,7 +17,7 @@ export default function Home(): JSX.Element {
   const { DarkLogo, LightLogo } = SpotOnEntepriseGifsAndLogos;
 
   return (
-    <section id="hero" className=" change-transitions">
+    <section id="hero" className="mb-24 change-transitions">
       <div className="relative h-screen py-5 section-container overflow-hidden h-[930px] tablet:h-[650px] laptop:h-[800px] laptop:p-4 desktop:p-6">
         <HamburgeMenu />
         {checked ? (
@@ -34,7 +34,7 @@ export default function Home(): JSX.Element {
                 alt="SpotOnEnterprise Logo"
               />
               {/* MENU */}
-              <nav className="hidden h-10 pt-2 text-sm font-medium opacity-70 laptop:flex laptop:space-x-7 desktop:space-x-8 laptop:px-6 laptop:text-base">
+              <nav className="hidden h-10 pt-2 text-sm font-medium opacity-50 laptop:flex laptop:space-x-7 desktop:space-x-8 laptop:px-6 laptop:text-base">
                 <div className="group ">
                   <a href="#home" className="cursor-pointer">
                     Home

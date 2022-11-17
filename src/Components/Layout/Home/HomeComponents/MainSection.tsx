@@ -24,7 +24,7 @@ export default function MainSection(): JSX.Element {
 
   return (
     <div className="container mx-auto ">
-      <div className="absolute z-20 top-72 w-[460px] pl-8 sm:pl-14 tablet:pl-4 tablet:space-y-32 space-y-40 tablet:top-28 laptop:space-y-40 laptop:left-14 mx-10 desktop:left-14 biggest:left-20">
+      <div className="absolute z-20 top-72 w-[460px] pl-6 sm:pl-14 tablet:pl-4 tablet:space-y-32 space-y-40 tablet:top-28 laptop:space-y-40 laptop:left-14 mx-10 desktop:left-14 biggest:left-20">
         <div className="space-y-20 tablet:space-y-12 laptop:space-y-16 ">
           <div className="flex flex-col space-y-3 sm:px-4 tablet:px-0 tablet:space-y-0 sm:space-y-3 tablet:space-y-4 laptop:space-y-7">
             {/* text - white: small - screen */}
@@ -44,9 +44,9 @@ export default function MainSection(): JSX.Element {
             </div>
 
             {/*  small - screen */}
-            <p className="text-white  tablet:hidden tablet:flex font-serif tracking-normal text-sm w-[210px] leading-5 opacity-80">
-              Specialiaties in producing bespoke, custom made garments for every
-              special occasion.
+            <p className="text-white  tablet:hidden tablet:flex font-serif tracking-tighter text-sm w-[210px] leading-5 opacity-80">
+              We Specialise in producing bespoke, custom made garments for every
+              special occasion, with the best customer service next to none.
             </p>
             {/* tablet - screen */}
             <p
@@ -70,7 +70,7 @@ export default function MainSection(): JSX.Element {
             <a
               href="#work"
               type="button"
-              className="duration-500 bg-white rounded-tl-full shadow cursor-pointer button tablet:text-xs rounded-bl-3xl shadow-3xl dark:shadow-gray-100/5 dark:bg-transparent dark:border-slate-500 "
+              className="duration-500 bg-white rounded-tl-full shadow cursor-pointer button tablet:text-xs rounded-bl-3xl shadow-3xl dark:shadow-gray-100/20 dark:bg-darkMode dark:border-slate-500 "
             >
               View Collection
             </a>
