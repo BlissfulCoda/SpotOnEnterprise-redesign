@@ -67,7 +67,7 @@ export default function Home(): JSX.Element {
                 </div>
               </nav>
               {/* PHONE */}
-              <div className="flex hidden pr-16 space-x-2 tablet:flex laptop:pr-0">
+              <div className="flex hidden pr-16 space-x-2 tablet:flex laptop:pr-0 tablet:border tablet:bg-transparent tablet:rounded-full tablet:py-4 dark:tablet:border-slate-600 tablet:px-4 tablet:pr-3 tablet:items-center tablet:justify-center laptop:pr-4">
                 <FaPhone
                   size={18}
                   className="text-yellow-400 delay-500 animate-pulse"
