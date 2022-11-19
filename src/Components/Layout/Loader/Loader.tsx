@@ -1,4 +1,3 @@
-
 import { useContext } from "react";
 import { DarkModeDataInterface } from "../../../Data/DarkModeData";
 import DarkModeContext from "../../../Context/DarkModeContext";

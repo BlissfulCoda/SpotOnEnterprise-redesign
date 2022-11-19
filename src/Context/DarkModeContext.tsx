@@ -41,32 +41,31 @@ export function DarkModeProvider({
   // Change Gif
   const toggleGif = () => SetGif(!gif);
 
+  // GET THEM FROM LOCALSTORAGE ON PAGE LOAD
   useEffect(() => {
     const preference = localStorage.getItem("theme");
     if (preference) {
       setTheme(JSON.parse(preference));
     }
-    setFlag(true)
-  }, [])
+    setFlag(true);
+  }, []);
 
-
-
+  // SAVE THEM IN LOCAL STORAGE
   useEffect(() => {
     if (flag) {
       localStorage.setItem("theme", JSON.stringify(theme));
-      root.classList.toggle("dark", theme)
+      root.classList.toggle("dark", theme);
     }
   }, [theme, flag]);
 
   // Change Gif, Logo, DarkMode
   const handleChange = () => {
-    console.log(root);
     if (!theme) {
       root.classList.add("dark");
       setTheme(true);
     } else {
       root.classList.remove("dark");
-      setTheme(false)
+      setTheme(false);
     }
   };
 

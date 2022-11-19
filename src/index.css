@@ -41,7 +41,7 @@
 }
 
 .image {
-  @apply tablet:object-cover w-full h-full hover:cursor-pointer rounded-lg shadow-lg;
+  @apply tablet:object-cover w-full h-full hover:cursor-pointer rounded-lg shadow-lg hover:scale-105 duration-500;
 }
 
 .quotations {
@@ -65,7 +65,7 @@
 }
 
 .footer-links {
-  @apply space-y-3 tablet:space-y-2;
+  @apply space-y-4 tablet:space-y-2;
 }
 
 .footer-subheading {
@@ -93,5 +93,9 @@
 }
 
 .dark-color {
-  @apply dark:bg-darkMode
+  @apply dark:bg-[#080F22]
+}
+
+.form-input-title {
+  @apply text-[10px]
 }

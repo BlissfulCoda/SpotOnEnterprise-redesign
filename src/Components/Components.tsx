@@ -1,18 +1,19 @@
 import { motion as m } from "framer-motion";
 
+
 import { useContext, useState, useEffect } from "react";
 import { DarkModeDataInterface } from "../Data/DarkModeData";
 import DarkModeContext from "../Context/DarkModeContext";
 
 import Loader from "./Layout/Loader/Loader";
 import Home from "./Layout/Home/HomeSection";
-import About from "../Components/Layout/AboutSection/About";
-import OurWork from "../Components/Layout/OurWorkSection/OurWork";
-import Testimonials from "../Components/Layout/TestimonialSection/Testimonials";
-import Contact from "../Components/Layout/ContactSection/Contact";
+import About from "./Layout/AboutSection/About";
+import OurWork from "./Layout/OurWorkSection/OurWork";
+import Testimonials from "./Layout/TestimonialSection/Testimonials";
+import Contact from "./Layout/ContactSection/Contact";
 import Footer from "./Layout/FooterSection/FooterSection";
 
-import MobileMenu from "../Components/Layout/Home/HomeComponents/MobileMenu";
+import MobileMenu from "./Layout/Home/HomeComponents/MobileMenu";
 
 function Components(): JSX.Element {
   const { checked } = useContext(DarkModeContext) as DarkModeDataInterface;

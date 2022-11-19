@@ -17,42 +17,65 @@ function OurWork(): JSX.Element {
         <h2>WHAT WE OFFER</h2>
       </div>
       <section className="relative grid-container tablet:px-4 laptop:px-12 desktop:px-16">
-        <img src={img2} alt="Image of a client" className="image" />
-        <img
-          src={img7}
-          alt="Image of a client in our clothes"
-          className="image"
-        />
-        <img
-          src={img4}
-          alt="Image of a client in our clothes"
-          className="image"
-        />
-        <img
-          src={img3}
-          alt="Image of a client in our clothes"
-          className="image"
-        />
-        <img
-          src={img1}
-          alt="Image of a client in our clothes"
-          className="image"
-        />
-        <img
-          src={img5}
-          alt="Image of a client in our clothes"
-          className="object-left image"
-        />
-        <img
-          src={img6}
-          alt="Image of a client in our clothes"
-          className="image"
-        />
-        <img
-          src={img8}
-          alt="Image of a client in our clothes"
-          className="image"
-        />
+        <div className="">
+          <img src={img2} alt="Image of a client" className="image" />
+        </div>
+        <div className="">
+          <img
+            loading="lazy"
+            src={img7}
+            alt="Image of a client in our clothes"
+            className="image"
+          />
+        </div>
+        <div className="">
+          <img
+            loading="lazy"
+            src={img4}
+            alt="Image of a client in our clothes"
+            className="image"
+          />
+        </div>
+        <div className="">
+          <img
+            loading="lazy"
+            src={img3}
+            alt="Image of a client in our clothes"
+            className="image"
+          />
+        </div>
+        <div className="">
+          <img
+            loading="lazy"
+            src={img1}
+            alt="Image of a client in our clothes"
+            className="image"
+          />
+        </div>
+        <div className="">
+          <img
+            loading="lazy"
+            src={img5}
+            alt="Image of a client in our clothes"
+            className="object-left image"
+          />
+        </div>
+        <div className="">
+          <img
+            loading="lazy"
+            src={img6}
+            alt="Image of a client in our clothes"
+            className="image"
+          />
+        </div>
+        <div className="bg-green-300">
+          <img
+            loading="lazy"
+            src={img8}
+            alt="Image of a client in our clothes"
+            className="image"
+          />
+        </div>
       </section>
     </section>
   );

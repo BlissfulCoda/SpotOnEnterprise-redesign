@@ -19,7 +19,7 @@ function FooterSection(): JSX.Element {
   const year: number = new Date().getUTCFullYear();
   return (
     <section
-      className="py-4 space-y-6 bg-zinc-50 laptop:space-y-10 desktop:space-y-12 dark:bg-transparent dark:border dark:border-t-slate-800"
+      className="py-4 space-y-6 shadow shadow-2xl laptop:space-y-10 desktop:space-y-12 dark:bg-transparent border-t-slate-100 dark:border dark:border-t-slate-800 bg-zinc-50 dark:border-b-none dark:border-x-0"
       id="footer"
     >
       <div className="flex flex-col max-w-sm px-4 py-3 pb-4 space-y-12 tablet:px-0 tablet:space-y-0 tablet:space-x-10 tablet:py-4 laptop:px-3 tablet:flex-row laptop:space-x-28 desktop:space-x-36 section-container">
