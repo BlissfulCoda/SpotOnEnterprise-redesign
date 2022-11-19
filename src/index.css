@@ -73,7 +73,7 @@
 }
 
 .button {
-  @apply py-2 px-6 text-[11px] font-medium font-serif border  hover:scale-105 laptop:px-9 laptop:py-3 flex items-center justify-center border-none;
+  @apply py-2 px-6 text-[11px] font-medium font-serif border  hover:scale-105 laptop:px-10 laptop:py-3 flex items-center justify-center border-none;
 }
 
 .gradient-bottom {

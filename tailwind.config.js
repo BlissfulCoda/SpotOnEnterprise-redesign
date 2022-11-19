@@ -26,7 +26,7 @@ module.exports = {
       },
       colors: {
         bgPurple: "#E635ED",
-        darkMode: "rgb(7 16 35)",
+        darkMode: "rgb(7 16 34)",
       },
 
       backgroundColor: {
