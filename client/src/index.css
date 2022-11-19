@@ -93,5 +93,9 @@
 }
 
 .dark-color {
-  @apply dark:bg-darkMode
+  @apply dark:bg-[#080F22]
+}
+
+.form-input-title {
+  @apply text-[10px]
 }

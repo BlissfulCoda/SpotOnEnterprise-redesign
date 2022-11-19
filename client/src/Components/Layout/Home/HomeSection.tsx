@@ -1,3 +1,5 @@
+
+
 import { useContext } from "react";
 import { DarkModeDataInterface } from "../../../Data/DarkModeData";
 import DarkModeContext from "../../../Context/DarkModeContext";
@@ -67,12 +69,12 @@ export default function Home(): JSX.Element {
                 </div>
               </nav>
               {/* PHONE */}
-              <div className="flex hidden pr-16 space-x-2 tablet:flex laptop:pr-0 tablet:border tablet:bg-transparent tablet:rounded-full tablet:py-4 dark:tablet:border-slate-600 tablet:px-4 tablet:pr-3 tablet:items-center tablet:justify-center laptop:pr-4">
+              <div className="flex hidden pr-16 space-x-2 tablet:flex laptop:pr-0 laptop:border tablet:bg-transparent tablet:rounded-full tablet:py-4 dark:laptop:border-slate-700 laptop:px-4 laptop:pr-3 laptop:items-center laptop:justify-center laptop:pr-4">
                 <FaPhone
                   size={18}
                   className="text-yellow-400 delay-500 animate-pulse"
                 />
-                <h4 className="text-sm text-bgPurple font-body ">
+                <h4 className="text-sm text-bgPurple font-body">
                   +(44) 753 823 6771
                 </h4>
               </div>
