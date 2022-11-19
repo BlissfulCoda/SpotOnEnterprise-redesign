@@ -70,7 +70,7 @@ export default function MainSection(): JSX.Element {
             <a
               href="#work"
               type="button"
-              className="duration-500 bg-white rounded-tl-full shadow cursor-pointer button tablet:text-xs rounded-bl-3xl shadow-3xl dark:shadow-gray-100/10 dark-color dark:border-slate-500 dark:bg-transparent"
+              className="duration-500 bg-white rounded-tl-full shadow cursor-pointer button tablet:text-xs rounded-bl-3xl shadow-3xl dark:shadow-gray-100/10 dark-color dark:border-slate-600 dark:bg-transparent"
             >
               View Collection
             </a>
