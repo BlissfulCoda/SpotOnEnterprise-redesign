@@ -37,7 +37,11 @@
 }
 
 .grid-container {
-  @apply grid gap-2 tablet:grid-cols-2 laptop:grid-cols-4 sm:max-w-lg mx-auto tablet:max-w-2xl laptop:p-12 laptop:max-w-5xl desktop:max-w-6xl biggest:max-w-7xl;
+  @apply grid gap-2 tablet:grid-cols-2 laptop:grid-cols-4 sm:max-w-lg mx-auto tablet:max-w-2xl laptop:p-12 laptop:max-w-5xl desktop:max-w-6xl biggest:max-w-7xl hidden tablet:grid;
+}
+
+.product-image {
+  @apply absolute
 }
 
 .image {
