@@ -34,7 +34,7 @@ export default function MobileMenu(): JSX.Element {
       animate={{ opacity: 1 }}
       transition={{ duration: 1, ease: "easeInOut" }}
       id="mobile-menu"
-      className="container relative flex flex-col justify-center w-full h-screen mx-auto laptop:hidden section-container"
+      className="container relative flex flex-col justify-center w-full h-screen mx-auto laptop:hidden section-container "
     >
       <HamburgeMenu />
       <TailorMade />

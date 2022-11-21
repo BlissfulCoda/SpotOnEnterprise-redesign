@@ -1,146 +1,90 @@
-import img1 from "../../assets/Images/img-1.png";
-import img2 from "../../assets/Images/img-2.png";
-import img3 from "../../assets/Images/img-3.png";
-import img4 from "../../assets/Images/img-4.png";
-import img5 from "../../assets/Images/img-5.png";
-import img6 from "../../assets/Images/img-6.png";
-import img7 from "../../assets/Images/img-7.png";
-import img8 from "../../assets/Images/img-8.png";
+import { useState, useEffect } from "react";
+
+import { FaAngleLeft } from "react-icons/fa";
+import { motion, useSpring, useTransform } from "framer-motion";
+import { AiOutlineClose } from "react-icons/ai";
+import { ImageList } from "../../../Data/ComponentData";
 
 function OurWork(): JSX.Element {
+  const x = useSpring(0, { stiffness: 900, damping: 150 });
+  const width = useTransform(x, [-2850, 0], [342, 0]);
+  const scale = useTransform(x, [-100, 0], [1.15, 1]);
+  const fadeIn = useTransform(x, [-100, 1], [0.5, 0]);
+  // state
+  const [state, setState] = useState<boolean>(false);
+
+  useEffect(() => {
+    // change state when dragged on x - axis is pass -100px
+    x.onChange(() => {
+      x.get() > -100 ? setState(false) : setState(true);
+    });
+  }, [x]);
+
   return (
     <section
       id="work"
-      className="container px-6 py-12 mx-auto mb-24 space-y-6 duration-1000 tablet:px-0 sm:p-2 laptop:-space-y-4 biggest:max-w-6xl " 
+      className="container px-6 py-12 mx-auto mb-12 space-y-4 duration-1000 tablet:px-0 sm:p-2 laptop:-space-y-4 biggest:max-w-6xl"
     >
       <div className="container mx-auto tablet:px-40 laptop:px-56">
         <h2>WHAT WE OFFER</h2>
       </div>
-      {/* MOBILE */}
-      <section className="relative flex space-x-3 overflow-hidden h-96 tablet:hidden">
-        <div className="">
-          <img src={img2} alt="Image of a client" className="image" />
-        </div>
-        <div className="">
-          <img
-            loading="lazy"
-            src={img7}
-            alt="Image of a client in our clothes"
-            className="image"
-          />
-        </div>
-        <div className="">
-          <img
-            loading="lazy"
-            src={img4}
-            alt="Image of a client in our clothes"
-            className="image"
-          />
-        </div>
-        <div className="">
-          <img
-            loading="lazy"
-            src={img3}
-            alt="Image of a client in our clothes"
-            className="image"
-          />
-        </div>
-        <div className="">
-          <img
-            loading="lazy"
-            src={img1}
-            alt="Image of a client in our clothes"
-            className="image"
-          />
-        </div>
-        <div className="">
-          <img
-            loading="lazy"
-            src={img5}
-            alt="Image of a client in our clothes"
-            className="object-left image"
-          />
-        </div>
-        <div className="">
-          <img
-            loading="lazy"
-            src={img6}
-            alt="Image of a client in our clothes"
-            className="image"
-          />
-        </div>
-        <div className="bg-green-300">
-          <img
-            loading="lazy"
-            src={img8}
-            alt="Image of a client in our clothes"
-            className="image"
-          />
-        </div>
-      </section>
 
-      {/* LARGE SCREENS */}
-      <section className="relative grid-container tablet:px-4 laptop:px-12 desktop:px-16 ">
-        <div className="">
-          <img src={img2} alt="Image of a client" className="image" />
+      {/* BACKGROUND CONTAINER */}
+      <div className="relative">
+        {/* BACKGROUND */}
+        <motion.div
+        style={{ opacity: fadeIn }}
+          className="background"
+        ></motion.div>
+        <div className="drag-header">
+          <div className="logo">SpotOnEnterprise</div>
+          <div className="close">
+            <AiOutlineClose />
+          </div>
         </div>
-        <div className="">
-          <img
-            loading="lazy"
-            src={img7}
-            alt="Image of a client in our clothes"
-            className="image"
-          />
+
+        {/* IMAGE CONTAINER */}
+        <div className="w-[4000px] relative h-[490px] tablet:w-full tablet:h-full ">
+          <motion.div
+            transition={{
+              x: { duration: 0.5 },
+              default: { ease: "linear" },
+            }}
+            style={{ x, scale }}
+            drag={"x"}
+            dragConstraints={{ left: -2850, right: 0 }}
+            dragElastic={0.05}
+            className="duration-200 grid-container"
+          >
+            {ImageList.map((image) => (
+              <div key={image.id}>
+                <img
+                  src={image.imageUrl}
+                  alt={image.alt}
+                  className={image.version}
+                />
+              </div>
+            ))}
+          </motion.div>
         </div>
-        <div className="">
-          <img
-            loading="lazy"
-            src={img4}
-            alt="Image of a client in our clothes"
-            className="image"
-          />
+        {/* PROGRESS BAR CONTAINER */}
+        <div className="space-y-2 sm:px-3">
+          <div className="flex items-center justify-end mb-4 space-x-1">
+            <FaAngleLeft className="text-bgPurple" />
+            <h5 className="font-black text-right opacity-100">
+              Drag To Enlarge
+            </h5>
+          </div>
+
+          {/* PROGESS BAR */}
+          <div className="drag-progress-background tablet:hidden ">
+            <motion.div
+              style={{ width }}
+              className="drag-progress tablet:hidden"
+            ></motion.div>
+          </div>
         </div>
-        <div className="">
-          <img
-            loading="lazy"
-            src={img3}
-            alt="Image of a client in our clothes"
-            className="image"
-          />
-        </div>
-        <div className="">
-          <img
-            loading="lazy"
-            src={img1}
-            alt="Image of a client in our clothes"
-            className="image"
-          />
-        </div>
-        <div className="">
-          <img
-            loading="lazy"
-            src={img5}
-            alt="Image of a client in our clothes"
-            className="object-left image"
-          />
-        </div>
-        <div className="">
-          <img
-            loading="lazy"
-            src={img6}
-            alt="Image of a client in our clothes"
-            className="image"
-          />
-        </div>
-        <div className="">
-          <img
-            loading="lazy"
-            src={img8}
-            alt="Image of a client in our clothes"
-            className="image"
-          />
-        </div>
-      </section>
+      </div>
     </section>
   );
 }

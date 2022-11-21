@@ -18,17 +18,15 @@
   }
 
   h3 {
-    @apply font-medium text-2xl tablet:text-2xl font-serif font-bold opacity-90 duration-500;
+    @apply font-medium text-2xl tablet:text-2xl font-serif font-bold  duration-500;
   }
 
- 
-
   h5 {
-    @apply text-xs opacity-50 desktop:text-sm;
+    @apply text-xs desktop:text-sm;
   }
 
   p {
-    @apply text-xs leading-6 tablet:leading-5 font-sans text-justify font-serif laptop:text-sm laptop:leading-6 opacity-60 desktop:leading-7 dark:opacity-70;
+    @apply text-xs leading-6 tablet:leading-5 font-sans text-justify font-serif laptop:text-sm laptop:leading-6  opacity-60 desktop:leading-7 dark:opacity-70;
   }
 }
 
@@ -36,16 +34,40 @@
   @apply container  mx-auto max-w-sm sm:max-w-md tablet:max-w-3xl laptop:max-w-5xl desktop:max-w-6xl biggest:max-w-7xl;
 }
 
+/* IMAGE CONTAINER */
 .grid-container {
-  @apply grid gap-2 tablet:grid-cols-2 laptop:grid-cols-4 sm:max-w-lg mx-auto tablet:max-w-2xl laptop:p-12 laptop:max-w-5xl desktop:max-w-6xl biggest:max-w-7xl hidden tablet:grid;
+  @apply tablet:gap-2 tablet:grid-cols-2 laptop:grid-cols-4 sm:max-w-lg mx-auto tablet:max-w-2xl laptop:p-12 laptop:max-w-5xl desktop:max-w-6xl biggest:max-w-7xl flex flex-row tablet:grid tablet:px-4 laptop:px-12 desktop:px-16  w-[4000px] h-[430px] tablet:w-full tablet:h-full tablet:static absolute z-30 space-x-3;
 }
 
-.product-image {
-  @apply absolute
+/* BACKGROUND  */
+.background {
+  @apply fixed h-screen w-full bg-[#636363]  top-0 left-0 bottom-0 z-30 opacity-0 overflow-y-hidden;
+}
+
+/* DRAG-HEADER */
+.drag-header {
+  @apply w-full box-border flex items-center justify-between fixed z-30 top-10 py-2 px-4 opacity-0;
+}
+
+
+/* CLOSE */
+.close {
+  @apply text-white text-2xl font-semibold flex items-end absolute right-0 h-2 w-32 justify-center;
+}
+
+
+/* PROGRESS CONTAINER */
+.drag-progress-background {
+  @apply w-full h-1 bg-slate-100 relative tablet:hidden dark:bg-slate-600;
+}
+
+/* PROGRESS LENGTH */
+.drag-progress {
+  @apply w-0 h-1 bg-slate-400 absolute z-10 right-0 tablet:hidden dark:bg-slate-700;
 }
 
 .image {
-  @apply tablet:object-cover w-full h-full hover:cursor-pointer rounded-lg shadow-lg hover:scale-105 duration-500;
+  @apply tablet:object-cover w-full h-full hover:cursor-pointer rounded-lg shadow-lg;
 }
 
 .quotations {
@@ -53,7 +75,7 @@
 }
 
 .footer-border {
-  @apply w-12 border-b-[2px] border-b-gray-900 opacity-50 mb-2 opacity-30 dark:border-b-gray-300;
+  @apply w-12 border-b-[2px] border-b-gray-900 mb-2  dark:border-b-gray-300;
 }
 
 .change-transitions {
@@ -97,9 +119,9 @@
 }
 
 .dark-color {
-  @apply dark:bg-[#080F22]
+  @apply dark:bg-[#080F22];
 }
 
 .form-input-title {
-  @apply text-[10px]
+  @apply text-[10px];
 }

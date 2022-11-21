@@ -6,6 +6,89 @@ import Night from "../Components/assets/Gifs/Night.gif";
 import Instagram from "../Components/assets/Gifs/Instagram.gif";
 import FingerPrint from "../Components/assets/Gifs/Fingerprint.gif";
 
+// images 
+import img1 from "../Components/assets/Images/img-1.png";
+import img2 from "../Components/assets/Images/img-2.png";
+import img3 from "../Components/assets/Images/img-3.png";
+import img4 from "../Components/assets/Images/img-4.png";
+import img5 from "../Components/assets/Images/img-5.png";
+import img6 from "../Components/assets/Images/img-6.png";
+import img7 from "../Components/assets/Images/img-7.png";
+import img8 from "../Components/assets/Images/img-8.png";
+
+// IMAGES
+
+
+export interface ImageInterface {
+  id: number;
+  imageUrl?: string;
+  alt: string;
+  version: string;
+  loading: string;
+}
+
+export const ImageList: ImageInterface[] = [
+  {
+    id: 1,
+    imageUrl: img2,
+    alt: "Celebration Event Image",
+    version: "image",
+    loading: "lazy",
+  },
+  {
+    id: 2,
+    imageUrl: img7,
+    alt: "Celebration Event Image",
+    version: "image",
+    loading: "lazy",
+  },
+  {
+    id: 3,
+    imageUrl: img4,
+    alt: "Celebration Event Image",
+    version: "image",
+    loading: "lazy",
+  },
+  {
+    id: 4,
+    imageUrl: img3,
+    alt: "Celebration Event Image",
+    version: "image",
+    loading: "lazy",
+  },
+  {
+    id: 5,
+    imageUrl: img1,
+    alt: "Celebration Event Image",
+    version: " image",
+    loading: "lazy",
+  },
+  {
+    id: 6,
+    imageUrl: img5,
+    alt: "Celebration Event Image",
+    version: "image object-left",
+    loading: "lazy",
+  },
+  {
+    id: 7,
+    imageUrl: img6,
+    alt: "Celebration Event Image",
+    version: "image",
+    loading: "lazy",
+  },
+  {
+    id: 8,
+    imageUrl: img8,
+    alt: "Celebration Event Image",
+    version: "image",
+    loading: "lazy",
+  },
+];
+
+
+
+// ICONS
 interface SpotOnEntepriseContactInterface {
   SPOTONENTERPRISE_INSTAGRAM: string;
   SPOTONENTERPRISE_LOCATION: string;
@@ -26,6 +109,7 @@ interface SpotOnEntepriseGifsAndLogosInterface {
   LightLogo: string;
 }
 
+// logos
 export const SpotOnEntepriseGifsAndLogos: SpotOnEntepriseGifsAndLogosInterface =
   {
     DarkLogo,
