@@ -13,7 +13,8 @@ import {
   AnimatePresence,
 } from "framer-motion";
 import { AiOutlineClose } from "react-icons/ai";
-import { ImageList } from "../../../Data/ComponentData";
+
+import ImageContainer from "./ImageContainer";
 
 function OurWork(): JSX.Element {
   const { theme } = useContext(DarkModeContext) as DarkModeDataInterface;
@@ -23,21 +24,20 @@ function OurWork(): JSX.Element {
   // Framer Motion setings
   const x = useSpring(0, { stiffness: 600, damping: 100 });
   const width = useTransform(x, [-2850, 0], [342, 0]);
-  const scale = useTransform(x, [-100, 0], [1.15, 1]);
-  const fadeIn = useTransform(x, [-100, 0], [1, 0]);
-  const fadeOut = useTransform(x, [-60, 0], [0, 1]);
+  const scale = useTransform(x, [-100, 0], [1.25, 1]);
+  const fadeIn = useTransform(x, [-120, 0], [1, 0]);
+  const fadeOut = useTransform(x, [-20, 0], [0, 1]);
   const up = useTransform(x, [-100, 0], [-100, 0]);
   // state
   const [state, setState] = useState<boolean>(false);
 
   // overflow
   let targetElement = document.querySelector("html");
-  console.log(targetElement)
 
   useEffect(() => {
-    // change state when dragged on x - axis is pass -100px
+    // change state when dragged on x - axis is pass
     x.onChange(() => {
-      x.get() > -100 ? setState(false) : setState(true);
+      x.get() > -40 ? setState(false) : setState(true);
     });
   }, [x]);
 
@@ -52,6 +52,7 @@ function OurWork(): JSX.Element {
     x.stop();
     x.set(0);
   };
+
   return (
     <section
       id="work"
@@ -101,32 +102,25 @@ function OurWork(): JSX.Element {
           <motion.div
             transition={{
               x: { duration: 0.5 },
-              default: { ease: "linear" },
+              default: { ease: [1, 0.06, -0.06, 0.99] },
             }}
             style={{ x, scale }}
             drag={"x"}
             dragConstraints={{ left: -2850, right: 0 }}
             dragElastic={0.05}
-            className="duration-200 grid-container"
+            className=" grid-container"
           >
-            {ImageList.map((image) => (
-              <div key={image.id}>
-                <img
-                  src={image.imageUrl}
-                  alt={image.alt}
-                  className={image.version}
-                />
-              </div>
-            ))}
+            <ImageContainer />
           </motion.div>
         </div>
+
         {/* PROGRESS BAR CONTAINER */}
-        <div className="space-y-2 sm:px-3">
+        <div className="max-w-sm mx-auto space-y-2 sm:px-2 sm:max-w-md ">
           <motion.div
             style={{ opacity: fadeOut, x }}
-            className="flex items-center justify-end mb-4 space-x-1"
+            className="flex items-center justify-end mb-4 space-x-2 animate-bounce "
           >
-            <FaAngleLeft className="text-bgPurple" />
+            <FaAngleLeft className="text-bgPurple animate-ping" />
             <h5 className="font-black text-right ">Drag To Explore</h5>
           </motion.div>
 
