@@ -39,31 +39,33 @@
   @apply tablet:gap-2 tablet:grid-cols-2 laptop:grid-cols-4 sm:max-w-lg mx-auto tablet:max-w-2xl laptop:p-12 laptop:max-w-5xl desktop:max-w-6xl biggest:max-w-7xl flex flex-row tablet:grid tablet:px-4 laptop:px-12 desktop:px-16  w-[4000px] h-[430px] tablet:w-full tablet:h-full tablet:static absolute z-30 space-x-3;
 }
 
-/* BACKGROUND  */
 .background {
-  @apply fixed h-screen w-full bg-[#636363]  top-0 left-0 bottom-0 z-30 opacity-0 overflow-y-hidden;
+  @apply fixed h-screen w-full bg-zinc-50 top-0 left-0 bottom-0 z-30 opacity-0 will-change-transform overflow-y-hidden;
 }
 
 /* DRAG-HEADER */
 .drag-header {
-  @apply w-full box-border flex items-center justify-between fixed z-30 top-10 py-2 px-4 opacity-0;
+  @apply w-full box-border flex items-center justify-between fixed z-30 top-5 py-2  opacity-100;
 }
-
 
 /* CLOSE */
 .close {
-  @apply text-white text-2xl font-semibold flex items-end absolute right-0 h-2 w-32 justify-center;
+  @apply dark:text-white text-3xl font-semibold flex items-center absolute right-0 h-2 w-32 justify-center;
 }
-
 
 /* PROGRESS CONTAINER */
 .drag-progress-background {
-  @apply w-full h-1 bg-slate-100 relative tablet:hidden dark:bg-slate-600;
+  @apply w-full h-[1px] bg-slate-300 relative tablet:hidden dark:bg-slate-600 z-30;
 }
 
 /* PROGRESS LENGTH */
 .drag-progress {
-  @apply w-0 h-1 bg-slate-400 absolute z-10 right-0 tablet:hidden dark:bg-slate-700;
+  @apply w-0 h-[1px] bg-slate-400 absolute z-30 right-0 tablet:hidden dark:bg-slate-700;
+}
+
+/* NO SCROLL WHILE DRAG IS ACTIVE */
+.no-scroll {
+  @apply overflow-y-hidden;
 }
 
 .image {
