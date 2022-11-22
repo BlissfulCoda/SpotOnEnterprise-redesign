@@ -35,17 +35,22 @@
 }
 
 /* IMAGE CONTAINER */
-.grid-container {
-  @apply tablet:gap-2 tablet:grid-cols-2 laptop:grid-cols-4 sm:max-w-lg mx-auto tablet:max-w-2xl laptop:p-12 laptop:max-w-5xl desktop:max-w-6xl biggest:max-w-7xl flex flex-row tablet:grid tablet:px-4 laptop:px-12 desktop:px-16  w-[4000px] h-[430px] tablet:w-full tablet:h-full tablet:static absolute z-30 space-x-3 duration-100 ;
+.image-container {
+  @apply w-[3000px] relative h-[510px] sm:h-[600px];
 }
 
-.background {
-  @apply fixed h-screen w-full bg-zinc-50 top-0 left-0 bottom-0 z-30 opacity-0 will-change-transform overflow-y-hidden;
+/* GRID CONTAINER */
+.grid-container {
+  @apply tablet:gap-2 tablet:space-x-1 laptop:space-x-0 tablet:grid-cols-2 tablet:grid tablet:px-2 laptop:grid-cols-4 mx-auto tablet:max-w-2xl laptop:p-12 laptop:max-w-5xl desktop:max-w-6xl biggest:max-w-7xl flex flex-row laptop:px-12 desktop:px-16 w-[4000px] h-[460px] sm:h-[550px] tablet:w-full tablet:h-full tablet:static absolute z-30 space-x-3 duration-100 hover:cursor-pointer;
+}
+
+.image {
+  @apply tablet:object-cover w-full h-full  rounded-2xl tablet:rounded-lg ;
 }
 
 /* DRAG-HEADER */
 .drag-header {
-  @apply w-full box-border flex items-center justify-between fixed z-30 top-5 py-2  opacity-100;
+  @apply w-full box-border flex items-center justify-between fixed z-30 top-5 py-2  opacity-0;
 }
 
 /* CLOSE */
@@ -55,7 +60,12 @@
 
 /* PROGRESS CONTAINER */
 .drag-progress-background {
-  @apply w-full h-[1px] bg-slate-300 relative tablet:hidden dark:bg-slate-600 z-30;
+  @apply w-full h-[1px] bg-slate-200 relative tablet:hidden dark:bg-slate-800 z-30;
+}
+
+/* IMAGE CONTAINER OVERLAY */
+.background {
+  @apply fixed h-screen w-full bg-zinc-50 dark:bg-slate-900 top-0 left-0 bottom-0 z-30 opacity-0 will-change-transform overflow-y-hidden tablet:hidden;
 }
 
 /* PROGRESS LENGTH */
@@ -66,10 +76,6 @@
 /* NO SCROLL WHILE DRAG IS ACTIVE */
 .no-scroll {
   @apply overflow-y-hidden;
-}
-
-.image {
-  @apply tablet:object-cover w-full h-full hover:cursor-pointer rounded-lg ;
 }
 
 .quotations {

@@ -21,7 +21,6 @@ export default function Home(): JSX.Element {
   return (
     <section id="hero" className="mb-24 change-transitions">
       <div className="relative h-screen py-5 section-container overflow-hidden h-[930px] tablet:h-[650px] laptop:h-[800px] laptop:p-4 desktop:p-6">
-        <HamburgeMenu />
         {checked ? (
           <MobileMenu />
         ) : (
@@ -84,6 +83,8 @@ export default function Home(): JSX.Element {
             <MainSection />
           </section>
         )}
+        
+        <HamburgeMenu />
       </div>
     </section>
   );

@@ -23,10 +23,15 @@ function OurWork(): JSX.Element {
 
   // Framer Motion setings
   const x = useSpring(0, { stiffness: 600, damping: 100 });
-  const width = useTransform(x, [-2850, 0], [342, 0]);
+  const START_INDEX: number = -3300;
+
+  const scrollYPosition = window.scrollY >= 1760 && window.scrollY <= 1860;
+
+  // MOTION - TRANSFORMS
+  const width = useTransform(x, [START_INDEX, 0], [346, 0]);
   const scale = useTransform(x, [-100, 0], [1.25, 1]);
-  const fadeIn = useTransform(x, [-120, 0], [1, 0]);
-  const fadeOut = useTransform(x, [-20, 0], [0, 1]);
+  const fadeIn = useTransform(x, [-100, 0], [1, 0]);
+  const fadeOut = useTransform(x, [-100, 0], [0, 1]);
   const up = useTransform(x, [-100, 0], [-100, 0]);
   // state
   const [state, setState] = useState<boolean>(false);
@@ -37,7 +42,7 @@ function OurWork(): JSX.Element {
   useEffect(() => {
     // change state when dragged on x - axis is pass
     x.onChange(() => {
-      x.get() > -40 ? setState(false) : setState(true);
+      x.get() > -100 ? setState(false) : setState(true);
     });
   }, [x]);
 
@@ -53,10 +58,24 @@ function OurWork(): JSX.Element {
     x.set(0);
   };
 
+  const [scrollPosition, setScrollPosition] = useState(0);
+
+  const handleScroll = () => {
+    const position = window.scrollY;
+    setScrollPosition(position);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [scrollPosition]);
   return (
     <section
       id="work"
-      className="container px-6 py-12 mx-auto mb-20 space-y-4 space-y-6 duration-1000 tablet:px-0 sm:p-2 laptop:-space-y-4 biggest:max-w-6xl"
+      className="container px-6 py-12 mx-auto mb-20 space-y-4 duration-1000 sm:p-2 laptop:-space-y-4 biggest:max-w-6xl"
     >
       <motion.div
         style={{ translateY: up }}
@@ -65,8 +84,8 @@ function OurWork(): JSX.Element {
         <h2>WHAT WE OFFER</h2>
       </motion.div>
 
-      {/* BACKGROUND CONTAINER */}
-      <div className="relative">
+      {/* MOBILE CONTAINER */}
+      <div className="relative tablet:hidden">
         <motion.div
           style={{ opacity: fadeIn }}
           className={state ? "background" : "hidden"}
@@ -89,8 +108,8 @@ function OurWork(): JSX.Element {
                 alt="SpotOnEnterprise Logo"
                 className="w-40 h-12"
               />
-              <div className="close">
-                <AiOutlineClose onClick={handleCloseDrag} />
+              <div className=" close">
+                <AiOutlineClose className="" onClick={handleCloseDrag} />
               </div>
             </motion.div>
           </AnimatePresence>
@@ -98,32 +117,64 @@ function OurWork(): JSX.Element {
           <AnimatePresence></AnimatePresence>
         )}
         {/* IMAGE CONTAINER */}
-        <div className="w-[4000px] relative h-[490px] tablet:w-full tablet:h-full ">
-          <motion.div
-            transition={{
-              x: { duration: 0.5 },
-              default: { ease: [1, 0.06, -0.06, 0.99] },
-            }}
-            style={{ x, scale }}
-            drag={"x"}
-            dragConstraints={{ left: -2850, right: 0 }}
-            dragElastic={0.05}
-            className=" grid-container"
-          >
-            <ImageContainer />
-          </motion.div>
+        <div
+          className={scrollYPosition ? "image-container -ml-3" : "image-container"}
+        >
+          {scrollYPosition ? (
+            <motion.div
+              transition={{
+                x: { duration: 0.5 },
+                default: { ease: [1, 0.06, -0.06, 0.99] },
+              }}
+              style={{ x, scale }}
+              drag={"x"}
+              dragConstraints={{ left: START_INDEX, right: 0 }}
+              dragElastic={0.07}
+              className=" tablet:hidden grid-container"
+            >
+              <motion.div
+                style={{ x }}
+                drag={"x"}
+                dragConstraints={{ left: START_INDEX, right: 0 }}
+                dragElastic={0.07}
+                className="absolute top-0 bottom-0 left-0  z-40 w-[5800px] sm:w-[6300px] h-full tablet:hidden  opacity-0 duration-400"
+              ></motion.div>
+              <ImageContainer />
+            </motion.div>
+          ) : (
+            <motion.div className="grid-container">
+              <ImageContainer />
+            </motion.div>
+          )}
         </div>
 
         {/* PROGRESS BAR CONTAINER */}
-        <div className="max-w-sm mx-auto space-y-2 sm:px-2 sm:max-w-md ">
+        <div className="max-w-xs mx-auto space-y-2 sm:px-2 sm:max-w-md tablet:hidden">
           <motion.div
             style={{ opacity: fadeOut, x }}
-            className="flex items-center justify-end mb-4 space-x-2 animate-bounce "
+            className={
+              scrollYPosition
+                ? "flex items-center justify-end mb-4 space-x-2 duration-500 animate-bounce"
+                : "flex items-center justify-end mb-4 space-x-2"
+            }
           >
-            <FaAngleLeft className="text-bgPurple animate-ping" />
-            <h5 className="font-black text-right ">Drag To Explore</h5>
+            <FaAngleLeft
+              className={
+                scrollYPosition
+                  ? "text-bgPurple animate-ping opacity-100 duration-500"
+                  : "text-bgPurple opacity-20"
+              }
+            />
+            <h5
+              className={
+                scrollYPosition
+                  ? "font-black text-right opacity-100 duration-500 "
+                  : "font-black text-right opacity-20 text-[9px] duration-500"
+              }
+            >
+              Drag To Explore
+            </h5>
           </motion.div>
-
           {/* PROGESS BAR */}
           <div className="drag-progress-background tablet:hidden ">
             <motion.div
@@ -132,6 +183,11 @@ function OurWork(): JSX.Element {
             ></motion.div>
           </div>
         </div>
+      </div>
+
+      {/* TABLET & UP */}
+      <div className="hidden tablet:grid">
+        <ImageContainer />
       </div>
     </section>
   );
