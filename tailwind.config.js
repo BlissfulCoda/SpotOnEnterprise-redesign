@@ -42,14 +42,20 @@ module.exports = {
       }),
       animation: {
         loader: "loader 1s ease-in-out forwards",
+        // animation
+        wave: "wave 3s infinite both",
       },
       keyframes: {
         loader: {
           "0%": { transform: "scale(.6)" },
           "100%": { transform: "scale(1.5)" },
-          wiggle: {
-            "0%, 100%": { transform: "rotate(-3deg)" },
-            "50%": { transform: "rotate(3deg)" },
+        },
+        wave: {
+          "0%, 100%": {
+            transform: "translateX(0%)",
+          },
+          "50%": {
+            transform: "translateX(2px) rotate(40deg)",
           },
         },
       },

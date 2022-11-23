@@ -1,6 +1,5 @@
 import { RiDoubleQuotesR } from "react-icons/ri";
 
-
 import Card from "../Shared/Card";
 
 import img1 from "../../assets/Images/img-1.png";
@@ -26,7 +25,7 @@ function Testimonials(): JSX.Element {
             <div className="absolute rounded-full w-9 h-9 bg-emerald-300 -top-4 -left-6 opacity-10 laptop:h-10 laptop:w-10 la desktop:h-12 desktop:w-12 desktop:-top-6 desktop:-left-7"></div>
             {/* ICON */}
             <RiDoubleQuotesR
-              className="absolute text-green-400 -top-1 -left-2"
+              className="absolute text-green-400 -top-1 -left-2 animate-ping"
               size={9}
             />
             <h3 className="text-2xl font-bold leading-8 tracking-wide text-left laptop:text-3xl desktop:text-4xl desktop:leading-tight">

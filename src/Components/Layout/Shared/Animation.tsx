@@ -80,7 +80,7 @@ export const Animations = {
       },
     },
   },
-  // Main Heading
+  // Main Heading - Dark
   darkTitle: {
     hidden: {
       y: "90%",
@@ -93,10 +93,11 @@ export const Animations = {
     visible: {
       opacity: 1,
       y: 0,
+      color: ["black", "white"],
       transition: {
         ease: [0.455, 0.03, 0.515, 0.955],
         duration: 1,
-        delay: 2.3,
+        delay: 2,
       },
     },
   },
@@ -143,7 +144,7 @@ export const Animations = {
     },
   },
 
-  // links
+  // socials
   socials: {
     hidden: {
       y: "90%",
@@ -193,7 +194,7 @@ export const Animations = {
       },
     },
     visible: {
-      opacity: 0.06,
+      opacity: 0.08,
       transition: {
         ease: [0.455, 0.03, 0.515, 0.955],
         duration: 3,
@@ -220,9 +221,8 @@ export const Animations = {
       opacity: 1,
       transition: {
         ease: [0.455, 0.03, 0.515, 0.955],
-        duration: 3
+        duration: 3,
       },
     },
   },
 };
-

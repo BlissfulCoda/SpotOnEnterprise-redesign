@@ -156,21 +156,14 @@ function OurWork(): JSX.Element {
             style={{ opacity: fadeOut, x }}
             className={
               scrollYPosition
-                ? "flex items-center justify-end mb-4 space-x-2 duration-500 animate-bounce"
+                ? "flex items-center justify-end mb-4 space-x-2 duration-500"
                 : "flex items-center justify-end mb-4 space-x-2"
             }
           >
-            {/* <FaAngleLeft
-              className={
-                scrollYPosition
-                  ? "text-bgPurple animate-ping opacity-100 duration-500"
-                  : "text-bgPurple opacity-20"
-              }
-            /> */}
             <div
               className={
                 scrollYPosition
-                  ? "text-bgPurple animate-wiggle w-min opacity-100 duration-500"
+                  ? "text-bgPurple animate-wave w-min opacity-100 duration-500 text-xl"
                   : "text-bgPurple opacity-20"
               }
             >
@@ -179,7 +172,7 @@ function OurWork(): JSX.Element {
             <h5
               className={
                 scrollYPosition
-                  ? "font-black text-right opacity-100 duration-500 "
+                  ? "font-black text-right opacity-100 duration-500 animate-pulse "
                   : "font-black text-right opacity-20 text-[9px] duration-500"
               }
             >

@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useContext, useState } from "react";
 import { DarkModeDataInterface } from "../../../../Data/DarkModeData";
 import DarkModeContext from "../../../../Context/DarkModeContext";
-import {Animations} from '../../Shared/Animation'
+import { Animations } from "../../Shared/Animation";
 
 import BespokeGarments from "../../Shared/BespokeGarments";
 import MainImage from "./MainImage";
@@ -25,24 +25,33 @@ export default function MainSection(): JSX.Element {
   const SPOTONENTERPRISE_LOCATION =
     "https://www.google.com/maps/place/111+East+St,+London/@51.4890573,-0.0916229,17z/data=!4m5!3m4!1s0x4876036188999255:0xc28bbd3db39f349c!8m2!3d51.4890403!4d-0.0916112";
 
-    // State
-    const [showImage, setShowImage] = useState<boolean>(false)
+  // State
+  const [showImage, setShowImage] = useState<boolean>(false);
 
   return (
     <div className="container mx-auto ">
-      <div className="absolute z-20 top-72 w-[460px] pl-6 sm:pl-10 tablet:pl-4 tablet:space-y-32 space-y-40 tablet:top-28 laptop:space-y-40 laptop:left-14 mx-10 desktop:left-14 biggest:left-20">
+      <div className="absolute z-20 top-[300px] w-[460px] pl-6 sm:pl-10 tablet:pl-4 tablet:space-y-32 space-y-40 tablet:top-28 laptop:space-y-40 laptop:left-14 mx-10 desktop:left-14 biggest:left-20">
         <div className="space-y-20 tablet:space-y-12 laptop:space-y-10 ">
           <motion.div
             variants={Animations.container}
             className="flex flex-col space-y-3 sm:px-4 tablet:px-0 sm:space-y-3 tablet:space-y-6 laptop:space-y-12"
           >
-            {/* text - white: small - screen */}
+            {/* SMALL - white: small - screen */}
             <BespokeGarments
               styling="tablet:hidden text-white max-w-xs font-serif text-[55px] font-semibold leading-9"
               title="Bespoke Garments"
             />
 
-            {/* text - black: large - screen */}
+            {/*  SMALL - screen */}
+            <motion.p
+              variants={Animations.subtitle}
+              className="text-white  tablet:hidden tablet:flex font-serif tracking-tight text-sm w-[210px] leading-5 opacity-80"
+            >
+              We Specialise in producing bespoke, custom made garments for every
+              special occasion, with the best customer service next to none.
+            </motion.p>
+
+            {/* LARGE - black: large - screen */}
             <BespokeGarments
               styling="hidden max-w-xs tablet:flex font-serif text-[55px] font-medium tablet:font-black tablet:text-7xl tablet:leading-[30px] 
               laptop:text-8xl  
@@ -50,15 +59,7 @@ export default function MainSection(): JSX.Element {
               title="Bespoke Garments"
             />
 
-            {/*  small - screen */}
-            <motion.p
-              variants={Animations.subtitle}
-              className="text-white  tablet:hidden tablet:flex font-serif tracking-tighter text-sm w-[210px] leading-5 opacity-80"
-            >
-              We Specialise in producing bespoke, custom made garments for every
-              special occasion, with the best customer service next to none.
-            </motion.p>
-            {/* tablet - screen */}
+            {/* LARGE - screen */}
             <motion.p
               variants={Animations.subtitle}
               className="hidden tablet:flex font-light tablet:leading-4 tablet:flex tablet:w-3/4 text-justify  laptop:w-[390px] laptop:leading-5  desktop:w-[450px] desktop:text-base font-serif desktop:leading-6 biggest:w-[450px]
@@ -92,7 +93,8 @@ export default function MainSection(): JSX.Element {
         </div>
 
         {/* Social Media */}
-        <motion.div onAnimationComplete={() => setShowImage(true)}
+        <motion.div
+          onAnimationComplete={() => setShowImage(true)}
           variants={Animations.socials}
           className="flex justify-between hidden w-24 space-x-2 tablet:flex tablet:pl-0 laptop:flex "
         >
