@@ -22,7 +22,7 @@ function FooterSection(): JSX.Element {
     >
       <div className="flex flex-col mx-auto tablet:flex-row ">
         {/* NAVIGATION */}
-        <div className="flex flex-col items-center inner-footer tablet:w-1/3 tablet:bg-zinc-100 dark-color tablet:dark:bg-slate-900">
+        <div className="flex flex-col items-center inner-footer tablet:w-1/3 tablet:bg-zinc-50 dark-color tablet:dark:bg-slate-900">
           <h3 className="footer-subheader">NAVIGATION</h3>
           <div className="footer-subcontainer">
             <a href="#home" className="footer-link">
@@ -44,7 +44,7 @@ function FooterSection(): JSX.Element {
         </div>
 
         {/* SOCIALS */}
-        <div className=" inner-footer bg-zinc-100 tablet:w-1/3 tablet:bg-white dark:bg-slate-900 tablet:dark:bg-darkMode">
+        <div className=" inner-footer bg-zinc-50 tablet:w-1/3 tablet:bg-white dark:bg-slate-900 tablet:dark:bg-darkMode">
           {/* LOGO  */}
           <h3 className="footer-subheader">CONTACT</h3>
           <div className="flex flex-col items-center footer-subcontainer">
@@ -79,7 +79,7 @@ function FooterSection(): JSX.Element {
         </div>
 
         {/* COMPANY */}
-        <div className="inner-footer tablet:w-1/3 tablet:bg-zinc-100 dark-color tablet:dark:bg-slate-900">
+        <div className="inner-footer tablet:w-1/3 tablet:bg-zinc-50 dark-color tablet:dark:bg-slate-900">
           <h3 className="footer-subheader">COMPANY</h3>
           <div className="mb-16 footer-subcontainer">
             <h5 className="footer-link">111C East Street Walworth</h5>

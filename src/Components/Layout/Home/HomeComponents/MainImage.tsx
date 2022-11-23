@@ -1,17 +1,11 @@
-import { delay, motion } from "framer-motion";
+import { motion } from "framer-motion";
+import {Animations} from '../../Shared/Animation'
 
 import HeroImage from "../../../assets/Images/HeroImage.png";
 
 export default function MainImage(): JSX.Element {
   return (
-    <motion.div
-      initial={{ opacity: "0%" }}
-      animate={{
-        opacity: "100%",
-        transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: 2.3, delay: 2.5 },
-      }}
-      className="relative"
-    >
+    <motion.div variants={Animations.picture} className="relative">
       <img
         src={HeroImage}
         alt="Hero Image"

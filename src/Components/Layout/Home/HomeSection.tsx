@@ -1,4 +1,4 @@
-import { motion, useTransform } from "framer-motion";
+import { motion} from "framer-motion";
 import { useContext } from "react";
 import { DarkModeDataInterface } from "../../../Data/DarkModeData";
 import DarkModeContext from "../../../Context/DarkModeContext";
