@@ -18,7 +18,7 @@
   }
 
   h3 {
-    @apply font-medium text-2xl tablet:text-2xl font-serif font-bold  duration-500;
+    @apply font-medium text-2xl tablet:text-2xl font-serif font-bold  duration-500 mb-2;
   }
 
   h5 {
@@ -45,7 +45,7 @@
 }
 
 .image {
-  @apply tablet:object-cover w-full h-full  rounded-2xl tablet:rounded-lg ;
+  @apply tablet:object-cover w-full h-full  rounded-2xl tablet:rounded-lg;
 }
 
 /* DRAG-HEADER */
@@ -82,10 +82,6 @@
   @apply inline absolute bottom-3;
 }
 
-.footer-border {
-  @apply w-12 border-b-[2px] border-b-gray-900 mb-2  dark:border-b-gray-300;
-}
-
 .change-transitions {
   @apply transition  duration-500 ease-in-out;
 }
@@ -98,16 +94,8 @@
   @apply font-bold opacity-100;
 }
 
-.footer-links {
-  @apply space-y-4 tablet:space-y-2;
-}
-
-.footer-subheading {
-  @apply text-base;
-}
-
 .button {
-  @apply py-2 px-6 text-[11px] font-medium font-serif border  hover:scale-105 laptop:px-10 laptop:py-3 flex items-center justify-center border-none;
+  @apply py-2 px-6 text-[11px] font-medium font-serif border hover:scale-105 laptop:px-10 laptop:py-3 flex items-center justify-center border-none;
 }
 
 .gradient-bottom {
@@ -132,4 +120,25 @@
 
 .form-input-title {
   @apply text-[10px];
+}
+
+/* FOOTER */
+.footer-border {
+  @apply w-12 border-b-[2px] border-b-gray-900 mb-2 dark:border-b-gray-300;
+}
+
+.inner-footer {
+  @apply text-center py-8 tablet:py-14;
+}
+
+.footer-subheader {
+  @apply text-xl mb-6 opacity-80 tracking-wider tablet:mb-6 tablet:text-sm;
+}
+
+.footer-subcontainer {
+  @apply space-y-4 flex flex-col opacity-70 py-3 tablet:space-y-3;
+}
+
+.footer-link {
+  @apply text-[9px];
 }

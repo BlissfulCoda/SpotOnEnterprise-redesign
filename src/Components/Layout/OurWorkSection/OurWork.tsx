@@ -137,7 +137,7 @@ function OurWork(): JSX.Element {
                 drag={"x"}
                 dragConstraints={{ left: START_INDEX, right: 0 }}
                 dragElastic={0.07}
-                className="absolute top-0 bottom-0 left-0  z-40 w-[5800px] sm:w-[6300px] h-full tablet:hidden  opacity-0 duration-400"
+                className="absolute top-0 bottom-0 left-0  z-40 w-[5800px] sm:w-[6600px] h-full tablet:hidden  opacity-0 duration-400"
               ></motion.div>
               <ImageContainer />
             </motion.div>

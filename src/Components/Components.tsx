@@ -32,14 +32,14 @@ function Components(): JSX.Element {
       {loading ? (
         <Loader />
       ) : (
-        <div className="space-y-4 overflow-hidden text-black ease-in-out bg-white tablet:space-y-12 laptop:space-y-16 dark:bg-darkMode dark:text-white scroll-smooth">
+        <div className="space-y-6 overflow-hidden text-black ease-in-out bg-white tablet:space-y-12 laptop:space-y-16 dark:bg-darkMode dark:text-white scroll-smooth">
           {checked ? (
             <MobileMenu />
           ) : (
             <m.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 1, ease: "easeInOut" }}
+              transition={{ duration: 1.4, ease: "easeInOut" }}
             >
               <Home />
               <About />

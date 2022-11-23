@@ -33,12 +33,12 @@ function About(): JSX.Element {
               {/* SERVICES */}
               <div className="space-y-12 tablet:w-4/5">
                 <div className="py-6 space-y-4 tablet:p-6">
-                  <div className="space-y-8 tablet:space-y-6 ">
+                  <div className="space-y-3 tablet:space-y-6 ">
                     <div className="flex flex-col ">
                       <div className="footer-border"></div>
                       <h3>SERVICES</h3>
                     </div>
-                    <p className="duration-500 about-p">
+                    <p className="duration-500 ">
                       We design all our garments from scratch, using our
                       expertise to offer our clients affordable tailor-made
                       garments for special occasions, that are not at a premium

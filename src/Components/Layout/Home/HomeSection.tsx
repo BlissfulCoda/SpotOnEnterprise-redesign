@@ -1,5 +1,4 @@
-
-
+import { motion, useTransform } from "framer-motion";
 import { useContext } from "react";
 import { DarkModeDataInterface } from "../../../Data/DarkModeData";
 import DarkModeContext from "../../../Context/DarkModeContext";
@@ -18,8 +17,18 @@ export default function Home(): JSX.Element {
 
   const { DarkLogo, LightLogo } = SpotOnEntepriseGifsAndLogos;
 
+  //  ANIMATIONS
+
   return (
-    <section id="hero" className="mb-24 change-transitions">
+    <section id="home" className="mb-24 change-transitions bg-zinc-100">
+      {/* <motion.div
+        initial={{ height: "100%" }}
+        animate={{
+          height: "0%",
+          transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: 2.2 },
+        }}
+        className="absolute z-40 w-full h-screen bg-black"
+      ></motion.div> */}
       <div className="relative h-screen py-5 section-container overflow-hidden h-[930px] tablet:h-[650px] laptop:h-[800px] laptop:p-4 desktop:p-6">
         {checked ? (
           <MobileMenu />
@@ -29,7 +38,16 @@ export default function Home(): JSX.Element {
             <header className="flex items-center justify-between font-serif biggest:px-6 laptop:z-20 laptop:-mt-2 laptop:px-0 laptop:absolute laptop:w-full ">
               {/* Logo */}
 
-              <img
+              <motion.img 
+                initial={{ opacity: "0%" }}
+                animate={{
+                  opacity: "100%",
+                  transition: {
+                    ease: [0.455, 0.03, 0.515, 0.955],
+                    duration: 1.1,
+                    delay: .3,
+                  },
+                }}
                 src={theme ? DarkLogo : LightLogo}
                 className="h-12 w-44 brightness-150 contrast-200 change-transitions"
                 alt="SpotOnEnterprise Logo"
@@ -83,7 +101,7 @@ export default function Home(): JSX.Element {
             <MainSection />
           </section>
         )}
-        
+
         <HamburgeMenu />
       </div>
     </section>
