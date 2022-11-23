@@ -118,7 +118,9 @@ function OurWork(): JSX.Element {
         )}
         {/* IMAGE CONTAINER */}
         <div
-          className={scrollYPosition ? "image-container -ml-3" : "image-container"}
+          className={
+            scrollYPosition ? "image-container -ml-3" : "image-container"
+          }
         >
           {scrollYPosition ? (
             <motion.div
@@ -158,13 +160,22 @@ function OurWork(): JSX.Element {
                 : "flex items-center justify-end mb-4 space-x-2"
             }
           >
-            <FaAngleLeft
+            {/* <FaAngleLeft
               className={
                 scrollYPosition
                   ? "text-bgPurple animate-ping opacity-100 duration-500"
                   : "text-bgPurple opacity-20"
               }
-            />
+            /> */}
+            <div
+              className={
+                scrollYPosition
+                  ? "text-bgPurple animate-wiggle w-min opacity-100 duration-500"
+                  : "text-bgPurple opacity-20"
+              }
+            >
+              👆
+            </div>
             <h5
               className={
                 scrollYPosition

@@ -6,7 +6,7 @@ import Night from "../Components/assets/Gifs/Night.gif";
 import Instagram from "../Components/assets/Gifs/Instagram.gif";
 import FingerPrint from "../Components/assets/Gifs/Fingerprint.gif";
 
-// images 
+// images
 import img1 from "../Components/assets/Images/img-1.png";
 import img2 from "../Components/assets/Images/img-2.png";
 import img3 from "../Components/assets/Images/img-3.png";
@@ -16,9 +16,48 @@ import img6 from "../Components/assets/Images/img-6.png";
 import img7 from "../Components/assets/Images/img-7.png";
 import img8 from "../Components/assets/Images/img-8.png";
 
+// NAV LINKS
+export interface NavLinkInterface {
+  id: number;
+  title: string;
+  href: string;
+  styling: string;
+}
+
+export const HomeNav: NavLinkInterface[] = [
+  {
+    id: 1,
+    title: "Home",
+    href: "#home",
+    styling: "cursor-pointer",
+  },
+  {
+    id: 2,
+    title: "About",
+    href: "#about",
+    styling: "cursor-pointer",
+  },
+  {
+    id: 3,
+    title: "Work",
+    href: "#work",
+    styling: "cursor-pointer",
+  },
+  {
+    id: 4,
+    title: "Testimonials",
+    href: "#testimonials",
+    styling: "cursor-pointer",
+  },
+  {
+    id: 5,
+    title: "Contact",
+    href: "#contact",
+    styling: "cursor-pointer",
+  },
+];
+
 // IMAGES
-
-
 export interface ImageInterface {
   id: number;
   imageUrl?: string;
@@ -86,8 +125,6 @@ export const ImageList: ImageInterface[] = [
   },
 ];
 
-
-
 // ICONS
 interface SpotOnEntepriseContactInterface {
   SPOTONENTERPRISE_INSTAGRAM: string;
@@ -119,7 +156,6 @@ export const SpotOnEntepriseGifsAndLogos: SpotOnEntepriseGifsAndLogosInterface =
     Night,
     FingerPrint,
   };
-
 
 export interface Testimonial {
   id: number;

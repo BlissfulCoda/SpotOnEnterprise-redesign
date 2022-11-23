@@ -47,6 +47,10 @@ module.exports = {
         loader: {
           "0%": { transform: "scale(.6)" },
           "100%": { transform: "scale(1.5)" },
+          wiggle: {
+            "0%, 100%": { transform: "rotate(-3deg)" },
+            "50%": { transform: "rotate(3deg)" },
+          },
         },
       },
     },
