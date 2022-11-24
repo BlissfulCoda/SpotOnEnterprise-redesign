@@ -20,7 +20,6 @@ export default function BespokeGarments({
   words.map((words) => {
     return words.push("\u00A0");
   });
-  console.log(words);
 
   return (
     <>

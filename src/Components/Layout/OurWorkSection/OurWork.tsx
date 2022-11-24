@@ -23,7 +23,7 @@ function OurWork(): JSX.Element {
 
   // Framer Motion setings
   const x = useSpring(0, { stiffness: 600, damping: 100 });
-  const START_INDEX: number = -3300;
+  const START_INDEX: number = -3000;
 
   const scrollYPosition = window.scrollY >= 1760 && window.scrollY <= 1860;
 

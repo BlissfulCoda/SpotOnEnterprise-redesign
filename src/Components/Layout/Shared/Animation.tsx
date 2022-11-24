@@ -113,7 +113,7 @@ export const Animations = {
       },
     },
     visible: {
-      opacity: 0.7,
+      opacity: 0.9,
       y: 0,
       transition: {
         ease: [0.455, 0.03, 0.515, 0.955],

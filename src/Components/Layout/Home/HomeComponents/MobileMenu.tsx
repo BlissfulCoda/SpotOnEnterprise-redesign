@@ -47,44 +47,44 @@ export default function MobileMenu(): JSX.Element {
 
         <nav
           aria-label="mobile"
-          className="flex flex-col items-center py-24 space-y-3 text-base opacity-90"
+          className="flex flex-col items-center py-20 space-y-3 text-base opacity-90"
         >
           <a
             href="#home"
-            className="w-full py-6 text-center hover-opacity-90"
+            className="w-full py-4 text-center hover-opacity-90"
             onClick={handleNavRemove}
           >
             Home
           </a>
           <a
             href="#about"
-            className="w-full py-6 text-center hover-opacity-90"
+            className="w-full py-4 text-center hover-opacity-90"
             onClick={handleNavRemove}
           >
             About
           </a>
           <a
             href="#work"
-            className="w-full py-6 text-center hover-opacity-90"
+            className="w-full py-4 text-center hover-opacity-90"
             onClick={handleNavRemove}
           >
             Work
           </a>
           <a
             href="#testimonials"
-            className="w-full py-6 text-center hover-opacity-90"
+            className="w-full py-4 text-center hover-opacity-90"
             onClick={handleNavRemove}
           >
             Testimonials
           </a>
           <a
             href="#contact"
-            className="w-full py-6 text-center hover-opacity-90"
+            className="w-full py-4 text-center hover-opacity-90"
             onClick={handleNavRemove}
           >
             Contact
           </a>
-          <div className="flex py-6 space-x-2 tablet:flex laptop:pr-0">
+          <div className="flex py-4 space-x-2 tablet:flex laptop:pr-0">
             <FaPhone
               size={20}
               className="text-yellow-400 delay-500 animate-pulse"

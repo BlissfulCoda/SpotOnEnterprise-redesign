@@ -30,7 +30,7 @@ export default function MainSection(): JSX.Element {
 
   return (
     <div className="container mx-auto ">
-      <div className="absolute z-20 top-[300px] w-[460px] pl-6 sm:pl-10 tablet:pl-4 tablet:space-y-32 space-y-40 tablet:top-28 laptop:space-y-40 laptop:left-14 mx-10 desktop:left-14 biggest:left-20">
+      <div className="absolute z-20 top-[260px] w-[460px] pl-12 sm:pl-16 tablet:pl-4 tablet:space-y-32 space-y-40 tablet:top-28 laptop:space-y-40 laptop:left-14 mx-10 desktop:left-14 biggest:left-20">
         <div className="space-y-20 tablet:space-y-12 laptop:space-y-10 ">
           <motion.div
             variants={Animations.container}
@@ -38,14 +38,14 @@ export default function MainSection(): JSX.Element {
           >
             {/* SMALL - white: small - screen */}
             <BespokeGarments
-              styling="tablet:hidden text-white max-w-xs font-serif text-[55px] font-semibold leading-9"
+              styling="tablet:hidden text-white max-w-xs font-serif text-5xl font-semibold leading-7"
               title="Bespoke Garments"
             />
 
             {/*  SMALL - screen */}
             <motion.p
               variants={Animations.subtitle}
-              className="text-white  tablet:hidden tablet:flex font-serif tracking-tight text-sm w-[210px] leading-5 opacity-80"
+              className="text-white pt-2 tablet:hidden tablet:flex font-serif tracking-tighter w-[190px] leading-4"
             >
               We Specialise in producing bespoke, custom made garments for every
               special occasion, with the best customer service next to none.
