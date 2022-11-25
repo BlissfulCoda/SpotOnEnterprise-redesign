@@ -12,7 +12,7 @@ function About(): JSX.Element {
                 A
               </h2>
             </div>
-            <p className="text-center duration-500 sm:px-0 desktop:px-12 ">
+            <p className="text-center duration-500 sm:px-0 desktop:px-12 opacity-60">
               We are experienced in delivering a diversity of attractive
               products and quality design that ensure maximum client
               satifaction.
@@ -38,7 +38,7 @@ function About(): JSX.Element {
                       <div className="footer-border"></div>
                       <h3>SERVICES</h3>
                     </div>
-                    <p className="duration-500 ">
+                    <p className="duration-500 opacity-60">
                       We design all our garments from scratch, using our
                       expertise to offer our clients affordable tailor-made
                       garments for special occasions, that are not at a premium

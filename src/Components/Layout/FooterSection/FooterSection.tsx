@@ -74,7 +74,9 @@ function FooterSection(): JSX.Element {
             </div>
 
             {/* EMAIL */}
-            <h5 className="footer-link">info.SpotOnEnterprise@gmail.com</h5>
+            <h5 className="footer-link animate-bounce">
+              info.SpotOnEnterprise@gmail.com
+            </h5>
           </div>
         </div>
 
@@ -87,7 +89,7 @@ function FooterSection(): JSX.Element {
             <h5 className="font-body footer-link">+(44) 753 823 6771</h5>
           </div>
           {/* FOOTER ©  */}
-          <h5 className=" text-[8px] laptop:text-[5px] laptop:pt-6 text-center opacity-50">
+          <h5 className=" text-[7px] laptop:text-[5px] laptop:pt-6 text-center opacity-50">
             ©{year} Spot On Enterprise. All Rights Reserved.
           </h5>
         </div>

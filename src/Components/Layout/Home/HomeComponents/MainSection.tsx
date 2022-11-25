@@ -55,7 +55,7 @@ export default function MainSection(): JSX.Element {
             <BespokeGarments
               styling="hidden max-w-xs tablet:flex font-serif text-[55px] font-medium tablet:font-black tablet:text-7xl tablet:leading-[30px] 
               laptop:text-8xl  
-              laptop:leading-7 desktop:text-[110px] desktop:leading-9"
+              laptop:leading-7 desktop:text-[115px] desktop:leading-[45px]"
               title="Bespoke Garments"
             />
 
