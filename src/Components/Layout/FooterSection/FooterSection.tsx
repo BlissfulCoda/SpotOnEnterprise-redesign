@@ -22,9 +22,9 @@ function FooterSection(): JSX.Element {
     >
       <div className="flex flex-col mx-auto tablet:flex-row ">
         {/* NAVIGATION */}
-        <div className="flex flex-col items-center inner-footer tablet:w-1/3 tablet:bg-zinc-50 dark-color tablet:dark:bg-slate-900">
+        <div className="flex flex-col items-center inner-footer tablet:w-1/3 tablet:bg-zinc-50 dark-color tablet:dark:bg-slate-900 ">
           <h3 className="footer-subheader">NAVIGATION</h3>
-          <div className="footer-subcontainer">
+          <div className="footer-subcontainer laptop:space-y-4">
             <a href="#home" className="footer-link">
               Home
             </a>
@@ -48,7 +48,7 @@ function FooterSection(): JSX.Element {
           {/* LOGO  */}
           <h3 className="footer-subheader">CONTACT</h3>
           <div className="flex flex-col items-center footer-subcontainer">
-            <div className="flex mb-8 space-x-3 tablet:mb-6 tablet:py-12 tablet:space-x-5">
+            <div className="flex mb-8 space-x-3 laptop:mb-5 tablet:mb-7 tablet:py-12 laptop:py-16 tablet:space-x-5">
               {/* FACEBOOK */}
               <a target="_blank" href="https://www.facebook.com/Bspoton/">
                 <FaFacebookF
@@ -87,7 +87,7 @@ function FooterSection(): JSX.Element {
             <h5 className="font-body footer-link">+(44) 753 823 6771</h5>
           </div>
           {/* FOOTER ©  */}
-          <h5 className=" text-[8px] laptop:text-xs laptop:pt-6 text-center opacity-50">
+          <h5 className=" text-[8px] laptop:text-[5px] laptop:pt-6 text-center opacity-50">
             ©{year} Spot On Enterprise. All Rights Reserved.
           </h5>
         </div>

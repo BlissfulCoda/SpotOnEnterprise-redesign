@@ -16,6 +16,8 @@ export default function BespokeGarments({
   // Split words into letters
   const words: string[][] = splitWords.map((word) => word.split(""));
 
+  const windowWidth = window.innerWidth;
+
   // Add space to words
   words.map((words) => {
     return words.push("\u00A0");
@@ -26,7 +28,9 @@ export default function BespokeGarments({
       {words.map((word, index) => {
         return (
           <motion.span
-            variants={Animations.title}
+            variants={
+              windowWidth > 480 ? Animations.title : Animations.mobileTitle
+            }
             className={styling}
             key={index}
           >

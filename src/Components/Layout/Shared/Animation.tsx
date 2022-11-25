@@ -15,8 +15,46 @@ export const Animations = {
         type: "spring",
         stiffness: 90,
         ease: [0.455, 0.03, 0.515, 0.955],
-        duration: 0.9,
-        delay: 0.1,
+        duration: 1,
+      },
+    },
+  },
+  // HAMBURG MENU
+  DisplayHamburgMenu: {
+    hidden: {
+      y: "-200%",
+      opacity: 0,
+      transition: {
+        ease: [0.455, 0.03, 0.515, 0.955],
+      },
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        stiffness: 90,
+        ease: [0.455, 0.03, 0.515, 0.955],
+        duration: 0.2,
+      },
+    },
+  },
+
+  // NAV
+  nav: {
+    hidden: {
+      y: "-200%",
+      opacity: 0,
+      transition: {
+        ease: [0.455, 0.03, 0.515, 0.955],
+      },
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        ease: [0.455, 0.03, 0.515, 0.955],
+        duration: 1.3,
+        delay: 1.2,
       },
     },
   },
@@ -35,27 +73,8 @@ export const Animations = {
       y: 0,
       transition: {
         ease: [0.455, 0.03, 0.515, 0.955],
-        duration: 1.2,
-        delay: 0.9,
-      },
-    },
-  },
-
-  nav: {
-    hidden: {
-      y: "-200%",
-      opacity: 0,
-      transition: {
-        ease: [0.455, 0.03, 0.515, 0.955],
-      },
-    },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        ease: [0.455, 0.03, 0.515, 0.955],
-        duration: 0.5,
-        delay: 1.5,
+        duration: 1.7,
+        delay: 0.7,
       },
     },
   },
@@ -63,7 +82,7 @@ export const Animations = {
   // Main Heading
   title: {
     hidden: {
-      y: "90%",
+      y: "70%",
       opacity: 0,
       transition: {
         duration: 1.1,
@@ -75,15 +94,16 @@ export const Animations = {
       y: 0,
       transition: {
         ease: [0.455, 0.03, 0.515, 0.955],
-        duration: 1,
-        delay: 2.3,
+        duration: 0.8,
+        delay: 2.2,
       },
     },
   },
-  // Main Heading - Dark
-  darkTitle: {
+  
+  // Main Heading - Mobile
+  mobileTitle: {
     hidden: {
-      y: "90%",
+      y: "30%",
       opacity: 0,
       transition: {
         duration: 1.1,
@@ -91,13 +111,13 @@ export const Animations = {
       },
     },
     visible: {
-      opacity: 1,
+      opacity: 2,
       y: 0,
-      color: ["black", "white"],
+      color: ["#FFF", "#000", "#FFF"],
       transition: {
         ease: [0.455, 0.03, 0.515, 0.955],
-        duration: 1,
-        delay: 2,
+        duration: 3,
+        delay: 1.2,
       },
     },
   },
@@ -108,17 +128,16 @@ export const Animations = {
       y: "90%",
       opacity: 0,
       transition: {
-        duration: 0.85,
         ease: [0.455, 0.03, 0.515, 0.955],
       },
     },
     visible: {
-      opacity: 0.9,
+      opacity: 0.8,
       y: 0,
       transition: {
         ease: [0.455, 0.03, 0.515, 0.955],
-        duration: 1,
-        delay: 2.4,
+        duration: 0.85,
+        delay: 2.2,
       },
     },
   },
@@ -129,7 +148,6 @@ export const Animations = {
       y: "90%",
       opacity: 0,
       transition: {
-        duration: 0.85,
         ease: [0.455, 0.03, 0.515, 0.955],
       },
     },
@@ -139,7 +157,7 @@ export const Animations = {
       transition: {
         ease: [0.455, 0.03, 0.515, 0.955],
         duration: 1,
-        delay: 2.5,
+        delay: 2.2,
       },
     },
   },
@@ -150,7 +168,6 @@ export const Animations = {
       y: "90%",
       opacity: 0,
       transition: {
-        duration: 0.85,
         ease: [0.455, 0.03, 0.515, 0.955],
       },
     },
@@ -159,8 +176,8 @@ export const Animations = {
       y: 0,
       transition: {
         ease: [0.455, 0.03, 0.515, 0.955],
-        duration: 0.75,
-        delay: 2.6,
+        duration: 0.86,
+        delay: 2.2,
       },
     },
   },
@@ -170,7 +187,6 @@ export const Animations = {
       y: "90%",
       opacity: 0,
       transition: {
-        duration: 0.85,
         ease: [0.455, 0.03, 0.515, 0.955],
       },
     },
@@ -180,6 +196,20 @@ export const Animations = {
       transition: {
         ease: [0.455, 0.03, 0.515, 0.955],
         duration: 0.75,
+      },
+    },
+  },
+
+  // HeroPicture
+  picture: {
+    hidden: {
+      opacity: 0,
+    },
+    visible: {
+      opacity: 1,
+      transition: {
+        ease: [0.455, 0.03, 0.515, 0.955],
+        duration: 2,
       },
     },
   },
@@ -194,11 +224,11 @@ export const Animations = {
       },
     },
     visible: {
-      opacity: 0.08,
+      opacity: 0.04,
       transition: {
         ease: [0.455, 0.03, 0.515, 0.955],
-        duration: 3,
-        delay: 3.3,
+        duration: 1.5,
+        delay: 3,
       },
     },
   },
@@ -208,20 +238,6 @@ export const Animations = {
     visible: {
       transition: {
         staggerChildren: 1,
-      },
-    },
-  },
-
-  // HeroPicture
-  picture: {
-    hidden: {
-      opacity: 0,
-    },
-    visible: {
-      opacity: 1,
-      transition: {
-        ease: [0.455, 0.03, 0.515, 0.955],
-        duration: 3,
       },
     },
   },

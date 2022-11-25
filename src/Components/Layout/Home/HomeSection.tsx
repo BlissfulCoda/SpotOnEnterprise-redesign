@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { DarkModeDataInterface } from "../../../Data/DarkModeData";
 import DarkModeContext from "../../../Context/DarkModeContext";
 
@@ -15,12 +15,15 @@ import { SpotOnEntepriseGifsAndLogos } from "../../../Data/ComponentData";
 import { Animations } from "../Shared/Animation";
 
 export default function Home(): JSX.Element {
-  const { theme, checked, handleChange } = useContext(
+  const { theme, checked} = useContext(
     DarkModeContext
   ) as DarkModeDataInterface;
 
-  const { DarkLogo, LightLogo, FingerPrint, Night } =
+  const { DarkLogo, LightLogo} =
     SpotOnEntepriseGifsAndLogos;
+
+    // STATE
+    const [showHamburgMenu, setShowHamburgMenu] = useState<boolean>(false);
 
   //  ANIMATIONS
 
@@ -41,6 +44,7 @@ export default function Home(): JSX.Element {
               {/* Logo */}
               <motion.img
                 variants={Animations.FadeLogo}
+                onAnimationComplete={() => setShowHamburgMenu(true)}
                 src={theme ? DarkLogo : LightLogo}
                 className="w-40 h-12 brightness-150 contrast-200 change-transitions"
                 alt="SpotOnEnterprise Logo"
@@ -70,16 +74,8 @@ export default function Home(): JSX.Element {
           </section>
         )}
 
-        {/* <a href="#" onClick={handleChange}>
-          <img
-            src={theme ? FingerPrint : Night}
-            alt="Button to change to darkmode"
-            className="absolute z-40 h-10 cursor-pointer z-80 -rotate-12 transition-1000 top-7 right-16"
-          />
-        </a> */}
-
         {/* HAMBURG MENU */}
-        <HamburgeMenu />
+        {showHamburgMenu && <HamburgeMenu />}
       </div>
     </motion.section>
   );

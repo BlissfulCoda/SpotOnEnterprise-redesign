@@ -27,7 +27,7 @@ export default function MainSection(): JSX.Element {
 
   // State
   const [showImage, setShowImage] = useState<boolean>(false);
-
+  
   return (
     <div className="container mx-auto ">
       <div className="absolute z-20 top-[260px] w-[460px] pl-12 sm:pl-16 tablet:pl-4 tablet:space-y-32 space-y-40 tablet:top-28 laptop:space-y-40 laptop:left-14 mx-10 desktop:left-14 biggest:left-20">
@@ -44,7 +44,7 @@ export default function MainSection(): JSX.Element {
 
             {/*  SMALL - screen */}
             <motion.p
-              variants={Animations.subtitle}
+              variants={Animations.mobileTitle}
               className="text-white pt-2 tablet:hidden tablet:flex font-serif tracking-tighter w-[190px] leading-4"
             >
               We Specialise in producing bespoke, custom made garments for every
@@ -85,9 +85,9 @@ export default function MainSection(): JSX.Element {
             <a
               href="#work"
               type="button"
-              className="duration-500 bg-white rounded-tl-full shadow cursor-pointer button tablet:text-xs rounded-bl-3xl shadow-3xl dark:shadow-gray-100/10 dark-color dark:border-slate-600 dark:bg-transparent"
+              className="duration-500 bg-white rounded-tl-full shadow cursor-pointer button tablet:text-xs rounded-bl-3xl shadow-3xl dark:shadow-gray-100/10 dark-color dark:border-slate-600 dark:bg-transparent "
             >
-              View Collection
+              <div className="animate-pulse">View Collection</div>
             </a>
           </motion.div>
         </div>
@@ -114,13 +114,13 @@ export default function MainSection(): JSX.Element {
           >
             <img src={Location} alt="Location" className="cursor-pointer " />
           </a>
-          <a href="#" className="w-6 h-6" onClick={handleChange}>
+          <span className="w-6 h-6" onClick={handleChange}>
             <img
               src={gif ? Fingerprint : Night}
               alt="Button to change to darkmode"
               className="cursor-pointer -rotate-12 transition-1000"
             />
-          </a>
+          </span>
         </motion.div>
       </div>
 

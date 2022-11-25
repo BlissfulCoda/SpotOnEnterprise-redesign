@@ -1,6 +1,9 @@
 import { useContext } from "react";
+import { motion } from "framer-motion";
 import { DarkModeDataInterface } from "../../../Data/DarkModeData";
 import DarkModeContext from "../../../Context/DarkModeContext";
+
+import { Animations } from "../Shared/Animation";
 
 import Open from "./Open";
 import Closed from "./Closed";
@@ -11,7 +14,7 @@ export default function HamburgeMenu(): JSX.Element {
   ) as DarkModeDataInterface;
 
   return (
-    <label className="bg-gradient-to-r from-[#E34CCE] to-[#E39B57] border-none top-6 right-0 z-30 text-white btn btn-circle swap swap-rotate sm:right-16 tablet:right-24 laptop:hidden shadow drop-shadow-xl absolute cursor-pointer ">
+    <motion.label variants={Animations.DisplayHamburgMenu} className="bg-gradient-to-r from-[#E34CCE] to-[#E39B57] border-none top-6 right-0 z-30 text-white btn btn-circle swap swap-rotate sm:right-16 tablet:right-24 laptop:hidden shadow drop-shadow-xl absolute cursor-pointer ">
       
       <input type="checkbox" onChange={handleMenu} checked={checked} />
       <svg
@@ -27,6 +30,6 @@ export default function HamburgeMenu(): JSX.Element {
       >
         {checked ? <Open /> : <Closed />}
       </svg>
-    </label>
+    </motion.label>
   );
 }

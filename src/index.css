@@ -18,7 +18,7 @@
   }
 
   h3 {
-    @apply font-medium text-2xl tablet:text-2xl font-serif font-bold  duration-500 mb-2;
+    @apply font-medium text-3xl tablet:text-2xl font-serif font-bold  duration-500 mb-2;
   }
 
   h5 {
@@ -35,10 +35,6 @@
 }
 
 /* GRID CONTAINER */
-/* .grid-container {
-  @apply relative pl-3 tablet:static tablet:gap-2 tablet:space-x-1 laptop:space-x-0 tablet:grid-cols-2 tablet:grid tablet:px-2 laptop:grid-cols-4 mx-auto tablet:max-w-2xl laptop:p-12 laptop:max-w-5xl desktop:max-w-6xl biggest:max-w-7xl flex flex-row laptop:px-12 desktop:px-16 tablet:w-full tablet:h-full tablet:static absolute z-30 space-x-2 duration-100 hover:cursor-pointer ;
-} */
-
 .grid-container {
   @apply tablet:gap-2 tablet:space-x-1 laptop:space-x-0 tablet:grid-cols-2 tablet:grid tablet:px-2 laptop:grid-cols-4 mx-auto tablet:max-w-2xl laptop:p-12 laptop:max-w-5xl desktop:max-w-6xl biggest:max-w-7xl flex flex-row laptop:px-12 desktop:px-16 w-[4000px] h-[460px] sm:h-[550px] tablet:w-full tablet:h-full tablet:static absolute z-30 space-x-3 duration-100 hover:cursor-pointer;
 }
@@ -137,7 +133,7 @@
 }
 
 .footer-subheader {
-  @apply text-xl mb-6 opacity-80 tracking-wider tablet:mb-6 tablet:text-sm;
+  @apply text-xl mb-6 opacity-80 tracking-wider tablet:mb-6 tablet:text-sm tablet:text-base laptop:text-xl laptop:space-y-4;
 }
 
 .footer-subcontainer {
@@ -145,5 +141,5 @@
 }
 
 .footer-link {
-  @apply text-[10px];
+  @apply text-[10px] tablet:text-[11px];
 }
