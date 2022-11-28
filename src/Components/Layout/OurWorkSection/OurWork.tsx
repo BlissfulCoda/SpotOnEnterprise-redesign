@@ -1,3 +1,4 @@
+import { FaRegCircle } from "react-icons/fa";
 import { useState, useEffect, useContext } from "react";
 
 import { DarkModeDataInterface } from "../../../Data/DarkModeData";
@@ -32,8 +33,10 @@ function OurWork(): JSX.Element {
   const fadeIn = useTransform(x, [-100, 0], [1, 0]);
   const fadeOut = useTransform(x, [-100, 0], [0, 1]);
   const up = useTransform(x, [-100, 0], [-100, 0]);
+
   // state
   const [state, setState] = useState<boolean>(false);
+  const [showPing, setShowPing] = useState<boolean>(false);
 
   // overflow
   let targetElement = document.documentElement;
@@ -52,10 +55,16 @@ function OurWork(): JSX.Element {
       : targetElement?.classList.remove("noScroll");
   });
 
+  // Close event
   const handleCloseDrag = () => {
+    setShowPing(true);
     x.stop();
     x.set(0);
   };
+
+  useEffect(() => {
+    !state ? setShowPing(true) : setShowPing(false);
+  }, [state]);
 
   const [scrollPosition, setScrollPosition] = useState(0);
 
@@ -84,106 +93,121 @@ function OurWork(): JSX.Element {
 
       {/* IMAGE CONTAINER */}
       <div className="relative tablet:hidden">
-        <span>
-          <motion.span
-            style={{ opacity: fadeIn }}
-            className={state ? "background" : "hidden"}
-          ></motion.span>
-          {/* LOGO AND EXIT */}
-          {state ? (
-            <AnimatePresence>
-              <motion.div
-                initial={{ opacity: 0, y: -30 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -30 }}
-                transition={{
-                  y: { duration: 0.5 },
-                  default: { ease: "linear" },
-                }}
-                className="drag-header"
+        <motion.span
+          style={{ opacity: fadeIn }}
+          className={state ? "background" : "hidden"}
+        ></motion.span>
+        {/* LOGO AND EXIT */}
+        {state ? (
+          <AnimatePresence>
+            <motion.div
+              initial={{ opacity: 0, y: -30 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -30 }}
+              transition={{
+                y: { duration: 0.5 },
+                default: { ease: "linear" },
+              }}
+              className="drag-header"
+            >
+              <img
+                src={state && !theme ? DarkLogo : DarkLogo}
+                alt="SpotOnEnterprise Logo"
+                className="w-40 h-12 brightness-150"
+              />
+              <div
+                className={
+                  state && !theme ? "close text-white relative" : "close"
+                }
               >
-                <img
-                  src={state && !theme ? DarkLogo : DarkLogo}
-                  alt="SpotOnEnterprise Logo"
-                  className="w-40 h-12"
+                <FaRegCircle
+                  id="circle"
+                  size={60}
+                  className={
+                    showPing
+                      ? " text-white duration-1000 border rounded-full animate-ping outline-4 opacity-100"
+                      : "opacity-0 hidden duration-500"
+                  }
                 />
-                <div className={state && !theme ? "close text-white" : "close"}>
-                  <AiOutlineClose onClick={handleCloseDrag} />
-                </div>
-              </motion.div>
-            </AnimatePresence>
-          ) : (
-            <AnimatePresence></AnimatePresence>
-          )}
+                <AiOutlineClose
+                  onClick={handleCloseDrag}
+                  size={30}
+                  className="absolute"
+                />
+              </div>
+            </motion.div>
+          </AnimatePresence>
+        ) : (
+          <AnimatePresence></AnimatePresence>
+        )}
 
-          {/* IMAGE CONTAINER */}
-          <div className="mb-4 image-container">
-            {scrollYPosition ? (
+        {/* IMAGE CONTAINER */}
+        <div className="mb-4 image-container">
+          {scrollYPosition ? (
+            <motion.div
+              transition={{
+                x: { duration: 0.5 },
+                default: { ease: [1, 0.06, -0.06, 0.99] },
+              }}
+              style={{ x, scale }}
+              drag={"x"}
+              dragConstraints={{ left: START_INDEX, right: 0 }}
+              dragElastic={0.07}
+              className="duration-800 tablet:hidden grid-container"
+            >
               <motion.div
-                transition={{
-                  x: { duration: 0.5 },
-                  default: { ease: [1, 0.06, -0.06, 0.99] },
-                }}
-                style={{ x, scale }}
+                style={{ x }}
                 drag={"x"}
                 dragConstraints={{ left: START_INDEX, right: 0 }}
                 dragElastic={0.07}
-                className="duration-800 tablet:hidden grid-container "
-              >
-                <motion.div
-                  style={{ x }}
-                  drag={"x"}
-                  dragConstraints={{ left: START_INDEX, right: 0 }}
-                  dragElastic={0.07}
-                  className="absolute top-0 bottom-0 left-0  z-40 w-[5000px] sm:w-[6600px] h-96 tablet:hidden  opacity-0 duration-300"
-                ></motion.div>
-                <ImageContainer />
-              </motion.div>
-            ) : (
-              <div className="pl-3 duration-800 tablet:hidden grid-container blur-sm">
-                <ImageContainer />
-              </div>
-            )}
-          </div>
+                className="absolute top-0 bottom-0 left-0  z-40 w-[5000px] sm:w-[6600px] h-96 tablet:hidden  opacity-0 duration-300"
+              ></motion.div>
+              <ImageContainer />
+            </motion.div>
+          ) : (
+            <div className="pl-3 duration-800 tablet:hidden grid-container blur-sm">
+              <ImageContainer />
+            </div>
+          )}
+        </div>
 
-          {/* PROGRESS BAR CONTAINER */}
-          <div className="max-w-xs mx-auto space-y-2 sm:px-2 sm:max-w-md tablet:hidden">
-            <motion.div
-              style={{ opacity: fadeOut, x }}
+        {/* PROGRESS BAR CONTAINER */}
+        <div className="max-w-xs mx-auto space-y-2 sm:px-2 sm:max-w-md tablet:hidden">
+          <motion.div
+            style={{ opacity: fadeOut, x }}
+            className={
+              scrollYPosition
+                ? "flex items-center justify-end mb-4 space-x-2 duration-500"
+                : "flex items-center justify-end mb-4 space-x-2"
+            }
+          >
+            <div
               className={
                 scrollYPosition
-                  ? "flex items-center justify-end mb-4 space-x-2 duration-500"
-                  : "flex items-center justify-end mb-4 space-x-2"
+                  ? "text-bgPurple animate-wave w-min opacity-100 duration-500 text-xl"
+                  : "text-bgPurple opacity-20"
               }
             >
-              <div
-                className={
-                  scrollYPosition
-                    ? "text-bgPurple animate-wave w-min opacity-100 duration-500 text-xl"
-                    : "text-bgPurple opacity-20"
-                }
-              >
-                👆
-              </div>
-              <h5
-                className={
-                  scrollYPosition
-                    ? "font-black text-right opacity-100 duration-500 animate-bounce text-[9px] pt-4"
-                    : "font-black text-right opacity-70 text-[9px] duration-500"
-                }
-              >
-                Drag To Explore
-              </h5>
-            </motion.div>
-            {/* PROGESS BAR */}
-            <div className="drag-progress-background tablet:hidden ">
-              <motion.div
-                style={{ width }}
-                className="drag-progress tablet:hidden"
-              ></motion.div>
+              👆
             </div>
+            <h5
+              className={
+                scrollYPosition
+                  ? "font-black text-right opacity-100 duration-500 animate-bounce text-[9px] pt-4"
+                  : "font-black text-right opacity-70 text-[9px] duration-500"
+              }
+            >
+              Drag To Explore
+            </h5>
+          </motion.div>
+          {/* PROGESS BAR */}
+          <div className="drag-progress-background tablet:hidden ">
+            <motion.div
+              style={{ width }}
+              className="drag-progress tablet:hidden"
+            ></motion.div>
           </div>
-        </span>
+        </div>
       </div>
 
       {/* TABLET & UP */}

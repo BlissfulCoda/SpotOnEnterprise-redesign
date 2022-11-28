@@ -1,7 +1,6 @@
 import ladyLight from "../../assets/Images/ladyLight.png";
 
 function About(): JSX.Element {
-  
   return (
     <section className="w-full py-20 mb-16 border bg-zinc-50 dark-color dark:border-y-slate-800 dark:border-x-0 dark:shadow dark:bg-shadow-xl border-y-slate-100">
       <section id="about" className="container p-4 mx-auto max-w-7xl sm:p-6">

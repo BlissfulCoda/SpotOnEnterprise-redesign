@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 
 import { ImageList as Images } from "../../../Data/ComponentData";
@@ -15,5 +16,5 @@ export default function ImageContainer(): JSX.Element {
       <img src={image.imageUrl} alt={image.alt} className={image.version} />
     </motion.div>
   ));
-  return <div className="duration-200 grid-container">{fullImageList}</div>;
+  return <div className="duration-200 grid-container ">{fullImageList}</div>;
 }

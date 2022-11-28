@@ -33,11 +33,11 @@ export const Animations = {
       y: 0,
       transition: {
         type: "spring",
-        stiffness: 7,
-        damping: 0.45,
+        stiffness: 9,
+        damping: 0.6,
         ease: [0.455, 0.03, 0.515, 0.955],
-        duration: 0.4,
-        delay: 0.02
+        duration: 0.1,
+        delay: 0.02,
       },
     },
   },
@@ -52,12 +52,12 @@ export const Animations = {
       },
     },
     visible: {
-      opacity: 1,
+      opacity: 0.85,
       y: 0,
       transition: {
         ease: [0.455, 0.03, 0.515, 0.955],
-        duration: 1.3,
-        delay: 1.2,
+        duration: 1.2,
+        delay: 1.3,
       },
     },
   },
@@ -238,9 +238,13 @@ export const Animations = {
 
   // Nav container
   container: {
+    hidden: { opacity: 1, scale: 0 },
     visible: {
+      opacity: 1,
+      scale: 1,
       transition: {
-        staggerChildren: 1,
+        delayChildren: 0.5,
+        staggerChildren: 0.5,
       },
     },
   },
