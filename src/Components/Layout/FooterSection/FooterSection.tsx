@@ -1,13 +1,8 @@
 import { FaFacebookF, FaInstagram, FaMapMarkerAlt } from "react-icons/fa";
 
-import { useContext } from "react";
-import { DarkModeDataInterface } from "../../../Data/DarkModeData";
-import DarkModeContext from "../../../Context/DarkModeContext";
-
 import { SpotOnEntepriseContact } from "../../../Data/ComponentData";
 
 function FooterSection(): JSX.Element {
-  const { theme } = useContext(DarkModeContext) as DarkModeDataInterface;
 
   const { SPOTONENTERPRISE_INSTAGRAM, SPOTONENTERPRISE_LOCATION } =
     SpotOnEntepriseContact;
@@ -74,9 +69,7 @@ function FooterSection(): JSX.Element {
             </div>
 
             {/* EMAIL */}
-            <h5 className="footer-link animate-bounce">
-              info.SpotOnEnterprise@gmail.com
-            </h5>
+            <h5 className="footer-link ">info.SpotOnEnterprise@gmail.com</h5>
           </div>
         </div>
 

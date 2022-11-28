@@ -32,9 +32,12 @@ export const Animations = {
       opacity: 1,
       y: 0,
       transition: {
-        stiffness: 90,
+        type: "spring",
+        stiffness: 7,
+        damping: 0.45,
         ease: [0.455, 0.03, 0.515, 0.955],
-        duration: 0.2,
+        duration: 0.4,
+        delay: 0.02
       },
     },
   },
@@ -80,7 +83,7 @@ export const Animations = {
   },
 
   // Main Heading
-  title: {
+  DesktopTitle: {
     hidden: {
       y: "70%",
       opacity: 0,
@@ -99,7 +102,7 @@ export const Animations = {
       },
     },
   },
-  
+
   // Main Heading - Mobile
   mobileTitle: {
     hidden: {
@@ -132,7 +135,7 @@ export const Animations = {
       },
     },
     visible: {
-      opacity: 0.8,
+      opacity: 0.7,
       y: 0,
       transition: {
         ease: [0.455, 0.03, 0.515, 0.955],
@@ -224,11 +227,11 @@ export const Animations = {
       },
     },
     visible: {
-      opacity: 0.04,
+      opacity: 0.08,
       transition: {
         ease: [0.455, 0.03, 0.515, 0.955],
-        duration: 1.5,
-        delay: 3,
+        duration: 3,
+        delay: 2.7,
       },
     },
   },

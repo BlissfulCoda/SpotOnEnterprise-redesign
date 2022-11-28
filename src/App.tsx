@@ -1,4 +1,5 @@
 import Components from "./Components/Components";
+import './styles/output.css';
 
 import { DarkModeProvider } from "./Context/DarkModeContext";
 

@@ -57,7 +57,7 @@ function Testimonials(): JSX.Element {
                 <div className="w-10 h-10 mt-2 overflow-hidden bg-green-400 rounded-full opacity-40 tablet:h-8 tablet:w-8 ">
                   <img
                     src={img7}
-                    alt="image of a lady"
+                    alt="Lady in black"
                     className="object-cover w-full h-full "
                   />
                 </div>

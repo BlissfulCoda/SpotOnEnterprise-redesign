@@ -36,17 +36,17 @@
 
 /* GRID CONTAINER */
 .grid-container {
-  @apply tablet:gap-2 tablet:space-x-1 laptop:space-x-0 tablet:grid-cols-2 tablet:grid tablet:px-2 laptop:grid-cols-4 mx-auto tablet:max-w-2xl laptop:p-12 laptop:max-w-5xl desktop:max-w-6xl biggest:max-w-7xl flex flex-row laptop:px-12 desktop:px-16 w-[4000px] h-[460px] sm:h-[550px] tablet:w-full tablet:h-full tablet:static absolute z-30 space-x-3 duration-100 hover:cursor-pointer;
+  @apply tablet:gap-2 tablet:space-x-1 laptop:space-x-0 tablet:grid-cols-2 tablet:grid tablet:px-2 laptop:grid-cols-4 mx-auto tablet:max-w-2xl laptop:p-12 laptop:max-w-5xl desktop:max-w-6xl biggest:max-w-7xl flex flex-row laptop:px-12 desktop:px-16 w-[2500px] h-[460px] sm:h-[550px] tablet:w-full tablet:h-full tablet:static absolute z-30 space-x-3 duration-100 hover:cursor-pointer;
 }
 
 /* IMAGE CONTAINER */
 .image-container {
-  @apply w-[320px] h-[430px] overflow-y-hidden laptop:h-full laptop:w-full;
+  @apply w-full h-[390px] laptop:h-full laptop:w-full rounded rounded-2xl;
 }
 
 /* IMAGES */
 .image {
-  @apply object-cover w-full h-full rounded-2xl tablet:rounded-lg;
+  @apply object-cover w-full h-full rounded-2xl tablet:rounded-lg tablet:hover:scale-125 duration-1000 cursor-pointer;
 }
 
 /* DRAG-HEADER */
@@ -63,10 +63,9 @@
 .drag-progress-background {
   @apply w-full h-[1px] bg-slate-200 relative tablet:hidden dark:bg-slate-800 z-30;
 }
-
 /* IMAGE CONTAINER OVERLAY */
 .background {
-  @apply fixed h-screen w-full bg-zinc-50 dark:bg-slate-900 top-0 left-0 bottom-0 z-30 opacity-0 will-change-transform overflow-y-hidden tablet:hidden;
+  @apply fixed h-screen w-full bg-darkMode opacity-10 dark:bg-slate-900 top-0 left-0 bottom-0 z-30 opacity-0 will-change-transform  tablet:hidden;
 }
 
 /* PROGRESS LENGTH */
@@ -75,7 +74,7 @@
 }
 
 /* NO SCROLL WHILE DRAG IS ACTIVE */
-.no-scroll {
+.noScroll {
   @apply overflow-y-hidden;
 }
 

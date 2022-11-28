@@ -5,7 +5,7 @@ import { ImageList as Images } from "../../../Data/ComponentData";
 export default function ImageContainer(): JSX.Element {
   const fullImageList = Images.map((image) => (
     <motion.div
-      className="shadow-xl rounded-2xl image-container"
+      className="overflow-y-hidden rounded-2xl image-container"
       key={image.id}
       transition={{
         y: { duration: 0.5 },

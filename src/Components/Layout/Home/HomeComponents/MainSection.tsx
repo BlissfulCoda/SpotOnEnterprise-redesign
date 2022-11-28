@@ -53,7 +53,7 @@ export default function MainSection(): JSX.Element {
 
             {/* LARGE - black: large - screen */}
             <BespokeGarments
-              styling="hidden max-w-xs tablet:flex font-serif text-[55px] font-medium tablet:font-black tablet:text-7xl tablet:leading-[30px] 
+              styling="hidden max-w-xs tablet:flex font-serif text-[55px] font-medium tablet:font-black tablet:text-7xl text-black dark:text-white tablet:leading-[30px] 
               laptop:text-8xl  
               laptop:leading-7 desktop:text-[115px] desktop:leading-[45px]"
               title="Bespoke Garments"
@@ -70,7 +70,7 @@ export default function MainSection(): JSX.Element {
             </motion.p>
           </motion.div>
 
-          {/* LARGE BUTTONS */}
+          {/* BUTTONS */}
           <motion.div
             variants={Animations.buttons}
             className="flex tablet:flex-row laptop:space-x-2 laptop:flex sm:pl-4 tablet:pl-0"
@@ -87,7 +87,7 @@ export default function MainSection(): JSX.Element {
               type="button"
               className="duration-500 bg-white rounded-tl-full shadow cursor-pointer button tablet:text-xs rounded-bl-3xl shadow-3xl dark:shadow-gray-100/10 dark-color dark:border-slate-600 dark:bg-transparent "
             >
-              <div className="animate-pulse">View Collection</div>
+              <div className="animate-pulse laptop:animate-none">View Collection</div>
             </a>
           </motion.div>
         </div>

@@ -37,7 +37,7 @@ module.exports = {
         "3xl": "5px 5px 23px rgba(0, 0, 0, 0.2)",
       },
       backgroundImage: (theme) => ({
-        photo: "url('../src/Components/assets/Images/HeroImage.png')",
+        photo: "url('/src/Components/assets/Images/HeroImage.png')",
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
       }),
       animation: {
@@ -52,10 +52,10 @@ module.exports = {
         },
         wave: {
           "0%, 100%": {
-            transform: "translateX(0%)",
+            transform: "translateY(0%)",
           },
           "50%": {
-            transform: "translateX(2px) rotate(40deg)",
+            transform: "translateY(2px) rotate(40deg)",
           },
         },
       },

@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Animations } from "../Shared/Animation";
 
@@ -16,7 +17,23 @@ export default function BespokeGarments({
   // Split words into letters
   const words: string[][] = splitWords.map((word) => word.split(""));
 
-  const windowWidth = window.innerWidth;
+  const [windowSize, setWindowSize] = useState(getWindowSize())
+
+  function getWindowSize() {
+    return window.innerWidth;
+  }
+
+  useEffect(() => {
+    function handleWindleResize() {
+      setWindowSize(getWindowSize());
+    }
+
+    window.addEventListener('resize', handleWindleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleWindleResize);
+    }
+  }, [])
 
   // Add space to words
   words.map((words) => {
@@ -29,9 +46,11 @@ export default function BespokeGarments({
         return (
           <motion.span
             variants={
-              windowWidth > 480 ? Animations.title : Animations.mobileTitle
+              window.innerWidth > 767
+                ? Animations.DesktopTitle
+                : Animations.mobileTitle
             }
-            className={styling}
+            className={`${styling}`}
             key={index}
           >
             {word}

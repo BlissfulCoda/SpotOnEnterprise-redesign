@@ -11,7 +11,7 @@ export default function Nav(): JSX.Element {
       {HomeNav.map((link) => (
         <div
           key={link.id}
-          className="duration-700 opacity-50 group hover:opacity-100"
+          className="duration-700 group hover:opacity-100 "
         >
           <motion.a
             variants={Animations.nav}
