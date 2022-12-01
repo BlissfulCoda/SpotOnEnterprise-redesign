@@ -79,6 +79,7 @@ function OurWork(): JSX.Element {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [scrollPosition]);
+
   return (
     <section
       id="work"
@@ -88,7 +89,14 @@ function OurWork(): JSX.Element {
         style={{ translateY: up }}
         className="container mx-auto overflow-y-hidden duration-100 tablet:px-40 laptop:px-56"
       >
-        <h2>WHAT WE OFFER</h2>
+        <h2
+          data-aos="zoom-out"
+          data-aos-once="true"
+          data-aos-easing="linear"
+          data-aos-duration="1000"
+        >
+          WHAT WE OFFER
+        </h2>
       </motion.div>
 
       {/* IMAGE CONTAINER */}
@@ -160,7 +168,7 @@ function OurWork(): JSX.Element {
                 drag={"x"}
                 dragConstraints={{ left: START_INDEX, right: 0 }}
                 dragElastic={0.07}
-                className="absolute top-0 bottom-0 left-0  z-40 w-[5000px] sm:w-[6600px] h-96 tablet:hidden  opacity-0 duration-300"
+                className="absolute top-0 bottom-0 left-0  z-40 w-[5000px] sm:w-[6600px] h-96 tablet:hidden  opacity-0 duration-1000"
               ></motion.div>
               <ImageContainer />
             </motion.div>
@@ -174,7 +182,7 @@ function OurWork(): JSX.Element {
         {/* PROGRESS BAR CONTAINER */}
         <div className="max-w-xs mx-auto space-y-2 sm:px-2 sm:max-w-md tablet:hidden">
           <motion.div
-            style={{ opacity: fadeOut, x }}
+            style={{ opacity: fadeOut }}
             className={
               scrollYPosition
                 ? "flex items-center justify-end mb-4 space-x-2 duration-500"

@@ -17,7 +17,7 @@ export default function BespokeGarments({
   // Split words into letters
   const words: string[][] = splitWords.map((word) => word.split(""));
 
-  const [windowSize, setWindowSize] = useState(getWindowSize())
+  const [windowSize, setWindowSize] = useState(getWindowSize());
 
   function getWindowSize() {
     return window.innerWidth;
@@ -28,12 +28,12 @@ export default function BespokeGarments({
       setWindowSize(getWindowSize());
     }
 
-    window.addEventListener('resize', handleWindleResize);
+    window.addEventListener("resize", handleWindleResize);
 
     return () => {
-      window.removeEventListener('resize', handleWindleResize);
-    }
-  }, [])
+      window.removeEventListener("resize", handleWindleResize);
+    };
+  }, []);
 
   // Add space to words
   words.map((words) => {
@@ -45,11 +45,7 @@ export default function BespokeGarments({
       {words.map((word, index) => {
         return (
           <motion.span
-            variants={
-              window.innerWidth > 767
-                ? Animations.DesktopTitle
-                : Animations.mobileTitle
-            }
+            variants={Animations.DesktopTitle}
             className={`${styling}`}
             key={index}
           >

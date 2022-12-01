@@ -32,13 +32,13 @@ export default function Home(): JSX.Element {
       initial="hidden"
       animate="visible"
       id="home"
-      className="px-2 mb-24 change-transitions"
+      className="px-2 tablet:mb-28 change-transitions"
     >
       <div className="relative h-screen py-5 section-container overflow-hidden h-[930px] tablet:h-[650px] laptop:h-[800px] laptop:p-4 desktop:p-6">
         {checked ? (
           <MobileMenu />
         ) : (
-          <section className="duration-300 laptop:relative">
+          <section className=" laptop:relative">
             {/* HEADER */}
             <header className="flex items-center justify-between font-serif biggest:px-6 laptop:z-20 laptop:-mt-2 laptop:px-0 laptop:absolute laptop:w-full ">
               {/* Logo */}

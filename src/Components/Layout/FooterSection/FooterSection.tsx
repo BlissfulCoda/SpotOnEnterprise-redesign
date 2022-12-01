@@ -3,7 +3,6 @@ import { FaFacebookF, FaInstagram, FaMapMarkerAlt } from "react-icons/fa";
 import { SpotOnEntepriseContact } from "../../../Data/ComponentData";
 
 function FooterSection(): JSX.Element {
-
   const { SPOTONENTERPRISE_INSTAGRAM, SPOTONENTERPRISE_LOCATION } =
     SpotOnEntepriseContact;
 
@@ -17,7 +16,15 @@ function FooterSection(): JSX.Element {
     >
       <div className="flex flex-col mx-auto tablet:flex-row ">
         {/* NAVIGATION */}
-        <div className="flex flex-col items-center inner-footer tablet:w-1/3 tablet:bg-zinc-50 dark-color tablet:dark:bg-slate-900 ">
+        <div
+          data-aos="fade-up"
+          data-aos-once="true"
+          data-aos-anchor-placement="top-bottom"
+          data-aos-easing="ease-out-cubic"
+          data-aos-duration="1000"
+          data-aos-delay="100"
+          className="flex flex-col items-center inner-footer tablet:w-1/3 tablet:bg-zinc-50 dark-color tablet:dark:bg-slate-900 "
+        >
           <h3 className="footer-subheader">NAVIGATION</h3>
           <div className="footer-subcontainer laptop:space-y-4">
             <a href="#home" className="footer-link">
@@ -39,8 +46,15 @@ function FooterSection(): JSX.Element {
         </div>
 
         {/* SOCIALS */}
-        <div className=" inner-footer bg-zinc-50 tablet:w-1/3 tablet:bg-white dark:bg-slate-900 tablet:dark:bg-darkMode">
-          {/* LOGO  */}
+        <div
+          data-aos="fade-up"
+          data-aos-once="true"
+          data-aos-anchor-placement="top-bottom"
+          data-aos-easing="ease-out-cubic"
+          data-aos-duration="1000"
+          data-aos-delay="50"
+          className=" inner-footer bg-zinc-50 tablet:w-1/3 tablet:bg-white dark:bg-slate-900 tablet:dark:bg-darkMode"
+        >
           <h3 className="footer-subheader">CONTACT</h3>
           <div className="flex flex-col items-center footer-subcontainer">
             <div className="flex mb-8 space-x-3 laptop:mb-5 tablet:mb-7 tablet:py-12 laptop:py-16 tablet:space-x-5">
@@ -74,7 +88,15 @@ function FooterSection(): JSX.Element {
         </div>
 
         {/* COMPANY */}
-        <div className="inner-footer tablet:w-1/3 tablet:bg-zinc-50 dark-color tablet:dark:bg-slate-900">
+        <div
+          data-aos="fade-up"
+          data-aos-once="true"
+          data-aos-anchor-placement="top-bottom"
+          data-aos-easing="ease-out-cubic"
+          data-aos-duration="1000"
+          data-aos-delay="50"
+          className="inner-footer tablet:w-1/3 tablet:bg-zinc-50 dark-color tablet:dark:bg-slate-900"
+        >
           <h3 className="footer-subheader">COMPANY</h3>
           <div className="mb-16 footer-subcontainer">
             <h5 className="footer-link">111C East Street Walworth</h5>

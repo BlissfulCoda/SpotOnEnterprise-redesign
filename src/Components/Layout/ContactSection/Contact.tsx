@@ -6,8 +6,6 @@ function Contact(): JSX.Element {
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [message, setMessage] = useState<string>("");
-  const [nameError, setNameError] = useState<string>("");
-  const [emailError, setEmailError] = useState<string>("");
 
   const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     let inputName: string = e.target.value;
@@ -41,12 +39,16 @@ function Contact(): JSX.Element {
   return (
     <section
       id="contact"
-      className="mb-24 space-y-3 outline-none tablet:space-y-6 section-container"
+      className="space-y-3 outline-none mb-28 tablet:space-y-6 section-container"
     >
-      <h2>CONTACT</h2>
+      <h2 data-aos="fade-zoom-in">CONTACT</h2>
       <div className="relative flex flex-col p-4 mx-auto tablet:flex-row tablet:py-0 tablet:p-4 tablet:max-w-2xl tablet:min-h-[600px] laptop:max-w-5xl desktop:max-w-6xl laptop:px-32 sm:p-0 ">
         {/* FORM */}
         <form
+          data-aos="zoom-down"
+          data-aos-once="true"
+          data-aos-easing="ease-in-sine"
+          data-aos-duration="1000"
           method="POST"
           action="/send"
           onSubmit={handleSubmit}
@@ -102,7 +104,13 @@ function Contact(): JSX.Element {
           </div>
         </form>
         {/* MAP */}
-        <div className="relative pt-[400px] tablet:right-0 tablet:w-full tablet:pt-12 tablet:pl-48 bg-opacity-100  tablet:bg-opacity-100 dark-color ">
+        <div
+          data-aos="fade-in"
+          data-aos-once="true"
+          data-aos-easing="ease-in-sine"
+          data-aos-delay="500"
+          className="relative pt-[400px] tablet:right-0 tablet:w-full tablet:pt-12 tablet:pl-48 bg-opacity-100  tablet:bg-opacity-100 dark-color "
+        >
           {/* BOTTOM GRADIENT */}
           <div className="absolute bottom-0 left-0 right-0 top-[700px] gradient-bottom  tablet:top-[400px] tablet:opacity-100 bg-opacity-100 "></div>
 
