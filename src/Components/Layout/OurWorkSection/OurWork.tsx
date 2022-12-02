@@ -14,7 +14,7 @@ import {
 } from "framer-motion";
 import { AiOutlineClose } from "react-icons/ai";
 
-import ImageContainer from "./ImageContainer";
+import ImageContainer from "./ImageDisplay";
 
 function OurWork(): JSX.Element {
   const { theme } = useContext(DarkModeContext) as DarkModeDataInterface;
@@ -25,7 +25,7 @@ function OurWork(): JSX.Element {
   const x = useSpring(0, { stiffness: 600, damping: 100 });
   const START_INDEX: number = -2500;
 
-  const scrollYPosition = window.scrollY >= 1760 && window.scrollY <= 1890;
+  const scrollYPosition = window.scrollY >= 1690 && window.scrollY <= 1770;
 
   // MOTION - TRANSFORMS
   const width = useTransform(x, [START_INDEX, 0], [346, 0]);
@@ -37,6 +37,7 @@ function OurWork(): JSX.Element {
   // state
   const [state, setState] = useState<boolean>(false);
   const [showPing, setShowPing] = useState<boolean>(false);
+  const [scrollPosition, setScrollPosition] = useState(0);
 
   // overflow
   let targetElement = document.documentElement;
@@ -55,6 +56,11 @@ function OurWork(): JSX.Element {
       : targetElement?.classList.remove("noScroll");
   });
 
+  //  CLICK PING TO CLOSE
+  useEffect(() => {
+    !state ? setShowPing(true) : setShowPing(false);
+  }, [state]);
+
   // Close event
   const handleCloseDrag = () => {
     setShowPing(true);
@@ -62,16 +68,11 @@ function OurWork(): JSX.Element {
     x.set(0);
   };
 
-  useEffect(() => {
-    !state ? setShowPing(true) : setShowPing(false);
-  }, [state]);
-
-  const [scrollPosition, setScrollPosition] = useState(0);
-
   const handleScroll = () => {
     setScrollPosition(window.scrollY);
   };
 
+  // HANDLE SCROLL
   useEffect(() => {
     window.addEventListener("scroll", handleScroll, { passive: true });
 
@@ -89,14 +90,7 @@ function OurWork(): JSX.Element {
         style={{ translateY: up }}
         className="container mx-auto overflow-y-hidden duration-100 tablet:px-40 laptop:px-56"
       >
-        <h2
-          data-aos="zoom-out"
-          data-aos-once="true"
-          data-aos-easing="linear"
-          data-aos-duration="1000"
-        >
-          WHAT WE OFFER
-        </h2>
+        <h2>WHAT WE OFFER</h2>
       </motion.div>
 
       {/* IMAGE CONTAINER */}
@@ -151,32 +145,31 @@ function OurWork(): JSX.Element {
 
         {/* IMAGE CONTAINER */}
         <div className="mb-4 image-container">
-          {scrollYPosition ? (
+          <motion.div
+            transition={{
+              x: { duration: 0.5 },
+              default: { ease: [1, 0.06, -0.06, 0.99] },
+            }}
+            style={{ x, scale }}
+            drag={"x"}
+            dragConstraints={{ left: START_INDEX, right: 0 }}
+            dragElastic={0.07}
+            className={
+              scrollYPosition
+                ? "duration-800 tablet:hidden grid-container duration-1000"
+                : "duration-800 tablet:hidden grid-container blur-sm duration-1000"
+            }
+          >
             <motion.div
-              transition={{
-                x: { duration: 0.5 },
-                default: { ease: [1, 0.06, -0.06, 0.99] },
-              }}
-              style={{ x, scale }}
+              style={scrollYPosition ? { x } : {}}
               drag={"x"}
               dragConstraints={{ left: START_INDEX, right: 0 }}
-              dragElastic={0.07}
-              className="duration-800 tablet:hidden grid-container"
-            >
-              <motion.div
-                style={{ x }}
-                drag={"x"}
-                dragConstraints={{ left: START_INDEX, right: 0 }}
-                dragElastic={0.07}
-                className="absolute top-0 bottom-0 left-0  z-40 w-[5000px] sm:w-[6600px] h-96 tablet:hidden  opacity-0 duration-1000"
-              ></motion.div>
-              <ImageContainer />
-            </motion.div>
-          ) : (
-            <div className="pl-3 duration-800 tablet:hidden grid-container blur-sm">
-              <ImageContainer />
-            </div>
-          )}
+              dragTransition={{ bounceStiffness: 600, bounceDamping: 10 }}
+              dragElastic={0.06}
+              className="absolute top-0 bottom-0 left-0  z-40 w-[5000px] sm:w-[6600px] h-96 tablet:hidden  opacity-0 duration-1000"
+            ></motion.div>
+            <ImageContainer />
+          </motion.div>
         </div>
 
         {/* PROGRESS BAR CONTAINER */}

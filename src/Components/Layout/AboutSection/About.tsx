@@ -4,7 +4,6 @@ function About(): JSX.Element {
   return (
     <section
       data-aos="fade-in"
-      data-aos-once="true"
       data-aos-easing="linear"
       data-aos-duration="1000"
       className="w-full py-20 mb-16 border bg-zinc-50 dark-color dark:border-y-slate-800 dark:border-x-0 dark:shadow dark:bg-shadow-xl border-y-slate-100 tablet:mb-40"
@@ -15,7 +14,6 @@ function About(): JSX.Element {
             <div className="flex justify-center bg-center bg-cover h-28 ">
               <h2
                 data-aos="zoom-out"
-                data-aos-once="true"
                 data-aos-easing="ease-out-cubic"
                 data-aos-duration="1500"
                 className="w-full h-full pt-8 text-transparent bg-white bg-center bg-cover text-9xl bg-clip-text bg-photo "
@@ -25,7 +23,6 @@ function About(): JSX.Element {
             </div>
             <p
               data-aos="fade-in"
-              data-aos-once="true"
               data-aos-easing="linear"
               data-aos-duration="1500"
               data-aos-delay="200"
@@ -42,7 +39,6 @@ function About(): JSX.Element {
             {/*  IMAGE */}
             <img
               data-aos="fade-in"
-              data-aos-once="true"
               data-aos-easing="linear"
               data-aos-duration="2000"
               data-aos-delay="300"
@@ -56,7 +52,6 @@ function About(): JSX.Element {
               {/* SERVICES */}
               <div
                 data-aos="fade-in"
-                data-aos-once="true"
                 data-aos-easing="linear"
                 data-aos-duration="1500"
                 data-aos-delay="300"

@@ -75,20 +75,28 @@ export default function MainSection(): JSX.Element {
             variants={Animations.buttons}
             className="flex tablet:flex-row laptop:space-x-2 laptop:flex sm:pl-4 tablet:pl-0"
           >
-            <a
+            <motion.a
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              transition={{ type: "spring", stiffness: 400, damping: 17 }}
               href="#contact"
               type="button"
               className="button tablet:text-xs text-white rounded-br-full shadow rounded-tr-3xl shadow-3xl cursor-pointer border-slate-400 bg-gradient-to-r from-[#E34CCE] to-[#E39B57] duration-500 border-none"
             >
               Get in touch
-            </a>
-            <a
+            </motion.a>
+            <motion.a
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              transition={{ type: "spring", stiffness: 400, damping: 17 }}
               href="#work"
               type="button"
               className="duration-500 bg-white rounded-tl-full shadow cursor-pointer button tablet:text-xs rounded-bl-3xl shadow-3xl dark:shadow-gray-100/10 dark-color dark:border-slate-600 dark:bg-transparent "
             >
-              <div className="animate-pulse laptop:animate-none">View Collection</div>
-            </a>
+              <div className="animate-pulse laptop:animate-none">
+                View Collection
+              </div>
+            </motion.a>
           </motion.div>
         </div>
 

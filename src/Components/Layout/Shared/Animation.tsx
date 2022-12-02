@@ -32,8 +32,9 @@ export const Animations = {
       opacity: 1,
       y: 0,
       transition: {
-        stiffness: 10,
-        damping: 100,
+        type: "spring",
+        stiffness: 90,
+        mass: 9,
         ease: [0.455, 0.03, 0.515, 0.955],
         duration: 0.2,
         delay: 0.2,

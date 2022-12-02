@@ -46,7 +46,6 @@ function Contact(): JSX.Element {
         {/* FORM */}
         <form
           data-aos="zoom-down"
-          data-aos-once="true"
           data-aos-easing="ease-in-sine"
           data-aos-duration="1000"
           method="POST"
@@ -106,7 +105,6 @@ function Contact(): JSX.Element {
         {/* MAP */}
         <div
           data-aos="fade-in"
-          data-aos-once="true"
           data-aos-easing="ease-in-sine"
           data-aos-delay="500"
           className="relative pt-[400px] tablet:right-0 tablet:w-full tablet:pt-12 tablet:pl-48 bg-opacity-100  tablet:bg-opacity-100 dark-color "

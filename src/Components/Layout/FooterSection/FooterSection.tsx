@@ -18,7 +18,6 @@ function FooterSection(): JSX.Element {
         {/* NAVIGATION */}
         <div
           data-aos="fade-up"
-          data-aos-once="true"
           data-aos-anchor-placement="top-bottom"
           data-aos-easing="ease-out-cubic"
           data-aos-duration="1000"
@@ -48,7 +47,6 @@ function FooterSection(): JSX.Element {
         {/* SOCIALS */}
         <div
           data-aos="fade-up"
-          data-aos-once="true"
           data-aos-anchor-placement="top-bottom"
           data-aos-easing="ease-out-cubic"
           data-aos-duration="1000"
@@ -90,7 +88,6 @@ function FooterSection(): JSX.Element {
         {/* COMPANY */}
         <div
           data-aos="fade-up"
-          data-aos-once="true"
           data-aos-anchor-placement="top-bottom"
           data-aos-easing="ease-out-cubic"
           data-aos-duration="1000"

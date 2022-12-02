@@ -9,7 +9,6 @@ function Testimonials(): JSX.Element {
   return (
     <section
       data-aos="zoom-in"
-      data-aos-once="true"
       data-aos-easing="ease-out-cubic"
       data-aos-duration="1000"
       data-aos-delay="200"
@@ -26,10 +25,9 @@ function Testimonials(): JSX.Element {
           {/* inner container */}
           <div
             data-aos="fade-in"
-            data-aos-once="true"
             data-aos-easing="ease-in-sine"
             data-aos-duration="1000"
-            data-aos-delay="500"
+            data-aos-delay="300"
             className="relative max-w-xs font-serif text-white "
           >
             {/* ICON CONTAINER */}
@@ -49,10 +47,9 @@ function Testimonials(): JSX.Element {
         <Card className="w-full px-6 py-10 mx-auto tablet:w-1/2 tablet:p-4 desktop:p-4 ">
           <div
             data-aos="fade-in"
-            data-aos-once="true"
             data-aos-easing="ease-in-sine"
             data-aos-duration="1000"
-            data-aos-delay="600"
+            data-aos-delay="500"
             className="px-2 tablet:px-14 tablet:py-12 laptop:px-20 laptop:py-20 desktop:px-24 desktop:py-23"
           >
             <div className=" pb-8 space-y-4 border-b-[1px] tablet:pb-4 tablet:space-y-2 laptop:pb-6 laptop:space-y-5 dark:border-b-zinc-600">
@@ -97,7 +94,7 @@ function Testimonials(): JSX.Element {
                 </div>
               </div>
               <div className="flex flex-col items-center space-y-1 tablet:space-y-0">
-                <h4 className="text-xs tablet:text-[7px]">Mr & Mrs Anthony</h4>
+                <h4 className="text-xs tablet:text-[px]">Mr & Mrs Anthony</h4>
                 <h5 className="text-[9px] opacity-30 tablet:text-[7px]">
                   November 21, 2020
                 </h5>

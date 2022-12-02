@@ -5,7 +5,6 @@ export default function ImageContainer(): JSX.Element {
   const fullImageList = Images.map((image, i) => (
     <motion.div
       data-aos="fade-in"
-      data-aos-once="true"
       data-aos-offset="100"
       data-aos-easing="ease-in-sine"
       data-aos-duration={2000 * (i + 2)}
