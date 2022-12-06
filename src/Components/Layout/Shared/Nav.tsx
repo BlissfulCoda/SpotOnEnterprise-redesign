@@ -11,7 +11,7 @@ export default function Nav(): JSX.Element {
       className="hidden h-10 pt-2 text-sm font-medium laptop:flex laptop:space-x-7 desktop:space-x-8 laptop:px-6"
     >
       {HomeNav.map((link, i) => (
-        <div key={link.id} className="duration-700 group hover:opacity-100 ">
+        <div key={link.id} className="duration-500 group hover:opacity-100 ">
           <motion.a
             variants={Animations.nav}
             href={link.href}

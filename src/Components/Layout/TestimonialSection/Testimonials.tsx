@@ -53,7 +53,7 @@ function Testimonials(): JSX.Element {
             className="px-2 tablet:px-14 tablet:py-12 laptop:px-20 laptop:py-20 desktop:px-24 desktop:py-23"
           >
             <div className=" pb-8 space-y-4 border-b-[1px] tablet:pb-4 tablet:space-y-2 laptop:pb-6 laptop:space-y-5 dark:border-b-zinc-600">
-              <h4 className="relative mx-auto text-lg leading-7 text-center tablet:text-[16px] laptop:text-xl desktop:text-2xl">
+              <h4 className="relative mx-auto text-lg leading-7 text-center tablet:text-[16px] laptop:text-xl desktop:text-xl">
                 Dont Take Our Word For It..
               </h4>
               <p className="font-sans text-[9px] leading-5 tracking-tight text-justify sm:text-xs opacity-40 sm:leading-6 tablet:text-[6px] tablet:leading-3 laptop:text-[8px] laptop:leading-4 biggest:leading-5  biggest:text-[10px]">

@@ -12,9 +12,21 @@
   box-sizing: border-box;
 }
 
+/* input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px #ffffff inset !important;
+} */
+
 html,
 body {
-  @apply overflow-y-hidden relative h-screen;
+  @apply relative h-screen;
 }
 
 @layer base {
@@ -66,11 +78,12 @@ body {
 
 /* PROGRESS CONTAINER */
 .drag-progress-background {
-  @apply w-full h-[1px] bg-slate-200 relative tablet:hidden dark:bg-slate-800 z-30;
+  @apply w-full h-[2px] relative tablet:hidden dark:bg-slate-800 z-30;
 }
+
 /* IMAGE CONTAINER OVERLAY */
 .background {
-  @apply fixed h-screen w-full bg-darkMode opacity-10 dark:bg-slate-900 top-0 left-0 bottom-0 z-30 opacity-0 will-change-transform  tablet:hidden;
+  @apply fixed h-screen w-full bg-slate-900 opacity-10 dark:bg-slate-900 top-0 left-0 bottom-0 z-30 opacity-0 will-change-transform tablet:hidden;
 }
 
 /* PROGRESS LENGTH */
@@ -123,11 +136,26 @@ body {
   @apply dark:bg-[#080F22];
 }
 
-.form-input-title {
-  @apply text-[10px];
+.btn-primary {
+  @apply text-xs rounded-sm text-black shadow px-12 py-2 shadow-3xl cursor-pointer border-slate-400 bg-gradient-to-r from-[#E34CCE] to-[#E39B57] duration-500 border-none disabled:opacity-75 rounded-tr-3xl rounded-bl-3xl;
 }
 
-/* FOOTER */
+.btn-secondary {
+  @apply text-xs rounded-sm text-white shadow px-12 py-2 shadow-3xl cursor-pointer border-slate-400 bg-gradient-to-r from-[#E34CCE] to-[#E39B57] duration-500 border-none disabled:opacity-75 rounded-tr-3xl rounded-bl-3xl;
+}
+
+
+
+/*---------------- FORM ------------*/
+.form-input-title {
+  @apply text-[10px] dark:text-slate-400;
+}
+
+.form-input {
+  @apply block w-full px-2 py-2 mt-1 text-xs bg-white border rounded-sm rounded focus:outline-none dark-color dark:border-slate-600 text-slate-700 dark:text-slate-200;
+}
+
+/*-------------- FOOTER -------------*/
 .footer-border {
   @apply w-12 border-b-[2px] border-b-gray-200 mb-2 dark:border-b-gray-300;
 }

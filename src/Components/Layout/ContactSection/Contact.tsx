@@ -1,39 +1,43 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import toast, { Toaster } from "react-hot-toast";
 
 import Button from "../Shared/Button";
+import ErrorMessage from "./ErrorMessage";
+
+import { validateEmail, validateUserName, validateMessage } from "./Validation";
 
 function Contact(): JSX.Element {
-  const [name, setName] = useState<string>("");
-  const [email, setEmail] = useState<string>("");
-  const [message, setMessage] = useState<string>("");
+  const [formState, setFormState] = useState({
+    userName: "",
+    email: "",
+    message: "",
+  });
+  const [nameError, setNameError] = useState<string>("");
+  const [emailError, setEmailError] = useState<string>("");
+  const [messageError, setMessageError] = useState<string>("");
+  const [btnDisabled, setBtnDisabled] = useState<boolean>(false);
 
-  const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    let inputName: string = e.target.value;
-    setName(inputName);
+  useEffect(() => {
+    const { userName, email, message } = formState;
+    validateUserName({ userName, setNameError });
+    validateEmail({ email, setEmailError });
+    validateMessage({ message, setMessageError });
+  }, [formState.userName, formState.email, formState.message]);
+
+  
+  // HANDLE FORM INPUTS
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    setFormState({ ...formState, [e.target.name]: e.target.value });
   };
 
-  const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    let inputEmail: string = e.target.value;
-    setEmail(inputEmail);
-  };
-
-  const handleMessageChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
-    let inputMessage: string = e.target.value;
-    setMessage(inputMessage);
-  };
-
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  
+  const handleFormSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    const newDetails: { name: string; email: string; message: string } = {
-      name,
-      email,
-      message,
-    };
-    console.log(newDetails);
-    setName("");
-    setEmail("");
-    setMessage("");
+    toast.success("Form submitted!");
+    setFormState({ ...formState, userName: "", email: "", message: "" });
   };
 
   return (
@@ -45,58 +49,67 @@ function Contact(): JSX.Element {
       <div className="relative flex flex-col p-4 mx-auto tablet:flex-row tablet:py-0 tablet:p-4 tablet:max-w-2xl tablet:min-h-[600px] laptop:max-w-5xl desktop:max-w-6xl laptop:px-32 sm:p-0 ">
         {/* FORM */}
         <form
+          autoComplete="off"
           data-aos="zoom-down"
           data-aos-easing="ease-in-sine"
           data-aos-duration="1000"
           method="POST"
           action="/send"
-          onSubmit={handleSubmit}
+          onSubmit={handleFormSubmit}
           className="absolute z-10 w-11/12 px-5 py-10 space-y-6 bg-white shadow shadow-3xl tablet:w-80 tablet:absolute tablet:z-20 tablet:left-4 laptop:w-1/2 tablet:p-7 laptop:w-96 laptop:h-[500px] laptop:py-12 laptop:left-12 desktop:left-16 dark-color sm:w-full sm:py-12 dark:shadow-gray-100/10 "
         >
-          <h3 className="text-sm text-center opacity-70">
+          <h3 className="text-sm text-center opacity-70 ">
             <span className="opacity-80"> Have an event in mind? </span>{" "}
             <span className="text-bgPurple">Let's talk now</span>
           </h3>
           <div className="space-y-6 tablet:space-y-3 ">
             {/* NAME */}
-            <div className="">
-              <h5 className="form-input-title">Your Name</h5>
+            <div>
+              <h5 className="form-input-title">Full Name</h5>
               <input
-                name="name"
-                value={name}
-                onChange={handleNameChange}
+                id="name"
+                name="userName"
+                value={formState.userName}
+                onChange={handleInputChange}
                 type="text"
-                className="block w-full px-2 py-2 mt-1 border rounded-sm rounded focus:outline-none dark-color dark:border-slate-600 in-range:border-green-500 out-of-range:border-red-500 "
-                min="2"
-                max="5"
+                className="form-input"
               />
+              {nameError && <ErrorMessage error={nameError} />}
             </div>
+
             {/* email */}
             <div>
-              <h5 className="form-input-title">Your Email</h5>
+              <h5 className="form-input-title">Email</h5>
               <input
                 id="email"
                 name="email"
-                value={email}
-                onChange={handleEmailChange}
+                value={formState.email}
+                onChange={handleInputChange}
                 type="email"
-                className="block w-full px-2 py-2 mt-1 border rounded-sm rounded focus:outline-none invalid:border-pink-500 invalid:text-pink-600 valid:text-green-600 dark-color dark:border-slate-600 "
+                className="form-input invalid:border-pink-500 invalid:text-pink-600 valid:text-green-600 dark:border-slate-600"
               />
+              {emailError && <ErrorMessage error={emailError} />}
             </div>
+
             {/* Contact */}
             <div>
-              <h5 className="form-input-title">Your Message</h5>
+              <h5 className="form-input-title">Message</h5>
               <textarea
+                id="message"
                 name="message"
-                value={message}
-                onChange={handleMessageChange}
-                rows={4}
-                className="block w-full px-2 py-2 mt-1 border rounded-sm rounded focus:outline-none dark-color dark:border-slate-600 "
+                value={formState.message}
+                onChange={handleInputChange}
+                rows={6}
+                className="block w-full px-2 py-2 mt-1 text-xs bg-white border rounded-sm rounded focus:outline-none dark-color dark:border-slate-600"
               />
+              {messageError && <ErrorMessage error={messageError} />}
             </div>
+
+            {/* BUTTON */}
             <Button
               type="submit"
-              className="text-xs rounded-sm text-white shadow px-12 py-2 shadow-3xl cursor-pointer border-slate-400 bg-gradient-to-r from-[#E34CCE] to-[#E39B57] duration-500 border-none"
+              className="secondary"
+              isDisabled={btnDisabled}
             >
               Send
             </Button>

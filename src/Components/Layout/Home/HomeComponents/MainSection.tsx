@@ -55,7 +55,7 @@ export default function MainSection(): JSX.Element {
             <BespokeGarments
               styling="hidden max-w-xs tablet:flex font-serif text-[55px] font-medium tablet:font-black tablet:text-7xl text-black dark:text-white tablet:leading-[30px] 
               laptop:text-8xl  
-              laptop:leading-7 desktop:text-[115px] desktop:leading-[45px]"
+              laptop:leading-7 desktop:text-[115px] desktop:leading-[45px] duration-500"
               title="Bespoke Garments"
             />
 
@@ -63,7 +63,7 @@ export default function MainSection(): JSX.Element {
             <motion.p
               variants={Animations.subtitle}
               className="hidden tablet:flex font-light tablet:leading-4 tablet:flex tablet:w-3/4 text-justify  laptop:w-[390px] laptop:leading-5  desktop:w-[450px] desktop:text-base font-serif desktop:leading-6 biggest:w-[450px]
-              biggest:text-base"
+              biggest:text-base duration-500"
             >
               We Specialise in producing bespoke, custom made garments for every
               special occasion, with the best customer service next to none.
@@ -91,7 +91,7 @@ export default function MainSection(): JSX.Element {
               transition={{ type: "spring", stiffness: 400, damping: 17 }}
               href="#work"
               type="button"
-              className="duration-500 bg-white rounded-tl-full shadow cursor-pointer button tablet:text-xs rounded-bl-3xl shadow-3xl dark:shadow-gray-100/10 dark-color dark:border-slate-600 dark:bg-transparent "
+              className="duration-500 bg-white rounded-tl-full shadow cursor-pointer button tablet:text-xs rounded-bl-3xl shadow-3xl dark:shadow-gray-100/10 dark-color dark:border-slate-600 dark:bg-transparent"
             >
               <div className="animate-pulse laptop:animate-none">
                 View Collection

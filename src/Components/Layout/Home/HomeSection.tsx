@@ -46,7 +46,7 @@ export default function Home(): JSX.Element {
                 variants={Animations.FadeLogo}
                 onAnimationComplete={() => setShowHamburgMenu(true)}
                 src={theme ? DarkLogo : LightLogo}
-                className="w-40 h-12 brightness-150 contrast-200 change-transitions"
+                className="w-40 h-12 duration-500 brightness-150 contrast-200 change-transitions"
                 alt="SpotOnEnterprise Logo"
               />
 
@@ -56,14 +56,14 @@ export default function Home(): JSX.Element {
               {/* PHONE */}
               <motion.div
                 variants={Animations.Phone}
-                className="flex hidden pr-40 space-x-2 tablet:flex laptop:pr-0 laptop:border tablet:bg-transparent tablet:rounded-full tablet:py-4 dark:laptop:border-slate-700 laptop:px-4 laptop:pr-3 laptop:items-center laptop:justify-center laptop:pr-4"
+                className="flex hidden pr-40 space-x-2 tablet:flex laptop:pr-0 laptop:border tablet:bg-transparent tablet:rounded-full tablet:py-4 dark:laptop:border-slate-700 laptop:px-4 laptop:pr-3 laptop:items-center laptop:justify-center laptop:pr-4 "
               >
                 {/* PHONE */}
                 <FaPhone
                   size={18}
                   className="text-yellow-400 delay-500 animate-pulse"
                 />
-                <h4 className="text-sm text-bgPurple font-body">
+                <h4 className="text-sm duration-500 text-bgPurple font-body">
                   +(44) 753 823 6771
                 </h4>
               </motion.div>

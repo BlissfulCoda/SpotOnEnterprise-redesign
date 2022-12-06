@@ -1,4 +1,5 @@
-import { FaRegCircle } from "react-icons/fa";
+import { WiMoonNew } from "react-icons/wi";
+import { FaAngleLeft } from "react-icons/fa";
 import { useState, useEffect, useContext } from "react";
 
 import { DarkModeDataInterface } from "../../../Data/DarkModeData";
@@ -25,7 +26,7 @@ function OurWork(): JSX.Element {
   const x = useSpring(0, { stiffness: 600, damping: 100 });
   const START_INDEX: number = -2500;
 
-  const scrollYPosition = window.scrollY >= 1690 && window.scrollY <= 1770;
+  const scrollYPosition = window.scrollY >= 1670 && window.scrollY <= 1780;
 
   // MOTION - TRANSFORMS
   const width = useTransform(x, [START_INDEX, 0], [346, 0]);
@@ -119,16 +120,16 @@ function OurWork(): JSX.Element {
               />
               <div
                 className={
-                  state && !theme ? "close text-white relative" : "close"
+                  state && !theme ? "close text-white relative" : "close "
                 }
               >
-                <FaRegCircle
+                <WiMoonNew
                   id="circle"
-                  size={60}
+                  size={62}
                   className={
                     showPing
-                      ? " text-white duration-1000 border rounded-full animate-ping outline-4 opacity-100"
-                      : "opacity-0 hidden duration-500"
+                      ? "text-white duration-1000 border rounded-full animate-ping outline-4 opacity-100"
+                      : "opacity-0 hidden duration-1000"
                   }
                 />
                 <AiOutlineClose
@@ -185,8 +186,8 @@ function OurWork(): JSX.Element {
             <div
               className={
                 scrollYPosition
-                  ? "text-bgPurple animate-wave w-min opacity-100 duration-500 text-xl"
-                  : "text-bgPurple opacity-20"
+                  ? "text-bgPurple animate-wave w-min opacity-100 duration-1000 text-xl"
+                  : "text-bgPurple opacity-20 duration-1000"
               }
             >
               👆
@@ -202,7 +203,13 @@ function OurWork(): JSX.Element {
             </h5>
           </motion.div>
           {/* PROGESS BAR */}
-          <div className="drag-progress-background tablet:hidden ">
+          <div
+            className={
+              state
+                ? "drag-progress-background bg-slate-800 duration-100"
+                : "drag-progress-background bg-slate-200 duration-100"
+            }
+          >
             <motion.div
               style={{ width }}
               className="drag-progress tablet:hidden"
