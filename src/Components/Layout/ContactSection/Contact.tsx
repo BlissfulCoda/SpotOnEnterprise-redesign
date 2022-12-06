@@ -15,7 +15,7 @@ function Contact(): JSX.Element {
   const [nameError, setNameError] = useState<string>("");
   const [emailError, setEmailError] = useState<string>("");
   const [messageError, setMessageError] = useState<string>("");
-  const [btnDisabled, setBtnDisabled] = useState<boolean>(false);
+  const [btnDisabled, setBtnDisabled] = useState<boolean>(true);
 
   useEffect(() => {
     const { userName, email, message } = formState;
@@ -24,19 +24,48 @@ function Contact(): JSX.Element {
     validateMessage({ message, setMessageError });
   }, [formState.userName, formState.email, formState.message]);
 
-  
   // HANDLE FORM INPUTS
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
+    const { userName, email, message } = formState;
+    if (
+      userName.trim().length >= 5 &&
+      userName.trim().length <= 40 &&
+      email !== "" &&
+      message.trim().length >= 10 &&
+      message.trim().length <= 200
+    ) {
+      setBtnDisabled(false);
+    } else {
+      setBtnDisabled(true);
+    }
     setFormState({ ...formState, [e.target.name]: e.target.value });
   };
 
-  
+  // HANDLE FORM SUBMIT
   const handleFormSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    toast.success("Form submitted!");
+    const { userName, email, message } = formState;
+
+    if (
+      userName.trim().length >= 5 &&
+      userName.trim().length <= 40 &&
+      email !== "" &&
+      message.trim().length >= 10 &&
+      message.trim().length <= 200
+    ) {
+      const formDetails: { userName: string; email: string; message: string } =
+        {
+          userName,
+          email,
+          message,
+        };
+
+      toast.success("Your message was sent successfully");
+      console.log(formDetails);
+    }
     setFormState({ ...formState, userName: "", email: "", message: "" });
   };
 

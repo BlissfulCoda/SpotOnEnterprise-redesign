@@ -144,15 +144,13 @@ body {
   @apply text-xs rounded-sm text-white shadow px-12 py-2 shadow-3xl cursor-pointer border-slate-400 bg-gradient-to-r from-[#E34CCE] to-[#E39B57] duration-500 border-none disabled:opacity-75 rounded-tr-3xl rounded-bl-3xl;
 }
 
-
-
 /*---------------- FORM ------------*/
 .form-input-title {
   @apply text-[10px] dark:text-slate-400;
 }
 
 .form-input {
-  @apply block w-full px-2 py-2 mt-1 text-xs bg-white border rounded-sm rounded focus:outline-none dark-color dark:border-slate-600 text-slate-700 dark:text-slate-200;
+  @apply block w-full px-2 py-3 mt-1 text-xs bg-white border rounded-sm rounded focus:outline-none dark-color dark:border-slate-600 text-slate-700 dark:text-slate-200;
 }
 
 /*-------------- FOOTER -------------*/
