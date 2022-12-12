@@ -4,9 +4,6 @@ export const Animations = {
     hidden: {
       y: "-200%",
       opacity: 0,
-      transition: {
-        ease: [0.455, 0.03, 0.515, 0.955],
-      },
     },
     visible: {
       opacity: 1,
@@ -15,29 +12,7 @@ export const Animations = {
         type: "spring",
         stiffness: 90,
         ease: [0.455, 0.03, 0.515, 0.955],
-        duration: 1,
-      },
-    },
-  },
-  // HAMBURG MENU
-  DisplayHamburgMenu: {
-    hidden: {
-      y: "-200%",
-      opacity: 0,
-      transition: {
-        ease: [0.455, 0.03, 0.515, 0.955],
-      },
-    },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        type: "spring",
-        stiffness: 90,
-        mass: 9,
-        ease: [0.455, 0.03, 0.515, 0.955],
-        duration: 0.2,
-        delay: 0.2,
+        duration: 0.5,
       },
     },
   },
@@ -57,7 +32,7 @@ export const Animations = {
       transition: {
         ease: [0.455, 0.03, 0.515, 0.955],
         duration: 1.2,
-        delay: 1.3,
+        delay: 1.1,
       },
     },
   },
@@ -76,7 +51,7 @@ export const Animations = {
       y: 0,
       transition: {
         ease: [0.455, 0.03, 0.515, 0.955],
-        duration: 1.7,
+        duration: 1.5,
         delay: 0.7,
       },
     },
@@ -85,10 +60,26 @@ export const Animations = {
   // Main Heading
   DesktopTitle: {
     hidden: {
-      y: "70%",
+      opacity: 0,
+    },
+    visible: {
+      opacity: 1,
+      transition: {
+        stiffness: 20,
+        dampness: 0.2,
+        ease: [0.455, 0.03, 0.515, 0.955],
+        duration: 0.7,
+        delay: 2,
+      },
+    },
+  },
+
+  // HAMBURG MENU
+  DisplayHamburgMenu: {
+    hidden: {
+      y: "-100%",
       opacity: 0,
       transition: {
-        duration: 1.1,
         ease: [0.455, 0.03, 0.515, 0.955],
       },
     },
@@ -96,9 +87,11 @@ export const Animations = {
       opacity: 1,
       y: 0,
       transition: {
+        stiffness: 120,
+        mass: 6,
         ease: [0.455, 0.03, 0.515, 0.955],
-        duration: 0.8,
-        delay: 2.2,
+        duration: 0.5,
+        delay: 0.1,
       },
     },
   },
@@ -106,15 +99,11 @@ export const Animations = {
   // Main Heading - Mobile
   mobileTitle: {
     hidden: {
-      y: "30%",
+      y: "10%",
       opacity: 0,
-      transition: {
-        duration: 1.1,
-        ease: [0.455, 0.03, 0.515, 0.955],
-      },
     },
     visible: {
-      opacity: 2,
+      opacity: 1,
       y: 0,
       color: ["#FFF", "#000", "#FFF"],
       transition: {
@@ -128,18 +117,13 @@ export const Animations = {
   // Sub heading
   subtitle: {
     hidden: {
-      y: "90%",
       opacity: 0,
-      transition: {
-        ease: [0.455, 0.03, 0.515, 0.955],
-      },
     },
     visible: {
       opacity: 0.7,
-      y: 0,
       transition: {
         ease: [0.455, 0.03, 0.515, 0.955],
-        duration: 0.85,
+        duration: 0.8,
         delay: 2.2,
       },
     },
@@ -148,7 +132,6 @@ export const Animations = {
   // Buttons
   buttons: {
     hidden: {
-      y: "90%",
       opacity: 0,
       transition: {
         ease: [0.455, 0.03, 0.515, 0.955],
@@ -156,11 +139,10 @@ export const Animations = {
     },
     visible: {
       opacity: 1,
-      y: 0,
       transition: {
         ease: [0.455, 0.03, 0.515, 0.955],
         duration: 1,
-        delay: 2.2,
+        delay: 2.1,
       },
     },
   },
@@ -168,7 +150,6 @@ export const Animations = {
   // socials
   socials: {
     hidden: {
-      y: "90%",
       opacity: 0,
       transition: {
         ease: [0.455, 0.03, 0.515, 0.955],
@@ -176,11 +157,10 @@ export const Animations = {
     },
     visible: {
       opacity: 1,
-      y: 0,
       transition: {
         ease: [0.455, 0.03, 0.515, 0.955],
-        duration: 0.86,
-        delay: 2.2,
+        duration: 1,
+        delay: 2.6,
       },
     },
   },
@@ -230,8 +210,8 @@ export const Animations = {
       opacity: 0.08,
       transition: {
         ease: [0.455, 0.03, 0.515, 0.955],
-        duration: 3,
-        delay: 2.7,
+        duration: 3.5,
+        delay: 3,
       },
     },
   },

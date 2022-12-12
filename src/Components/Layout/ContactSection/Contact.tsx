@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import toast, { Toaster } from "react-hot-toast";
+import toast from "react-hot-toast";
 
 import Button from "../Shared/Button";
 import ErrorMessage from "./ErrorMessage";
@@ -62,10 +62,10 @@ function Contact(): JSX.Element {
           email,
           message,
         };
-
-      toast.success("Your message was sent successfully");
       console.log(formDetails);
     }
+
+    toast.success("Your message was sent successfully");
     setFormState({ ...formState, userName: "", email: "", message: "" });
   };
 
@@ -78,19 +78,16 @@ function Contact(): JSX.Element {
       <div className="relative flex flex-col p-4 mx-auto tablet:flex-row tablet:py-0 tablet:p-4 tablet:max-w-2xl tablet:min-h-[600px] laptop:max-w-5xl desktop:max-w-6xl laptop:px-32 sm:p-0 ">
         {/* FORM */}
         <form
-          autoComplete="off"
           data-aos="zoom-down"
           data-aos-easing="ease-in-sine"
           data-aos-duration="1000"
+          data-aos-once="true"
           method="POST"
           action="/send"
           onSubmit={handleFormSubmit}
-          className="absolute z-10 w-11/12 px-5 py-10 space-y-6 bg-white shadow shadow-3xl tablet:w-80 tablet:absolute tablet:z-20 tablet:left-4 laptop:w-1/2 tablet:p-7 laptop:w-96 laptop:h-[500px] laptop:py-12 laptop:left-12 desktop:left-16 dark-color sm:w-full sm:py-12 dark:shadow-gray-100/10 "
+          className="absolute z-10 w-11/12 px-5 py-10 space-y-6 bg-white shadow shadow-xl tablet:w-80 tablet:absolute tablet:z-20 tablet:left-4 laptop:w-1/2 tablet:p-7 laptop:w-96 laptop:h-[500px] laptop:py-12 laptop:left-12 desktop:left-16 dark-color sm:w-full sm:py-12 dark:shadow-gray-100/5"
         >
-          <h3 className="text-sm text-center opacity-70 ">
-            <span className="opacity-80"> Have an event in mind? </span>{" "}
-            <span className="text-bgPurple">Let's talk now</span>
-          </h3>
+          <h3 className="text-sm text-center opacity-90 ">SEND A MESSAGE</h3>
           <div className="space-y-6 tablet:space-y-3 ">
             {/* NAME */}
             <div>
@@ -115,7 +112,7 @@ function Contact(): JSX.Element {
                 value={formState.email}
                 onChange={handleInputChange}
                 type="email"
-                className="form-input invalid:border-pink-500 invalid:text-pink-600 valid:text-green-600 dark:border-slate-600"
+                className="form-input invalid:border-pink-500 invalid:text-pink-600 valid:text-green-600 dark:border-slate-800"
               />
               {emailError && <ErrorMessage error={emailError} />}
             </div>
@@ -129,7 +126,7 @@ function Contact(): JSX.Element {
                 value={formState.message}
                 onChange={handleInputChange}
                 rows={6}
-                className="block w-full px-2 py-2 mt-1 text-xs bg-white border rounded-sm rounded focus:outline-none dark-color dark:border-slate-600"
+                className="form-input "
               />
               {messageError && <ErrorMessage error={messageError} />}
             </div>
@@ -149,6 +146,7 @@ function Contact(): JSX.Element {
           data-aos="fade-in"
           data-aos-easing="ease-in-sine"
           data-aos-delay="500"
+          data-aos-once="true"
           className="relative pt-[400px] tablet:right-0 tablet:w-full tablet:pt-12 tablet:pl-48 bg-opacity-100  tablet:bg-opacity-100 dark-color "
         >
           {/* BOTTOM GRADIENT */}

@@ -4,7 +4,8 @@ import { DarkModeDataInterface } from "../../../../Data/DarkModeData";
 import DarkModeContext from "../../../../Context/DarkModeContext";
 import { Animations } from "../../Shared/Animation";
 
-import BespokeGarments from "../../Shared/BespokeGarments";
+import BespokeGarmentsDesktop from "../../Shared/BespokeGarmentsDesktop";
+import BespokeGarmentsMobile from "../../Shared/BespokeGarmentsMobile";
 import MainImage from "./MainImage";
 import TailorMade from "../../Shared/TailorMade";
 
@@ -27,7 +28,7 @@ export default function MainSection(): JSX.Element {
 
   // State
   const [showImage, setShowImage] = useState<boolean>(false);
-  
+
   return (
     <div className="container mx-auto ">
       <div className="absolute z-20 top-[260px] w-[460px] pl-12 sm:pl-16 tablet:pl-4 tablet:space-y-32 space-y-40 tablet:top-28 laptop:space-y-40 laptop:left-14 mx-10 desktop:left-14 biggest:left-20">
@@ -37,22 +38,22 @@ export default function MainSection(): JSX.Element {
             className="flex flex-col space-y-3 sm:px-4 tablet:px-0 sm:space-y-3 tablet:space-y-6 laptop:space-y-12"
           >
             {/* SMALL - white: small - screen */}
-            <BespokeGarments
+            <BespokeGarmentsMobile
               styling="tablet:hidden text-white max-w-xs font-serif text-5xl font-semibold leading-7"
               title="Bespoke Garments"
             />
 
             {/*  SMALL - screen */}
             <motion.p
-              variants={Animations.mobileTitle}
-              className="text-white pt-2 tablet:hidden tablet:flex font-serif tracking-tighter w-[190px] leading-4"
+              variants={Animations.subtitle}
+              className="text-white pt-2 tablet:hidden tablet:flex font-serif tracking-tighter w-[190px] leading-4 opacity-40"
             >
               We Specialise in producing bespoke, custom made garments for every
               special occasion, with the best customer service next to none.
             </motion.p>
 
             {/* LARGE - black: large - screen */}
-            <BespokeGarments
+            <BespokeGarmentsDesktop
               styling="hidden max-w-xs tablet:flex font-serif text-[55px] font-medium tablet:font-black tablet:text-7xl text-black dark:text-white tablet:leading-[30px] 
               laptop:text-8xl  
               laptop:leading-7 desktop:text-[115px] desktop:leading-[45px] duration-500"
@@ -91,11 +92,11 @@ export default function MainSection(): JSX.Element {
               transition={{ type: "spring", stiffness: 400, damping: 17 }}
               href="#work"
               type="button"
-              className="duration-500 bg-white rounded-tl-full shadow cursor-pointer button tablet:text-xs rounded-bl-3xl shadow-3xl dark:shadow-gray-100/10 dark-color dark:border-slate-600 dark:bg-transparent"
+              className="duration-500 bg-white rounded-tl-full shadow cursor-pointer button tablet:text-xs rounded-bl-3xl shadow-3xl dark:shadow-gray-100/10 dark-color dark:border-slate-300 dark:bg-transparent"
             >
-              <div className="animate-pulse laptop:animate-none">
+              <span className="animate-pulse laptop:animate-none">
                 View Collection
-              </div>
+              </span>
             </motion.a>
           </motion.div>
         </div>

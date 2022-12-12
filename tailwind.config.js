@@ -41,7 +41,7 @@ module.exports = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
       }),
       animation: {
-        loader: "loader 1s ease-in-out forwards",
+        loader: "loader 1.2s ease-in-out forwards",
         // animation
         wave: "wave 3s infinite both",
       },

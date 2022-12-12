@@ -1,13 +1,12 @@
-import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Animations } from "../Shared/Animation";
+import { Animations } from "./Animation";
 
 interface Letters {
   title: string;
   styling: string;
 }
 
-export default function BespokeGarments({
+export default function BespokeGarmentsMobile({
   title,
   styling,
 }: Letters): JSX.Element {
@@ -16,24 +15,6 @@ export default function BespokeGarments({
 
   // Split words into letters
   const words: string[][] = splitWords.map((word) => word.split(""));
-
-  const [windowSize, setWindowSize] = useState(getWindowSize());
-
-  function getWindowSize() {
-    return window.innerWidth;
-  }
-
-  useEffect(() => {
-    function handleWindleResize() {
-      setWindowSize(getWindowSize());
-    }
-
-    window.addEventListener("resize", handleWindleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleWindleResize);
-    };
-  }, []);
 
   // Add space to words
   words.map((words) => {
@@ -45,7 +26,7 @@ export default function BespokeGarments({
       {words.map((word, index) => {
         return (
           <motion.span
-            variants={Animations.DesktopTitle}
+            variants={Animations.mobileTitle}
             className={`${styling}`}
             key={index}
           >

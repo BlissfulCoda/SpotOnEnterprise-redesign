@@ -9,7 +9,8 @@ export default function ImageContainer(): JSX.Element {
       data-aos-easing="ease-in-sine"
       data-aos-duration={2000 * (i + 2)}
       data-aos-delay={100 * i}
-      className="overflow-y-hidden duration-1000 rounded-2xl image-container"
+      data-aos-once="true"
+      className="overflow-y-hidden duration-1000 image-container"
       key={image.id}
     >
       <img src={image.imageUrl} alt={image.alt} className={image.version} />

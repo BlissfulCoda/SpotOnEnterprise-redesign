@@ -6,6 +6,7 @@ function About(): JSX.Element {
       data-aos="fade-in"
       data-aos-easing="linear"
       data-aos-duration="1000"
+      data-aos-once="true"
       className="w-full py-20 mb-16 border bg-zinc-50 dark-color dark:border-y-slate-800 dark:border-x-0 dark:shadow dark:bg-shadow-xl border-y-slate-100 tablet:mb-40"
     >
       <section id="about" className="container p-4 mx-auto max-w-7xl sm:p-6">
@@ -16,6 +17,7 @@ function About(): JSX.Element {
                 data-aos="zoom-out"
                 data-aos-easing="ease-out-cubic"
                 data-aos-duration="1500"
+                data-aos-once="true"
                 className="w-full h-full pt-8 text-transparent bg-white bg-center bg-cover text-9xl bg-clip-text bg-photo "
               >
                 A
@@ -26,6 +28,7 @@ function About(): JSX.Element {
               data-aos-easing="linear"
               data-aos-duration="1500"
               data-aos-delay="200"
+              data-aos-once="true"
               className="text-center duration-500 sm:px-0 desktop:px-12 opacity-60"
             >
               We are experienced in delivering a diversity of attractive
@@ -42,6 +45,7 @@ function About(): JSX.Element {
               data-aos-easing="linear"
               data-aos-duration="2000"
               data-aos-delay="300"
+              data-aos-once="true"
               src={ladyLight}
               alt="tailor image"
               className="hidden mx-auto tablet:pl-12 laptop:pl-12 h-80 laptop:h-96 tablet:flex saturate-150 brightness-100 dark:brightness-50"
@@ -55,6 +59,7 @@ function About(): JSX.Element {
                 data-aos-easing="linear"
                 data-aos-duration="1500"
                 data-aos-delay="300"
+                data-aos-once="true"
                 className="space-y-12 tablet:w-4/5"
               >
                 <div className="py-6 space-y-4 tablet:p-6">
@@ -70,7 +75,7 @@ function About(): JSX.Element {
                       price. we cater to both individuals, familes and groups -
                       occassions such as
                       <span className="about-span"> weddings </span>,
-                      <span className="about-span">anniversaries, </span> 
+                      <span className="about-span">anniversaries, </span>
                       <span className="about-span">birthdays </span>and{" "}
                       <span className="about-span">special celebrations.</span>{" "}
                       Our garments include but not limited to,{" "}

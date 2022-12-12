@@ -23,16 +23,16 @@ function OurWork(): JSX.Element {
   const { DarkLogo } = SpotOnEntepriseGifsAndLogos;
 
   // Framer Motion setings
-  const x = useSpring(0, { stiffness: 600, damping: 100 });
-  const START_INDEX: number = -2500;
+  const x = useSpring(0, { stiffness: 600, damping: 110 });
+  const START_INDEX: number = -2470;
 
-  const scrollYPosition = window.scrollY >= 1670 && window.scrollY <= 1780;
+  const scrollYPosition = window.scrollY >= 1670 && window.scrollY <= 1760;
 
   // MOTION - TRANSFORMS
-  const width = useTransform(x, [START_INDEX, 0], [346, 0]);
+  const width = useTransform(x, [START_INDEX, 0], [320, 0]);
   const scale = useTransform(x, [-100, 0], [1.25, 1]);
   const fadeIn = useTransform(x, [-100, 0], [1, 0]);
-  const fadeOut = useTransform(x, [-100, 0], [0, 1]);
+  const fadeOut = useTransform(x, [-40, 0], [0, 1]);
   const up = useTransform(x, [-100, 0], [-100, 0]);
 
   // state
@@ -46,15 +46,15 @@ function OurWork(): JSX.Element {
   useEffect(() => {
     // change state when dragged on x - axis is pass
     x.onChange(() => {
-      x.get() > -93 ? setState(false) : setState(true);
+      x.get() > -90 ? setState(false) : setState(true);
     });
   }, [x]);
 
   // No scroll while drag state is active
   useEffect(() => {
     state
-      ? targetElement?.classList.add("noScroll")
-      : targetElement?.classList.remove("noScroll");
+      ? targetElement?.classList.add("overflow-hidden")
+      : targetElement?.classList.remove("overflow-hidden");
   });
 
   //  CLICK PING TO CLOSE
@@ -89,7 +89,7 @@ function OurWork(): JSX.Element {
     >
       <motion.div
         style={{ translateY: up }}
-        className="container mx-auto overflow-y-hidden duration-100 tablet:px-40 laptop:px-56"
+        className="container mx-auto overflow-hidden duration-200 tablet:px-40 laptop:px-56"
       >
         <h2>WHAT WE OFFER</h2>
       </motion.div>
@@ -98,7 +98,7 @@ function OurWork(): JSX.Element {
       <div className="relative tablet:hidden">
         <motion.span
           style={{ opacity: fadeIn }}
-          className={state ? "background" : "hidden"}
+          className={state ? "background duration-100" : "hidden duration-100"}
         ></motion.span>
         {/* LOGO AND EXIT */}
         {state ? (
@@ -108,10 +108,9 @@ function OurWork(): JSX.Element {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -30 }}
               transition={{
-                y: { duration: 0.5 },
                 default: { ease: "linear" },
               }}
-              className="drag-header"
+              className="duration-100 drag-header"
             >
               <img
                 src={state && !theme ? DarkLogo : DarkLogo}
@@ -128,7 +127,7 @@ function OurWork(): JSX.Element {
                   size={62}
                   className={
                     showPing
-                      ? "text-white duration-1000 border rounded-full animate-ping outline-4 opacity-100"
+                      ? "text-white duration-1000 animate-ping opacity-100 "
                       : "opacity-0 hidden duration-1000"
                   }
                 />
@@ -165,8 +164,7 @@ function OurWork(): JSX.Element {
               style={scrollYPosition ? { x } : {}}
               drag={"x"}
               dragConstraints={{ left: START_INDEX, right: 0 }}
-              dragTransition={{ bounceStiffness: 600, bounceDamping: 10 }}
-              dragElastic={0.06}
+              dragElastic={0.07}
               className="absolute top-0 bottom-0 left-0  z-40 w-[5000px] sm:w-[6600px] h-96 tablet:hidden  opacity-0 duration-1000"
             ></motion.div>
             <ImageContainer />
@@ -179,24 +177,24 @@ function OurWork(): JSX.Element {
             style={{ opacity: fadeOut }}
             className={
               scrollYPosition
-                ? "flex items-center justify-end mb-4 space-x-2 duration-500"
-                : "flex items-center justify-end mb-4 space-x-2"
+                ? "flex items-center justify-end space-x-1 duration-1000 pt-2 opacity-100 animate-bounce"
+                : "flex items-center justify-end space-x-1  duration-1000 pt-2 opacity-30"
             }
           >
-            <div
+            <span
               className={
                 scrollYPosition
-                  ? "text-bgPurple animate-wave w-min opacity-100 duration-1000 text-xl"
-                  : "text-bgPurple opacity-20 duration-1000"
+                  ? "text-bgPurple opacity-100 duration-1000 animate-pulse pt-4"
+                  : "text-bgPurple opacity-60 duration-1000 pt-4 "
               }
             >
-              👆
-            </div>
+              <FaAngleLeft size={15} />
+            </span>
             <h5
               className={
                 scrollYPosition
-                  ? "font-black text-right opacity-100 duration-500 animate-bounce text-[9px] pt-4"
-                  : "font-black text-right opacity-70 text-[9px] duration-500"
+                  ? "font-black text-right opacity-100 duration-500  text-[9px] pt-4"
+                  : "font-black text-right opacity-70 text-[9px] pt-4 duration-500"
               }
             >
               Drag To Explore
@@ -206,8 +204,8 @@ function OurWork(): JSX.Element {
           <div
             className={
               state
-                ? "drag-progress-background bg-slate-800 duration-100"
-                : "drag-progress-background bg-slate-200 duration-100"
+                ? "drag-progress-background bg-slate-800"
+                : "drag-progress-background bg-slate-200"
             }
           >
             <motion.div

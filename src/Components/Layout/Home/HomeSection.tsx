@@ -15,15 +15,14 @@ import { SpotOnEntepriseGifsAndLogos } from "../../../Data/ComponentData";
 import { Animations } from "../Shared/Animation";
 
 export default function Home(): JSX.Element {
-  const { theme, checked} = useContext(
+  const { theme, checked } = useContext(
     DarkModeContext
   ) as DarkModeDataInterface;
 
-  const { DarkLogo, LightLogo} =
-    SpotOnEntepriseGifsAndLogos;
+  const { DarkLogo, LightLogo } = SpotOnEntepriseGifsAndLogos;
 
-    // STATE
-    const [showHamburgMenu, setShowHamburgMenu] = useState<boolean>(false);
+  // STATE
+  const [showHamburgMenu, setShowHamburgMenu] = useState<boolean>(false);
 
   //  ANIMATIONS
 

@@ -12,6 +12,10 @@
   box-sizing: border-box;
 }
 
+.google-map * {
+  border-style: none;
+}
+
 /* input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
@@ -21,7 +25,7 @@ textarea:-webkit-autofill:focus,
 select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
-  -webkit-box-shadow: 0 0 0px 1000px #ffffff inset !important;
+  -webkit-box-shadow: 0 0 0px 1000px #000000 inset !important;
 } */
 
 html,
@@ -47,53 +51,58 @@ body {
   }
 }
 
+/*----------- PAGE INDICATOR  ----------*/
+/* .navigation {
+  @apply m-0 p-0 z-40 fixed right-4 top-96 -space-y-1 translate-x-1/2 list-none;
+} */
+
+/* .navigation-li {
+  @apply w-2 h-2  rounded-full hover:scale-150 duration-700 cursor-pointer;
+} */
+
+/*----------- DARK-MODE ----------*/
+.dark-color {
+  @apply dark:bg-[#080F22];
+}
+
 .section-container {
   @apply container  mx-auto max-w-sm sm:max-w-md tablet:max-w-3xl laptop:max-w-5xl desktop:max-w-6xl biggest:max-w-7xl;
 }
 
-/* GRID CONTAINER */
+/*----------- IMAGES ----------*/
 .grid-container {
   @apply tablet:gap-2 tablet:space-x-1 laptop:space-x-0 tablet:grid-cols-2 tablet:grid tablet:px-2 laptop:grid-cols-4 mx-auto tablet:max-w-2xl laptop:p-12 laptop:max-w-5xl desktop:max-w-6xl biggest:max-w-7xl flex flex-row laptop:px-12 desktop:px-16 w-[2500px] h-[460px] sm:h-[550px] tablet:w-full tablet:h-full tablet:static absolute z-30 space-x-3 duration-100 hover:cursor-pointer;
 }
 
-/* IMAGE CONTAINER */
 .image-container {
-  @apply w-full h-[390px] laptop:h-full laptop:w-full rounded rounded-2xl;
+  @apply w-full h-[390px] laptop:h-full laptop:w-full rounded-tl-3xl rounded-br-3xl;
 }
 
-/* IMAGES */
 .image {
-  @apply object-cover w-full h-full rounded-2xl tablet:rounded-lg tablet:hover:scale-125 duration-1000 cursor-pointer;
+  @apply object-cover w-full h-full tablet:hover:scale-125 duration-1000 cursor-pointer rounded-tl-3xl rounded-br-3xl;
 }
 
+/*----------- DRAG & IMAGE-OVERLAY ----------*/
 /* DRAG-HEADER */
 .drag-header {
   @apply w-full box-border flex items-center justify-between fixed z-30 top-5 py-2  opacity-0;
 }
 
-/* CLOSE */
 .close {
   @apply dark:text-white text-3xl font-semibold flex items-center absolute right-0 h-2 w-32 justify-center;
 }
 
-/* PROGRESS CONTAINER */
+.background {
+  @apply fixed h-screen w-full bg-slate-900 opacity-10 dark:bg-slate-900 top-0 left-0 bottom-0 z-30 opacity-100 will-change-transform tablet:hidden;
+}
+
+/*----------- PROGRESS  ----------*/
 .drag-progress-background {
   @apply w-full h-[2px] relative tablet:hidden dark:bg-slate-800 z-30;
 }
 
-/* IMAGE CONTAINER OVERLAY */
-.background {
-  @apply fixed h-screen w-full bg-slate-900 opacity-10 dark:bg-slate-900 top-0 left-0 bottom-0 z-30 opacity-0 will-change-transform tablet:hidden;
-}
-
-/* PROGRESS LENGTH */
 .drag-progress {
-  @apply w-0 h-[1px] bg-slate-400 absolute z-30 right-0 tablet:hidden dark:bg-slate-700;
-}
-
-/* NO SCROLL WHILE DRAG IS ACTIVE */
-.noScroll {
-  @apply overflow-y-hidden isolate;
+  @apply w-0 h-[1px] bg-slate-400 absolute z-30 right-0 tablet:hidden dark:bg-slate-400;
 }
 
 .quotations {
@@ -113,9 +122,10 @@ body {
 }
 
 .button {
-  @apply py-2 px-4 text-[11px] font-semibold font-serif border hover:scale-105 laptop:px-10 laptop:py-3 flex items-center justify-center border-none;
+  @apply py-2 px-4 text-[11px]  font-serif border hover:scale-105 laptop:px-10 laptop:py-3 flex items-center justify-center border-none;
 }
 
+/*----------- GOOGLE MAP  ----------*/
 .gradient-bottom {
   @apply bg-gradient-to-b from-transparent to-white dark:to-darkMode;
 }
@@ -132,10 +142,6 @@ body {
   @apply bg-gradient-to-t from-transparent to-white dark:to-darkMode;
 }
 
-.dark-color {
-  @apply dark:bg-[#080F22];
-}
-
 .btn-primary {
   @apply text-xs rounded-sm text-black shadow px-12 py-2 shadow-3xl cursor-pointer border-slate-400 bg-gradient-to-r from-[#E34CCE] to-[#E39B57] duration-500 border-none disabled:opacity-75 rounded-tr-3xl rounded-bl-3xl;
 }
@@ -144,13 +150,37 @@ body {
   @apply text-xs rounded-sm text-white shadow px-12 py-2 shadow-3xl cursor-pointer border-slate-400 bg-gradient-to-r from-[#E34CCE] to-[#E39B57] duration-500 border-none disabled:opacity-75 rounded-tr-3xl rounded-bl-3xl;
 }
 
+/*---------------- TESTIMONIALS ------------*/
+.testimonial-container {
+  @apply w-full mx-auto;
+}
+
+.testimonial-carousel {
+  @apply h-[350px]  pl-2 flex flex-col pt-8 overflow-hidden;
+}
+
+.testimonial-slider {
+  @apply h-5/6 w-[300%] flex relative items-center mb-8 space-x-7 ease-linear duration-700;
+}
+
+.slider-section {
+  @apply basis-full;
+}
+
+.slider-list-container {
+  @apply flex space-x-2 text-center justify-center list-none p-0 m-0;
+}
+
+.slider-li {
+  @apply w-2 h-2 bg-red-300 rounded-full cursor-pointer hover:scale-150 duration-500;
+}
 /*---------------- FORM ------------*/
 .form-input-title {
-  @apply text-[10px] dark:text-slate-400;
+  @apply text-[10px] dark:text-slate-200;
 }
 
 .form-input {
-  @apply block w-full px-2 py-3 mt-1 text-xs bg-white border rounded-sm rounded focus:outline-none dark-color dark:border-slate-600 text-slate-700 dark:text-slate-200;
+  @apply block w-full px-2 py-3 mt-1 text-xs bg-white border rounded-sm rounded focus:outline-none dark-color dark:border-slate-800 text-slate-700 dark:text-slate-200;
 }
 
 /*-------------- FOOTER -------------*/

@@ -1,6 +1,5 @@
 import { motion as m } from "framer-motion";
 
-
 import { useContext, useState, useEffect } from "react";
 import { DarkModeDataInterface } from "../Data/DarkModeData";
 import DarkModeContext from "../Context/DarkModeContext";
@@ -12,6 +11,7 @@ import OurWork from "./Layout/OurWorkSection/OurWork";
 import Testimonials from "./Layout/TestimonialSection/Testimonials";
 import Contact from "./Layout/ContactSection/Contact";
 import Footer from "./Layout/FooterSection/FooterSection";
+import PageIndicator from "./Layout/Shared/PageIndicator";
 
 import MobileMenu from "./Layout/Home/HomeComponents/MobileMenu";
 

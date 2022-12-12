@@ -22,7 +22,8 @@ function FooterSection(): JSX.Element {
           data-aos-easing="ease-out-cubic"
           data-aos-duration="1000"
           data-aos-delay="100"
-          className="flex flex-col items-center inner-footer tablet:w-1/3 tablet:bg-zinc-50 dark-color tablet:dark:bg-slate-900 "
+          data-aos-once="true"
+          className="flex flex-col items-center inner-footer tablet:w-1/3 tablet:bg-zinc-50 dark-color tablet:dark:bg-dark-color "
         >
           <h3 className="footer-subheader">NAVIGATION</h3>
           <div className="footer-subcontainer laptop:space-y-4">
@@ -44,14 +45,15 @@ function FooterSection(): JSX.Element {
           </div>
         </div>
 
-        {/* SOCIALS */}
+        {/* CONTACT */}
         <div
           data-aos="fade-up"
           data-aos-anchor-placement="top-bottom"
           data-aos-easing="ease-out-cubic"
           data-aos-duration="1000"
           data-aos-delay="50"
-          className=" inner-footer bg-zinc-50 tablet:w-1/3 tablet:bg-white dark:bg-slate-900 tablet:dark:bg-darkMode"
+          data-aos-once="true"
+          className=" inner-footer bg-zinc-50 tablet:w-1/3 tablet:bg-white dark:bg-[#0E1426] tablet:dark:bg-darkMode"
         >
           <h3 className="footer-subheader">CONTACT</h3>
           <div className="flex flex-col items-center footer-subcontainer">
@@ -92,7 +94,8 @@ function FooterSection(): JSX.Element {
           data-aos-easing="ease-out-cubic"
           data-aos-duration="1000"
           data-aos-delay="50"
-          className="inner-footer tablet:w-1/3 tablet:bg-zinc-50 dark-color tablet:dark:bg-slate-900"
+          data-aos-once="true"
+          className="inner-footer tablet:w-1/3 tablet:bg-zinc-50 dark-color tablet:dark:bg-dark-color"
         >
           <h3 className="footer-subheader">COMPANY</h3>
           <div className="mb-16 footer-subcontainer">
