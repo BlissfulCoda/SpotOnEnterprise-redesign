@@ -45,7 +45,7 @@ export default function MainSection(): JSX.Element {
 
             {/*  SMALL - screen */}
             <motion.p
-              variants={Animations.subtitle}
+              variants={Animations.mobileTitle}
               className="text-white pt-2 tablet:hidden tablet:flex font-serif tracking-tighter w-[190px] leading-4 opacity-40"
             >
               We Specialise in producing bespoke, custom made garments for every

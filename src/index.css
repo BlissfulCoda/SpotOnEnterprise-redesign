@@ -16,18 +16,6 @@
   border-style: none;
 }
 
-/* input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus,
-textarea:-webkit-autofill,
-textarea:-webkit-autofill:hover,
-textarea:-webkit-autofill:focus,
-select:-webkit-autofill,
-select:-webkit-autofill:hover,
-select:-webkit-autofill:focus {
-  -webkit-box-shadow: 0 0 0px 1000px #000000 inset !important;
-} */
-
 html,
 body {
   @apply relative h-screen;
@@ -152,19 +140,19 @@ body {
 
 /*---------------- TESTIMONIALS ------------*/
 .testimonial-container {
-  @apply w-full mx-auto;
+  @apply w-full tablet:overflow-hidden h-[350px] mx-auto mb-5 sm:h-[450px] sm:mb-6 tablet:w-[270px] tablet:h-[360px] tablet:ml-12 tablet:mb-2 laptop:w-[330px] laptop:ml-6 laptop:h-[430px] desktop:h-[460px] desktop:ml-4 desktop:w-[360px] biggest:h-[490px];
 }
 
 .testimonial-carousel {
-  @apply h-[350px]  pl-2 flex flex-col pt-8 overflow-hidden;
+  @apply h-full w-full overflow-hidden flex justify-start flex-col ml-4 sm:ml-0 sm:pt-5 sm:mb-2 tablet:h-[330px] tablet:w-[280px] tablet:ml-0 tablet:mb-0 tablet:pt-4 laptop:w-[340px] laptop:pt-2 laptop:h-[400px] desktop:pt-5 desktop:w-[360px] desktop:h-[430px] laptop:pl-14 desktop:pl-6 desktop:mb-2 biggest:pt-5;
 }
 
 .testimonial-slider {
-  @apply h-5/6 w-[300%] flex relative items-center mb-8 space-x-7 ease-linear duration-700;
+  @apply h-full w-[390%] flex relative items-center transition duration-500 ease-linear shrink-0 items-center justify-center space-x-8 ml-2 sm:-ml-5  pl-4 tablet:pl-0 laptop:ml-0 desktop:space-x-20  desktop:pl-32;
 }
 
 .slider-section {
-  @apply basis-full;
+  @apply basis-1/4 w-3/12 shrink-0 flex-1 transition delay-1000 duration-300 ease-in-out;
 }
 
 .slider-list-container {

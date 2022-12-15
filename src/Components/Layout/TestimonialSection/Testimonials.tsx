@@ -12,16 +12,15 @@ function Testimonials(): JSX.Element {
       data-aos-delay="200"
       data-aos-once="true"
       id="testimonials"
-      className="px-3 py-8 space-y-4 mb-28 section-container sm:px-0"
+      className="px-3 py-8 space-y-6 mb-28 section-container sm:px-0"
     >
       <div className="space-y-2">
         <h2>TESTIMONIALS</h2>
       </div>
 
-      <Card className="flex flex-col pr-1 space-y-2 shadow shadow-lg tablet:flex-row section-container tablet:max-w-2xl laptop:max-w-5xl desktop:max-w-5xl tablet:h-full tablet:pr-0 dark:shadow-slate-500/5">
-        
+      <Card className="flex flex-col pr-1 space-y-2 shadow shadow-lg tablet:flex-row section-container tablet:max-w-2xl laptop:max-w-4xl desktop:max-w-5xl tablet:h-full tablet:pr-0 dark:shadow-slate-500/5 ">
         {/* LEFT SIDE */}
-        <Card className="flex items-center justify-center w-full h-80 bg-[#071C3E] dark:bg-[#01112C] bg-zinc-20 rounded-br-[60px] py-20 px-40 tablet:w-1/2 tablet:h-96 laptop:h-[460px] desktop:h-[480px] biggest:h-[520px]">
+        <Card className="flex items-center justify-center w-full h-80 bg-[#071C3E] dark:bg-[#01112C] bg-zinc-20 rounded-br-[60px] py-20 px-40 tablet:w-1/2 tablet:h-96 laptop:h-[460px] desktop:h-[480px] biggest:h-[520px] laptop:rounded-br-[80px]">
           {/* inner container */}
           <div
             data-aos="fade-in"
@@ -45,7 +44,7 @@ function Testimonials(): JSX.Element {
         </Card>
 
         {/* RIGHT SIDE - IMAGES + CUSTOMER FEEDBACK */}
-        <Card className="w-full px-5 mx-auto py-9 tablet:w-1/2 tablet:py-0 tablet:px-0">
+        <Card className="w-full px-5 mx-auto py-7 tablet:w-1/2 tablet:py-0 tablet:px-0">
           <div
             data-aos="fade-in"
             data-aos-easing="ease-in-sine"

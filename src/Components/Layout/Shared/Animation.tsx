@@ -120,7 +120,7 @@ export const Animations = {
       opacity: 0,
     },
     visible: {
-      opacity: 0.7,
+      opacity: 0.5,
       transition: {
         ease: [0.455, 0.03, 0.515, 0.955],
         duration: 0.8,
@@ -192,7 +192,7 @@ export const Animations = {
       opacity: 1,
       transition: {
         ease: [0.455, 0.03, 0.515, 0.955],
-        duration: 2,
+        duration: 1,
       },
     },
   },
@@ -207,10 +207,10 @@ export const Animations = {
       },
     },
     visible: {
-      opacity: 0.08,
+      opacity: 0.06,
       transition: {
         ease: [0.455, 0.03, 0.515, 0.955],
-        duration: 3.5,
+        duration: 2.5,
         delay: 3,
       },
     },

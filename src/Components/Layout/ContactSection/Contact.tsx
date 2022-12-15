@@ -85,7 +85,7 @@ function Contact(): JSX.Element {
           method="POST"
           action="/send"
           onSubmit={handleFormSubmit}
-          className="absolute z-10 w-11/12 px-5 py-10 space-y-6 bg-white shadow shadow-xl tablet:w-80 tablet:absolute tablet:z-20 tablet:left-4 laptop:w-1/2 tablet:p-7 laptop:w-96 laptop:h-[500px] laptop:py-12 laptop:left-12 desktop:left-16 dark-color sm:w-full sm:py-12 dark:shadow-gray-100/5"
+          className="absolute z-10 w-11/12 px-5 py-10 space-y-6 bg-white shadow shadow-xl tablet:w-80 tablet:absolute tablet:z-20 tablet:left-4 laptop:w-1/2 tablet:p-7 laptop:w-96 laptop:h-[500px] laptop:py-12 laptop:left-12 desktop:left-16 dark-color sm:w-full sm:py-12 dark:shadow-gray-100/5 border border-slate-100 dark:border-slate-900"
         >
           <h3 className="text-sm text-center opacity-90 ">SEND A MESSAGE</h3>
           <div className="space-y-6 tablet:space-y-3 ">
