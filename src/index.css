@@ -16,6 +16,11 @@
   border-style: none;
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  transition: background-color 600000s 0s, color 600000s 0s;
+}
+
 html,
 body {
   @apply relative h-screen;
@@ -39,15 +44,6 @@ body {
   }
 }
 
-/*----------- PAGE INDICATOR  ----------*/
-/* .navigation {
-  @apply m-0 p-0 z-40 fixed right-4 top-96 -space-y-1 translate-x-1/2 list-none;
-} */
-
-/* .navigation-li {
-  @apply w-2 h-2  rounded-full hover:scale-150 duration-700 cursor-pointer;
-} */
-
 /*----------- DARK-MODE ----------*/
 .dark-color {
   @apply dark:bg-[#080F22];
@@ -59,15 +55,15 @@ body {
 
 /*----------- IMAGES ----------*/
 .grid-container {
-  @apply tablet:gap-2 tablet:space-x-1 laptop:space-x-0 tablet:grid-cols-2 tablet:grid tablet:px-2 laptop:grid-cols-4 mx-auto tablet:max-w-2xl laptop:p-12 laptop:max-w-5xl desktop:max-w-6xl biggest:max-w-7xl flex flex-row laptop:px-12 desktop:px-16 w-[2500px] h-[460px] sm:h-[550px] tablet:w-full tablet:h-full tablet:static absolute z-30 space-x-3 duration-100 hover:cursor-pointer;
+  @apply tablet:gap-2 tablet:space-x-1 laptop:space-x-0 tablet:grid-cols-2 tablet:grid tablet:px-2 laptop:grid-cols-4 mx-auto tablet:max-w-2xl laptop:p-12 laptop:max-w-5xl desktop:max-w-6xl biggest:max-w-7xl flex flex-row laptop:px-12 desktop:px-16 w-[2500px] h-[460px] sm:h-[550px] sm:w-[2600px] tablet:w-full tablet:h-full tablet:static absolute z-30 space-x-3 duration-100 cursor-grabbing;
 }
 
 .image-container {
-  @apply w-full h-[390px] laptop:h-full laptop:w-full rounded-tl-3xl rounded-br-3xl;
+  @apply w-full h-[390px] sm:h-[420px] laptop:h-full laptop:w-full rounded-tl-3xl rounded-br-3xl cursor-grabbing;
 }
 
 .image {
-  @apply object-cover w-full h-full tablet:hover:scale-125 duration-1000 cursor-pointer rounded-tl-3xl rounded-br-3xl;
+  @apply object-cover w-full h-full tablet:hover:scale-125 duration-1000 cursor-grabbing rounded-tl-3xl rounded-br-3xl;
 }
 
 /*----------- DRAG & IMAGE-OVERLAY ----------*/
@@ -131,40 +127,37 @@ body {
 }
 
 .btn-primary {
-  @apply text-xs rounded-sm text-black shadow px-12 py-2 shadow-3xl cursor-pointer border-slate-400 bg-gradient-to-r from-[#E34CCE] to-[#E39B57] duration-500 border-none disabled:opacity-75 rounded-tr-3xl rounded-bl-3xl;
+  @apply text-xs rounded-sm text-black shadow px-12 py-2 shadow-3xl cursor-pointer border-slate-400 bg-gradient-to-r from-[#E34CCE] to-[#E39B57] duration-500 border-none disabled:opacity-75 rounded-tr-3xl rounded-bl-3xl transition duration-300 delay-150;
 }
 
 .btn-secondary {
-  @apply text-xs rounded-sm text-white shadow px-12 py-2 shadow-3xl cursor-pointer border-slate-400 bg-gradient-to-r from-[#E34CCE] to-[#E39B57] duration-500 border-none disabled:opacity-75 rounded-tr-3xl rounded-bl-3xl;
+  @apply text-xs rounded-sm text-white shadow px-12 py-2 shadow-3xl cursor-pointer border-slate-400 bg-gradient-to-r from-[#E34CCE] to-[#E39B57] duration-500 border-none disabled:opacity-40 rounded-tr-3xl rounded-bl-3xl transition duration-1000 delay-150;
+}
+
+.btn-gradient {
+  @apply text-xs rounded-sm text-white shadow px-12 py-2 shadow-3xl cursor-pointer border-slate-400 bg-gradient-to-r from-[#E34CCE] to-[#E39B57] duration-500 border-none opacity-100 rounded-tr-3xl rounded-bl-3xl animate-border inline-block bg-white from-purple-500 via-pink-500 to-orange-500 bg-[length:400%_400%] p-0.5 hover:bg-gradient-to-r transition duration-1000 delay-150;
 }
 
 /*---------------- TESTIMONIALS ------------*/
 .testimonial-container {
-  @apply w-full tablet:overflow-hidden h-[350px] mx-auto mb-5 sm:h-[450px] sm:mb-6 tablet:w-[270px] tablet:h-[360px] tablet:ml-12 tablet:mb-2 laptop:w-[330px] laptop:ml-6 laptop:h-[430px] desktop:h-[460px] desktop:ml-4 desktop:w-[360px] biggest:h-[490px];
+  @apply w-full h-[350px] tablet:overflow-hidden mx-auto mb-6 sm:h-[450px] sm:mb-6 tablet:w-[270px] tablet:h-[360px] tablet:ml-12 tablet:mb-2 laptop:w-[330px] laptop:ml-6 laptop:h-[430px] desktop:h-[460px] desktop:ml-4 desktop:w-[360px] biggest:h-[490px];
 }
 
 .testimonial-carousel {
-  @apply h-full w-full overflow-hidden flex justify-start flex-col ml-4 sm:ml-0 sm:pt-5 sm:mb-2 tablet:h-[330px] tablet:w-[280px] tablet:ml-0 tablet:mb-0 tablet:pt-4 laptop:w-[340px] laptop:pt-2 laptop:h-[400px] desktop:pt-5 desktop:w-[360px] desktop:h-[430px] laptop:pl-14 desktop:pl-6 desktop:mb-2 biggest:pt-5;
+  @apply h-full w-full overflow-hidden  flex justify-start flex-col ml-4 sm:ml-0 sm:pt-5 sm:mb-2 tablet:h-[330px] tablet:w-[280px] tablet:ml-0 tablet:mb-0 tablet:pt-4 laptop:w-[340px] laptop:pt-2 laptop:h-[400px] desktop:pt-5 desktop:w-[360px] desktop:h-[430px] laptop:pl-14 desktop:pl-6 desktop:mb-2 biggest:pt-5;
 }
 
 .testimonial-slider {
-  @apply h-full w-[390%] flex relative items-center transition duration-500 ease-linear shrink-0 items-center justify-center space-x-8 ml-2 sm:-ml-5  pl-4 tablet:pl-0 laptop:ml-0 desktop:space-x-20  desktop:pl-32;
+  @apply h-full w-[390%] flex relative items-center transition duration-1000 delay-300 ease-linear shrink-0 items-center justify-center space-x-8 ml-2 sm:-ml-5  pl-4 tablet:pl-0 laptop:ml-0 desktop:space-x-20  desktop:pl-32 transition duration-1000 delay-150;
 }
 
 .slider-section {
-  @apply basis-1/4 w-3/12 shrink-0 flex-1 transition delay-1000 duration-300 ease-in-out;
+  @apply basis-1/4 w-3/12 shrink-0 flex-1;
 }
 
-.slider-list-container {
-  @apply flex space-x-2 text-center justify-center list-none p-0 m-0;
-}
-
-.slider-li {
-  @apply w-2 h-2 bg-red-300 rounded-full cursor-pointer hover:scale-150 duration-500;
-}
 /*---------------- FORM ------------*/
 .form-input-title {
-  @apply text-[10px] dark:text-slate-200;
+  @apply text-[10px] dark:text-slate-200 opacity-60;
 }
 
 .form-input {

@@ -73,24 +73,10 @@ function About(): JSX.Element {
                       expertise to offer our clients affordable tailor-made
                       garments for special occasions, that are not at a premium
                       price. we cater to both individuals, familes and groups -
-                      occassions such as
-                      <span className="about-span"> weddings </span>,
-                      <span className="about-span">anniversaries, </span>
-                      <span className="about-span">birthdays </span>and{" "}
-                      <span className="about-span">special celebrations.</span>{" "}
-                      Our garments include but not limited to,{" "}
-                      <span className="about-span">weddings gowns</span>,
-                      evening gowns,{" "}
-                      <span className="about-span">
-                        {" "}
-                        bridesmaids and groomsmen’s garments
-                      </span>
-                      and{" "}
-                      <span className="about-span">
-                        {" "}
-                        traditional African{" "}
-                      </span>{" "}
-                      and <span className="about-span"> Caribbean </span>
+                      occassions such as weddings,anniversaries, birthdays and
+                      special celebrations. Our garments include but not limited
+                      to, weddings gowns evening gowns, bridesmaids and
+                      groomsmen’s garments andtraditional African and Caribbean
                       outfits. we also produce garments for office wear. We look
                       forward to working wih you and producing your special
                       garment, in the near future.

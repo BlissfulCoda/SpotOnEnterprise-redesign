@@ -38,25 +38,19 @@ module.exports = {
       },
       backgroundImage: (theme) => ({
         photo: "url('/src/Components/assets/Images/HeroImage.png')",
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
       }),
       animation: {
         loader: "loader 1.2s ease-in-out forwards",
-        // animation
-        wave: "wave 3s infinite both",
+        border: "border 4s ease infinite",
       },
       keyframes: {
         loader: {
           "0%": { transform: "scale(.6)" },
           "100%": { transform: "scale(1.5)" },
         },
-        wave: {
-          "0%, 100%": {
-            transform: "translateY(0%)",
-          },
-          "50%": {
-            transform: "translateY(2px) rotate(40deg)",
-          },
+        border: {
+          "0%, 100%": { backgroundPosition: "0% 50%" },
+          "50%": { backgroundPosition: "100% 50%" },
         },
       },
     },

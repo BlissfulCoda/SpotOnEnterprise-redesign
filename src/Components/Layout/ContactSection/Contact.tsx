@@ -4,7 +4,12 @@ import toast from "react-hot-toast";
 import Button from "../Shared/Button";
 import ErrorMessage from "./ErrorMessage";
 
-import { validateEmail, validateUserName, validateMessage } from "./Validation";
+import {
+  validateEmail,
+  validateUserName,
+  validateMessage,
+  validateButton,
+} from "./Validation";
 
 function Contact(): JSX.Element {
   const [formState, setFormState] = useState({
@@ -12,6 +17,7 @@ function Contact(): JSX.Element {
     email: "",
     message: "",
   });
+
   const [nameError, setNameError] = useState<string>("");
   const [emailError, setEmailError] = useState<string>("");
   const [messageError, setMessageError] = useState<string>("");
@@ -22,24 +28,12 @@ function Contact(): JSX.Element {
     validateUserName({ userName, setNameError });
     validateEmail({ email, setEmailError });
     validateMessage({ message, setMessageError });
+    validateButton({ userName, email, message, setBtnDisabled });
   }, [formState.userName, formState.email, formState.message]);
 
-  // HANDLE FORM INPUTS
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
-    const { userName, email, message } = formState;
-    if (
-      userName.trim().length >= 5 &&
-      userName.trim().length <= 40 &&
-      email !== "" &&
-      message.trim().length >= 10 &&
-      message.trim().length <= 200
-    ) {
-      setBtnDisabled(false);
-    } else {
-      setBtnDisabled(true);
-    }
     setFormState({ ...formState, [e.target.name]: e.target.value });
   };
 
@@ -48,23 +42,13 @@ function Contact(): JSX.Element {
     event.preventDefault();
 
     const { userName, email, message } = formState;
-
-    if (
-      userName.trim().length >= 5 &&
-      userName.trim().length <= 40 &&
-      email !== "" &&
-      message.trim().length >= 10 &&
-      message.trim().length <= 200
-    ) {
-      const formDetails: { userName: string; email: string; message: string } =
-        {
-          userName,
-          email,
-          message,
-        };
-      console.log(formDetails);
-    }
-
+    
+    const formDetails: { userName: string; email: string; message: string } = {
+      userName,
+      email,
+      message,
+    };
+    console.log(formDetails);
     toast.success("Your message was sent successfully");
     setFormState({ ...formState, userName: "", email: "", message: "" });
   };
@@ -134,7 +118,7 @@ function Contact(): JSX.Element {
             {/* BUTTON */}
             <Button
               type="submit"
-              className="secondary"
+              className={!btnDisabled ? "gradient" : "secondary"}
               isDisabled={btnDisabled}
             >
               Send

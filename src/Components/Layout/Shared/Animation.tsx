@@ -77,21 +77,16 @@ export const Animations = {
   // HAMBURG MENU
   DisplayHamburgMenu: {
     hidden: {
-      y: "-100%",
       opacity: 0,
-      transition: {
-        ease: [0.455, 0.03, 0.515, 0.955],
-      },
     },
     visible: {
       opacity: 1,
-      y: 0,
       transition: {
-        stiffness: 120,
-        mass: 6,
-        ease: [0.455, 0.03, 0.515, 0.955],
-        duration: 0.5,
-        delay: 0.1,
+        stiffness: 160,
+        damping: 1,
+        ease: [1.455, 0.55, 2.515, 2.955],
+        duration: 0.6,
+        delay: 0.2,
       },
     },
   },
@@ -159,8 +154,8 @@ export const Animations = {
       opacity: 1,
       transition: {
         ease: [0.455, 0.03, 0.515, 0.955],
-        duration: 1,
-        delay: 2.6,
+        duration: 0.8,
+        delay: 2.3,
       },
     },
   },
@@ -192,7 +187,7 @@ export const Animations = {
       opacity: 1,
       transition: {
         ease: [0.455, 0.03, 0.515, 0.955],
-        duration: 1,
+        duration: 1.7,
       },
     },
   },
@@ -211,7 +206,7 @@ export const Animations = {
       transition: {
         ease: [0.455, 0.03, 0.515, 0.955],
         duration: 2.5,
-        delay: 3,
+        delay: 2.8,
       },
     },
   },

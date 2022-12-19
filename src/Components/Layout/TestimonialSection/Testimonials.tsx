@@ -20,7 +20,7 @@ function Testimonials(): JSX.Element {
 
       <Card className="flex flex-col pr-1 space-y-2 shadow shadow-lg tablet:flex-row section-container tablet:max-w-2xl laptop:max-w-4xl desktop:max-w-5xl tablet:h-full tablet:pr-0 dark:shadow-slate-500/5 ">
         {/* LEFT SIDE */}
-        <Card className="flex items-center justify-center w-full h-80 bg-[#071C3E] dark:bg-[#01112C] bg-zinc-20 rounded-br-[60px] py-20 px-40 tablet:w-1/2 tablet:h-96 laptop:h-[460px] desktop:h-[480px] biggest:h-[520px] laptop:rounded-br-[80px]">
+        <Card className="flex items-center justify-center w-full h-96 bg-[#071C3E] dark:bg-[#01112C] bg-zinc-20 rounded-br-[60px] py-20 px-40 tablet:w-1/2 tablet:h-96 laptop:h-[460px] desktop:h-[480px] biggest:h-[520px] laptop:rounded-br-[80px]">
           {/* inner container */}
           <div
             data-aos="fade-in"

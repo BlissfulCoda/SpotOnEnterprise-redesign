@@ -1,6 +1,6 @@
 import { WiMoonNew } from "react-icons/wi";
 import { FaAngleLeft } from "react-icons/fa";
-import { useState, useEffect, useContext } from "react";
+import { useState, useEffect, useContext, useRef } from "react";
 
 import { DarkModeDataInterface } from "../../../Data/DarkModeData";
 import DarkModeContext from "../../../Context/DarkModeContext";
@@ -26,7 +26,7 @@ function OurWork(): JSX.Element {
   const x = useSpring(0, { stiffness: 600, damping: 110 });
   const START_INDEX: number = -2470;
 
-  const scrollYPosition = window.scrollY >= 1670 && window.scrollY <= 1760;
+  const scrollYPosition = window.scrollY >= 1670 && window.scrollY <= 1740;
 
   // MOTION - TRANSFORMS
   const width = useTransform(x, [START_INDEX, 0], [320, 0]);
@@ -40,6 +40,9 @@ function OurWork(): JSX.Element {
   const [showPing, setShowPing] = useState<boolean>(false);
   const [scrollPosition, setScrollPosition] = useState(0);
 
+  const imageRef = useRef<HTMLDivElement>(null);
+  
+
   // overflow
   let targetElement = document.documentElement;
 
@@ -52,9 +55,14 @@ function OurWork(): JSX.Element {
 
   // No scroll while drag state is active
   useEffect(() => {
-    state
-      ? targetElement?.classList.add("overflow-hidden")
-      : targetElement?.classList.remove("overflow-hidden");
+
+    if (state) {
+      imageRef?.current!.classList.add("overflow-hidden");
+      targetElement?.classList.add("overflow-hidden");
+    } else {
+      imageRef?.current!.classList.remove("overflow-hidden");
+      targetElement?.classList.remove("overflow-hidden");
+    }
   });
 
   //  CLICK PING TO CLOSE
@@ -71,6 +79,7 @@ function OurWork(): JSX.Element {
 
   const handleScroll = () => {
     setScrollPosition(window.scrollY);
+    console.log(window.scrollY);
   };
 
   // HANDLE SCROLL
@@ -84,8 +93,9 @@ function OurWork(): JSX.Element {
 
   return (
     <section
+      ref={imageRef}
       id="work"
-      className="container px-6 py-12 mx-auto mb-20 space-y-4 duration-1000 sm:p-2 laptop:-space-y-4 biggest:max-w-6xl"
+      className="container relative px-6 py-12 mx-auto mb-20 space-y-4 duration-1000 sm:p-2 laptop:-space-y-4 biggest:max-w-6xl"
     >
       <motion.div
         style={{ translateY: up }}
@@ -95,7 +105,7 @@ function OurWork(): JSX.Element {
       </motion.div>
 
       {/* IMAGE CONTAINER */}
-      <div className="relative tablet:hidden">
+      <div className="relative sm:ml-3 tablet:hidden">
         <motion.span
           style={{ opacity: fadeIn }}
           className={state ? "background duration-100" : "hidden duration-100"}
@@ -147,29 +157,20 @@ function OurWork(): JSX.Element {
         <div className="mb-4 image-container">
           <motion.div
             transition={{
-              x: { duration: 0.5 },
-              default: { ease: [1, 0.06, -0.06, 0.99] },
+              x: { duration: 0.4 },
+              default: { ease: "ease-[cubic-bezier(1.95,2.05,1.795,1.035)]" },
             }}
-            style={{ x, scale }}
-            drag={"x"}
+            style={scrollYPosition ? { x, scale, cursor: "grab" } : {}}
+            drag={scrollYPosition && "x"}
             dragConstraints={{ left: START_INDEX, right: 0 }}
             dragElastic={0.07}
+            whileTap={{ cursor: "grabbing" }}
             className={
               scrollYPosition
-                ? "duration-800 tablet:hidden grid-container duration-1000"
-                : "duration-800 tablet:hidden grid-container blur-sm duration-1000"
+                ? "tablet:hidden grid-container duration-1000"
+                : " tablet:hidden grid-container blur duration-1000 "
             }
           >
-            <motion.div
-              style={scrollYPosition ? { x } : {}}
-              drag={"x"}
-              dragConstraints={{
-                left: START_INDEX,
-                right: 0,
-              }}
-              dragElastic={0.07}
-              className="absolute top-0 bottom-0 left-0  z-40 w-[5000px] sm:w-[6600px] h-96 tablet:hidden  opacity-0 duration-1000"
-            ></motion.div>
             <ImageContainer />
           </motion.div>
         </div>
@@ -180,8 +181,8 @@ function OurWork(): JSX.Element {
             style={{ opacity: fadeOut }}
             className={
               scrollYPosition
-                ? "flex items-center justify-end space-x-1 duration-1000 pt-2 opacity-100 animate-bounce"
-                : "flex items-center justify-end space-x-1  duration-1000 pt-2 opacity-30"
+                ? "flex items-center justify-end space-x-1 duration-1000 pt-2 animate-bounce"
+                : "flex items-center justify-end space-x-1  duration-1000 pt-2 "
             }
           >
             <span
@@ -197,7 +198,7 @@ function OurWork(): JSX.Element {
               className={
                 scrollYPosition
                   ? "font-black text-right opacity-100 duration-500  text-[9px] pt-4"
-                  : "font-black text-right opacity-70 text-[9px] pt-4 duration-500"
+                  : "font-black text-right opacity-30 text-[9px] pt-4 duration-500"
               }
             >
               Drag To Explore

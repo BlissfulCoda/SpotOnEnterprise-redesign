@@ -13,7 +13,12 @@ export default function ImageContainer(): JSX.Element {
       className="overflow-hidden duration-1000 image-container"
       key={image.id}
     >
-      <img src={image.imageUrl} alt={image.alt} className={image.version} />
+      <img
+        src={image.imageUrl}
+        alt={image.alt}
+        className={image.version}
+        draggable="false"
+      />
     </motion.div>
   ));
   return <div className="duration-1000 grid-container ">{fullImageList}</div>;

@@ -1,23 +1,30 @@
 type ValidatorEmailProps = {
   email: string;
-  setEmailError: (msg: string) => void;
+  setEmailError(msg: string): void;
 };
 
 type ValidateNameProps = {
   userName: string;
-  setNameError: (msg: string) => void;
+  setNameError(msg: string): void;
 };
 
 type ValidateMessageProps = {
   message: string;
-  setMessageError: (msg: string) => void;
+  setMessageError(msg: string): void;
+};
+
+type ValidateButtonProps = {
+  userName: string;
+  email: string;
+  message: string;
+  setBtnDisabled(val: boolean): void;
 };
 
 // VALIDATE NAME
 const validateUserName = ({ userName, setNameError }: ValidateNameProps) => {
   return userName.trim() && userName.trim().length < 5
     ? setNameError("Name is too short")
-    : userName && userName.length > 40
+    : userName && userName.length >= 40
     ? setNameError("Name is too long.")
     : setNameError("");
 };
@@ -43,4 +50,19 @@ const validateMessage = ({
     : setMessageError("");
 };
 
-export { validateUserName, validateEmail, validateMessage };
+const validateButton = ({
+  userName,
+  email,
+  message,
+  setBtnDisabled,
+}: ValidateButtonProps) => {
+  return userName.trim().length >= 5 &&
+    userName.trim().length <= 40 &&
+    email.trim().includes("@") &&
+    message.trim().length >= 10 &&
+    message.trim().length <= 200
+    ? setBtnDisabled(false)
+    : setBtnDisabled(true);
+};
+
+export { validateUserName, validateEmail, validateMessage, validateButton };
