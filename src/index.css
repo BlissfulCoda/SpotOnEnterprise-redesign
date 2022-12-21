@@ -77,10 +77,10 @@ body {
 }
 
 .background {
-  @apply fixed h-screen w-full bg-slate-900 opacity-10 dark:bg-slate-900 top-0 left-0 bottom-0 z-30 opacity-100 will-change-transform tablet:hidden;
+  @apply fixed h-screen w-full bg-slate-900 opacity-10 dark:bg-slate-800 top-0 left-0 bottom-0 z-30 opacity-100 will-change-transform tablet:hidden;
 }
 
-/*----------- PROGRESS  ----------*/
+/* PROGRESS */
 .drag-progress-background {
   @apply w-full h-[2px] relative tablet:hidden dark:bg-slate-800 z-30;
 }
@@ -131,7 +131,7 @@ body {
 }
 
 .btn-secondary {
-  @apply text-xs rounded-sm text-white shadow px-12 py-2 shadow-3xl cursor-pointer border-slate-400 bg-gradient-to-r from-[#E34CCE] to-[#E39B57] duration-500 border-none disabled:opacity-40 rounded-tr-3xl rounded-bl-3xl transition duration-1000 delay-150;
+  @apply text-xs rounded-sm text-white shadow px-12 py-2 shadow-3xl cursor-pointer border-slate-400 bg-gradient-to-r from-[#E34CCE] to-[#E39B57] duration-500 border-none disabled:opacity-30 rounded-tr-3xl rounded-bl-3xl transition duration-1000 delay-150;
 }
 
 .btn-gradient {
@@ -157,11 +157,11 @@ body {
 
 /*---------------- FORM ------------*/
 .form-input-title {
-  @apply text-[10px] dark:text-slate-200 opacity-60;
+  @apply text-[10px] dark:text-slate-100 opacity-60 pl-0;
 }
 
 .form-input {
-  @apply block w-full px-2 py-3 mt-1 text-xs bg-white border rounded-sm rounded focus:outline-none dark-color dark:border-slate-800 text-slate-700 dark:text-slate-200;
+  @apply block w-full px-2 py-0 pb-1 text-xs bg-white border rounded-sm  focus:outline-none dark-color dark:border-b-slate-800 text-slate-700 dark:text-slate-200 border-b-slate-300 border-l-transparent border-t-transparent border-r-transparent pl-0 focus:border-blue-400 focus:border-t-transparent  dark:focus:border-b-indigo-700 focus:border-r-transparent focus:border-l-transparent;
 }
 
 /*-------------- FOOTER -------------*/

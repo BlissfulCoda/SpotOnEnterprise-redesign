@@ -41,7 +41,6 @@ function OurWork(): JSX.Element {
   const [scrollPosition, setScrollPosition] = useState(0);
 
   const imageRef = useRef<HTMLDivElement>(null);
-  
 
   // overflow
   let targetElement = document.documentElement;
@@ -55,7 +54,6 @@ function OurWork(): JSX.Element {
 
   // No scroll while drag state is active
   useEffect(() => {
-
     if (state) {
       imageRef?.current!.classList.add("overflow-hidden");
       targetElement?.classList.add("overflow-hidden");
@@ -79,7 +77,6 @@ function OurWork(): JSX.Element {
 
   const handleScroll = () => {
     setScrollPosition(window.scrollY);
-    console.log(window.scrollY);
   };
 
   // HANDLE SCROLL
@@ -165,6 +162,7 @@ function OurWork(): JSX.Element {
             dragConstraints={{ left: START_INDEX, right: 0 }}
             dragElastic={0.07}
             whileTap={{ cursor: "grabbing" }}
+            dragSnapToOrigin={!scrollYPosition ? true : false}
             className={
               scrollYPosition
                 ? "tablet:hidden grid-container duration-1000"

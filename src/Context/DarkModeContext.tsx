@@ -55,7 +55,7 @@ export function DarkModeProvider({
     if (flag) {
       localStorage.setItem("theme", JSON.stringify(theme));
       root.classList.toggle("dark", theme);
-    }
+    } 
   }, [theme, flag]);
 
   // Change Gif, Logo, DarkMode
@@ -63,9 +63,11 @@ export function DarkModeProvider({
     if (!theme) {
       root.classList.add("dark");
       setTheme(true);
+      SetGif(true)
     } else {
       root.classList.remove("dark");
       setTheme(false);
+      SetGif(false);
     }
   };
 

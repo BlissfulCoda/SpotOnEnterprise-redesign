@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import toast from "react-hot-toast";
 
 import Button from "../Shared/Button";
@@ -22,6 +22,13 @@ function Contact(): JSX.Element {
   const [emailError, setEmailError] = useState<string>("");
   const [messageError, setMessageError] = useState<string>("");
   const [btnDisabled, setBtnDisabled] = useState<boolean>(true);
+  const [nameText, setNameText] = useState<boolean>(false);
+  const [messageText, setMessageText] = useState<boolean>(false);
+
+  const nameRef = useRef<HTMLHeadingElement>(null);
+  const emailRef = useRef<HTMLHeadingElement>(null);
+  const messageRef = useRef<HTMLHeadingElement>(null);
+  const nameInputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     const { userName, email, message } = formState;
@@ -29,6 +36,8 @@ function Contact(): JSX.Element {
     validateEmail({ email, setEmailError });
     validateMessage({ message, setMessageError });
     validateButton({ userName, email, message, setBtnDisabled });
+
+    userName.length >= 5 && setNameText(true);
   }, [formState.userName, formState.email, formState.message]);
 
   const handleInputChange = (
@@ -42,15 +51,67 @@ function Contact(): JSX.Element {
     event.preventDefault();
 
     const { userName, email, message } = formState;
-    
+
     const formDetails: { userName: string; email: string; message: string } = {
       userName,
       email,
       message,
     };
-    console.log(formDetails);
     toast.success("Your message was sent successfully");
     setFormState({ ...formState, userName: "", email: "", message: "" });
+  };
+
+  const handleInputText = (
+    event: React.FormEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    switch (event.currentTarget.name) {
+      case "userName":
+        nameRef.current!.style.color = "";
+        nameRef.current!.style.transform = "translateY(-1ch)";
+        nameRef.current!.style.fontSize = "8px";
+        nameRef.current!.style.opacity = "0.3";
+        break;
+      case "email":
+        emailRef.current!.style.color = "";
+        emailRef.current!.style.transform = "translateY(-1ch)";
+        emailRef.current!.style.fontSize = "8px";
+        emailRef.current!.style.opacity = "0.3";
+        break;
+      case "message":
+        messageRef.current!.style.color = "";
+        messageRef.current!.style.transform = "translateY(-1ch)";
+        messageRef.current!.style.fontSize = "8px";
+        messageRef.current!.style.opacity = "0.3";
+        break;
+    }
+  };
+
+  const handleRemoveText = (
+    event: React.FormEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    switch (event.currentTarget.name) {
+      case "userName":
+        if (event.currentTarget.value.length <= 0) {
+          nameRef.current!.style.opacity = "0.6";
+          nameRef.current!.style.transform = "translateY(0)";
+          nameRef.current!.style.fontSize = "10px";
+        }
+        break;
+      case "email":
+        if (event.currentTarget.value.length <= 0) {
+          emailRef.current!.style.opacity = "0.6";
+          emailRef.current!.style.transform = "translateY(0)";
+          emailRef.current!.style.fontSize = "10px";
+        }
+        break;
+      case "message":
+        if (event.currentTarget.value.length <= 0) {
+          messageRef.current!.style.opacity = "0.6";
+          messageRef.current!.style.transform = "translateY(0)";
+          messageRef.current!.style.fontSize = "10px";
+        }
+        break;
+    }
   };
 
   return (
@@ -75,42 +136,55 @@ function Contact(): JSX.Element {
           <div className="space-y-6 tablet:space-y-3 ">
             {/* NAME */}
             <div>
-              <h5 className="form-input-title">Full Name</h5>
+              <h5 className={`form-input-title duration-700`} ref={nameRef}>
+                Full Name
+              </h5>
               <input
                 id="name"
                 name="userName"
                 value={formState.userName}
                 onChange={handleInputChange}
+                onFocus={handleInputText}
+                onBlur={handleRemoveText}
                 type="text"
-                className="form-input"
+                ref={nameInputRef}
+                className={`form-input dark:focus:border-b-indigo-700 `}
               />
               {nameError && <ErrorMessage error={nameError} />}
             </div>
 
-            {/* email */}
+            {/* EMAIL */}
             <div>
-              <h5 className="form-input-title">Email</h5>
+              <h5 className="duration-700 form-input-title" ref={emailRef}>
+                Email
+              </h5>
               <input
                 id="email"
                 name="email"
                 value={formState.email}
                 onChange={handleInputChange}
+                onFocus={handleInputText}
+                onBlur={handleRemoveText}
                 type="email"
-                className="form-input invalid:border-pink-500 invalid:text-pink-600 valid:text-green-600 dark:border-slate-800"
+                className=" form-input invalid:border-b-pink-500 dark:invalid:border-b-pink-500 invalid:text-pink-600 valid:text-green-600"
               />
               {emailError && <ErrorMessage error={emailError} />}
             </div>
 
-            {/* Contact */}
+            {/* TEXTAREA */}
             <div>
-              <h5 className="form-input-title">Message</h5>
+              <h5 className="duration-700 form-input-title" ref={messageRef}>
+                Message
+              </h5>
               <textarea
                 id="message"
                 name="message"
                 value={formState.message}
                 onChange={handleInputChange}
+                onFocus={handleInputText}
+                onBlur={handleRemoveText}
                 rows={6}
-                className="form-input "
+                className="form-input dark:focus:border-b-indigo-700"
               />
               {messageError && <ErrorMessage error={messageError} />}
             </div>

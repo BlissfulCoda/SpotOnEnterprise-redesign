@@ -25,7 +25,7 @@ const validateUserName = ({ userName, setNameError }: ValidateNameProps) => {
   return userName.trim() && userName.trim().length < 5
     ? setNameError("Name is too short")
     : userName && userName.length >= 40
-    ? setNameError("Name is too long.")
+    ? setNameError("Please fill in a longer name")
     : setNameError("");
 };
 
@@ -34,7 +34,7 @@ const validateEmail = ({ email, setEmailError }: ValidatorEmailProps) => {
   const emailRegular =
     /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   return email.trim() && !email.trim().match(emailRegular)
-    ? setEmailError("Email is not valid")
+    ? setEmailError("Please fill in a valid email")
     : setEmailError("");
 };
 
@@ -46,7 +46,7 @@ const validateMessage = ({
   return message.trim() && message.trim().length < 10
     ? setMessageError("Message is too short")
     : message && message.length > 200
-    ? setMessageError("Try to make short and meanfull")
+    ? setMessageError("Please fill in a longer message")
     : setMessageError("");
 };
 
