@@ -3649,7 +3649,7 @@ body {
 
 .dark .background {
   --tw-bg-opacity: 1;
-  background-color: rgb(30 41 59 / var(--tw-bg-opacity));
+  background-color: rgb(15 23 42 / var(--tw-bg-opacity));
 }
 
 @media (min-width: 768px) {
@@ -3683,11 +3683,6 @@ body {
   z-index: 30;
   height: 1px;
   width: 0px;
-  --tw-bg-opacity: 1;
-  background-color: rgb(148 163 184 / var(--tw-bg-opacity));
-}
-
-.dark .drag-progress {
   --tw-bg-opacity: 1;
   background-color: rgb(148 163 184 / var(--tw-bg-opacity));
 }
