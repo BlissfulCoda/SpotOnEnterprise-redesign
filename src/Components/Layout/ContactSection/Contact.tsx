@@ -24,6 +24,7 @@ function Contact(): JSX.Element {
   const [btnDisabled, setBtnDisabled] = useState<boolean>(true);
   const [nameText, setNameText] = useState<boolean>(false);
   const [messageText, setMessageText] = useState<boolean>(false);
+  const [formSubmit, setFormSubmit] = useState<boolean>(false);
 
   const nameRef = useRef<HTMLHeadingElement>(null);
   const emailRef = useRef<HTMLHeadingElement>(null);
@@ -36,16 +37,50 @@ function Contact(): JSX.Element {
     validateEmail({ email, setEmailError });
     validateMessage({ message, setMessageError });
     validateButton({ userName, email, message, setBtnDisabled });
-
-    userName.length >= 5 && setNameText(true);
   }, [formState.userName, formState.email, formState.message]);
 
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
+    switch (e.currentTarget.name) {
+      case "userName":
+        if (
+          e.currentTarget.value !== "" &&
+          e.currentTarget.value.length >= 5 &&
+          e.currentTarget.value.length < 40
+        ) {
+          setNameText(true);
+        } else {
+          setNameText(false);
+        }
+        break;
+      case "message":
+        if (
+          e.currentTarget.value !== "" &&
+          e.currentTarget.value.length >= 10 &&
+          e.currentTarget.value.length <= 200
+        ) {
+          setMessageText(true);
+        } else {
+          setMessageText(false);
+        }
+        break;
+    }
+
     setFormState({ ...formState, [e.target.name]: e.target.value });
   };
 
+  const resetFormLabel = (
+    inputField: React.RefObject<HTMLHeadingElement>,
+    opacity: string,
+    transform: string,
+    fontSize: string
+  ) => {
+    inputField.current!.style.opacity = opacity;
+    inputField.current!.style.transform = transform;
+    inputField.current!.style.fontSize = fontSize;
+    inputField.current!.style.transition = "all 1s linear";
+  };
   // HANDLE FORM SUBMIT
   const handleFormSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -59,6 +94,12 @@ function Contact(): JSX.Element {
     };
     toast.success("Your message was sent successfully");
     setFormState({ ...formState, userName: "", email: "", message: "" });
+    resetFormLabel(nameRef, "0.6", "translateY(0)", "10px");
+    resetFormLabel(emailRef, "0.6", "translateY(0)", "10px");
+    resetFormLabel(messageRef, "0.6", "translateY(0)", "10px");
+    setFormSubmit(true);
+    setNameText(false);
+    setMessageText(false);
   };
 
   const handleInputText = (
@@ -66,22 +107,13 @@ function Contact(): JSX.Element {
   ) => {
     switch (event.currentTarget.name) {
       case "userName":
-        nameRef.current!.style.color = "";
-        nameRef.current!.style.transform = "translateY(-1ch)";
-        nameRef.current!.style.fontSize = "8px";
-        nameRef.current!.style.opacity = "0.3";
+        resetFormLabel(nameRef, "0.3", "translateY(-1ch)", "8px");
         break;
       case "email":
-        emailRef.current!.style.color = "";
-        emailRef.current!.style.transform = "translateY(-1ch)";
-        emailRef.current!.style.fontSize = "8px";
-        emailRef.current!.style.opacity = "0.3";
+        resetFormLabel(emailRef, "0.3", "translateY(-1ch)", "8px");
         break;
       case "message":
-        messageRef.current!.style.color = "";
-        messageRef.current!.style.transform = "translateY(-1ch)";
-        messageRef.current!.style.fontSize = "8px";
-        messageRef.current!.style.opacity = "0.3";
+        resetFormLabel(messageRef, "0.3", "translateY(-1ch)", "8px");
         break;
     }
   };
@@ -92,23 +124,17 @@ function Contact(): JSX.Element {
     switch (event.currentTarget.name) {
       case "userName":
         if (event.currentTarget.value.length <= 0) {
-          nameRef.current!.style.opacity = "0.6";
-          nameRef.current!.style.transform = "translateY(0)";
-          nameRef.current!.style.fontSize = "10px";
+          resetFormLabel(nameRef, "0.6", "translateY(0)", "10px");
         }
         break;
       case "email":
         if (event.currentTarget.value.length <= 0) {
-          emailRef.current!.style.opacity = "0.6";
-          emailRef.current!.style.transform = "translateY(0)";
-          emailRef.current!.style.fontSize = "10px";
+          resetFormLabel(emailRef, "0.6", "translateY(0)", "10px");
         }
         break;
       case "message":
         if (event.currentTarget.value.length <= 0) {
-          messageRef.current!.style.opacity = "0.6";
-          messageRef.current!.style.transform = "translateY(0)";
-          messageRef.current!.style.fontSize = "10px";
+          resetFormLabel(messageRef, "0.6", "translateY(0)", "10px");
         }
         break;
     }
@@ -133,13 +159,15 @@ function Contact(): JSX.Element {
           className="absolute z-10 w-11/12 px-5 py-10 space-y-6 bg-white shadow shadow-xl tablet:w-80 tablet:absolute tablet:z-20 tablet:left-4 laptop:w-1/2 tablet:p-7 laptop:w-96 laptop:h-[500px] laptop:py-12 laptop:left-12 desktop:left-16 dark-color sm:w-full sm:py-12 dark:shadow-gray-100/5 border border-slate-100 dark:border-slate-900"
         >
           <h3 className="text-sm text-center opacity-90 ">SEND A MESSAGE</h3>
-          <div className="space-y-6 tablet:space-y-3 ">
+          <div className="space-y-7 tablet:space-y-3 ">
             {/* NAME */}
-            <div>
-              <h5 className={`form-input-title duration-700`} ref={nameRef}>
+            <div className="duration-500">
+              <h5 className={`form-input-title duration-1000`} ref={nameRef}>
                 Full Name
               </h5>
               <input
+                min="5"
+                max="40"
                 id="name"
                 name="userName"
                 value={formState.userName}
@@ -148,14 +176,20 @@ function Contact(): JSX.Element {
                 onBlur={handleRemoveText}
                 type="text"
                 ref={nameInputRef}
-                className={`form-input dark:focus:border-b-indigo-700 `}
+                className={`form-input out-of-range:border-red-500  ${
+                  nameText
+                    ? "focus:border-b-emerald-400 border-b-green-400  dark:focus:border-b-emerald-600 dark:border-b-emerald-600"
+                    : formSubmit
+                    ? "dark:border-b-slate-800 dark:focus:border-b-indigo-700"
+                    : "dark:focus:border-b-indigo-700 dark:border-b-slate-800"
+                }`}
               />
               {nameError && <ErrorMessage error={nameError} />}
             </div>
 
             {/* EMAIL */}
             <div>
-              <h5 className="duration-700 form-input-title" ref={emailRef}>
+              <h5 className="duration-1000 form-input-title" ref={emailRef}>
                 Email
               </h5>
               <input
@@ -166,14 +200,14 @@ function Contact(): JSX.Element {
                 onFocus={handleInputText}
                 onBlur={handleRemoveText}
                 type="email"
-                className=" form-input invalid:border-b-pink-500 dark:invalid:border-b-pink-500 invalid:text-pink-600 valid:text-green-600"
+                className="form-input invalid:border-b-pink-500 dark:invalid:border-b-pink-500 invalid:text-pink-600 valid:text-emerald-600 valid:dark:focus:text-emerald-600"
               />
               {emailError && <ErrorMessage error={emailError} />}
             </div>
 
             {/* TEXTAREA */}
-            <div>
-              <h5 className="duration-700 form-input-title" ref={messageRef}>
+            <div className="duration-1000">
+              <h5 className="duration-1000 form-input-title" ref={messageRef}>
                 Message
               </h5>
               <textarea
@@ -184,7 +218,11 @@ function Contact(): JSX.Element {
                 onFocus={handleInputText}
                 onBlur={handleRemoveText}
                 rows={6}
-                className="form-input dark:focus:border-b-indigo-700"
+                className={`form-input  ${
+                  messageText
+                    ? "dark:focus:border-b-emerald-600 dark:border-b-emerald-600"
+                    : "dark:focus:border-b-indigo-700 "
+                }`}
               />
               {messageError && <ErrorMessage error={messageError} />}
             </div>

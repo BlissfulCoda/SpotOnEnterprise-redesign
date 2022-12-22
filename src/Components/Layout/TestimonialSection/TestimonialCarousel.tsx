@@ -70,14 +70,15 @@ export default function TestimonialCarousel(): JSX.Element {
           >
             <AnimatePresence>
               {TestimonialData.map((review) => (
-                <motion.span
+                <motion.div
                   key={review.id}
+                  initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
                   transition={{ duration: 1.5 }}
                 >
-                  <TestimonialSlides review={review} />
-                </motion.span>
+                  <TestimonialSlides key={count} review={review} />
+                </motion.div>
               ))}
             </AnimatePresence>
           </div>
