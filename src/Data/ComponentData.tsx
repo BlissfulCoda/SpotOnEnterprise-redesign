@@ -7,14 +7,14 @@ import Instagram from "../Components/assets/Gifs/Instagram.gif";
 import FingerPrint from "../Components/assets/Gifs/Fingerprint.gif";
 
 // images
-import img1 from "../Components/assets/Images/img-1.png";
-import img2 from "../Components/assets/Images/img-2.png";
-import img3 from "../Components/assets/Images/img-3.png";
-import img4 from "../Components/assets/Images/img-4.png";
-import img5 from "../Components/assets/Images/img-5.png";
-import img6 from "../Components/assets/Images/img-6.png";
-import img7 from "../Components/assets/Images/img-7.png";
-import img8 from "../Components/assets/Images/img-8.png";
+import img1 from "../Components/assets/Images/img1.png";
+import img2 from "../Components/assets/Images/img2.png";
+import img3 from "../Components/assets/Images/img3.png";
+import img4 from "../Components/assets/Images/img4.png";
+import img5 from "../Components/assets/Images/img5.png";
+import img6 from "../Components/assets/Images/img6.png";
+import img7 from "../Components/assets/Images/img7.png";
+import img8 from "../Components/assets/Images/img8.png";
 
 // NAV LINKS
 export interface NavLinkInterface {
