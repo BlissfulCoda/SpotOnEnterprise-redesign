@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import Components from "./Components/Components";
-import "./index.css";
+
 
 import { DarkModeProvider } from "./Context/DarkModeContext";
 

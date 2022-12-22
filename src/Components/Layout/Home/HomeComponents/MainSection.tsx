@@ -1,6 +1,10 @@
 import { motion } from "framer-motion";
 import { useContext, useState } from "react";
 import { DarkModeDataInterface } from "../../../../Data/DarkModeData";
+import {
+  SpotOnEntepriseContact,
+  SpotOnEntepriseGifsAndLogos,
+} from "../../../../Data/ComponentData";
 import DarkModeContext from "../../../../Context/DarkModeContext";
 import { Animations } from "../../Shared/Animation";
 
@@ -9,22 +13,16 @@ import BespokeGarmentsMobile from "../../Shared/BespokeGarmentsMobile";
 import MainImage from "./MainImage";
 import TailorMade from "../../Shared/TailorMade";
 
-import Location from "../../../assets/Gifs/Location.gif";
-
-import Instagram from "../../../assets/Gifs/Instagram.gif";
-import Night from "../../../assets/Gifs/Night.gif";
-import Fingerprint from "../../../assets/Gifs/Fingerprint.gif";
-
 export default function MainSection(): JSX.Element {
   const { gif, handleChange } = useContext(
     DarkModeContext
   ) as DarkModeDataInterface;
 
-  const SPOTONENTERPRISE_INSTAGRAM =
-    "https://www.instagram.com/spotonenterprise/";
+  const { SPOTONENTERPRISE_INSTAGRAM, SPOTONENTERPRISE_LOCATION } =
+    SpotOnEntepriseContact;
 
-  const SPOTONENTERPRISE_LOCATION =
-    "https://www.google.com/maps/place/111+East+St,+London/@51.4890573,-0.0916229,17z/data=!4m5!3m4!1s0x4876036188999255:0xc28bbd3db39f349c!8m2!3d51.4890403!4d-0.0916112";
+  const { Night, Instagram, Location, FingerPrint } =
+    SpotOnEntepriseGifsAndLogos;
 
   // State
   const [showImage, setShowImage] = useState<boolean>(false);
@@ -125,7 +123,7 @@ export default function MainSection(): JSX.Element {
           </a>
           <span className="w-6 h-6" onClick={handleChange}>
             <img
-              src={gif ? Fingerprint : Night}
+              src={gif ? FingerPrint : Night}
               alt="Button to change to darkmode"
               className="cursor-pointer -rotate-12 transition-1000"
             />

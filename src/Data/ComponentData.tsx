@@ -3,7 +3,7 @@ import LightLogo from "../Components/assets/Logos/LightLogo.png";
 
 import Location from "../Components/assets/Gifs/Location.gif";
 import Night from "../Components/assets/Gifs/Night.gif";
-
+import Instagram from "../Components/assets/Gifs/Instagram.gif";
 import FingerPrint from "../Components/assets/Gifs/Fingerprint.gif";
 
 // images
@@ -152,7 +152,7 @@ export const SpotOnEntepriseGifsAndLogos: SpotOnEntepriseGifsAndLogosInterface =
     DarkLogo,
     LightLogo,
     Location,
-    Instagram: "../Components/assets/Gifs/Instagram.gif",
+    Instagram,
     Night,
     FingerPrint,
   };
