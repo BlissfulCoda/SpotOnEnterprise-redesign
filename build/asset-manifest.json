@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/static/css/main.3296a44b.css",
+    "main.js": "/static/js/main.73e6a1e2.js",
+    "static/media/night.gif": "/static/media/night.bffd3fb595dfaf645359.gif",
+    "static/media/instagram.gif": "/static/media/instagram.9ba7ed12583f81228790.gif",
+    "static/media/img8.png": "/static/media/img8.2d775dfa219521308a8a.png",
+    "static/media/img4.png": "/static/media/img4.93703283b61f35eb146d.png",
+    "static/media/img6.png": "/static/media/img6.b053c14a475328199064.png",
+    "static/media/fingerprint.gif": "/static/media/fingerprint.09f268e97c8c9bf8ff3f.gif",
+    "static/media/img1.png": "/static/media/img1.557208f809915339cf87.png",
+    "static/media/ladyLight.png": "/static/media/ladyLight.fd51e98bdf63967f7322.png",
+    "static/media/HeroImage.png": "/static/media/HeroImage.ff870c7edb66f5c3473a.png",
+    "static/media/img7.png": "/static/media/img7.a088adad6bb9744d0108.png",
+    "static/media/img5.png": "/static/media/img5.6d34709f0cfdf7a8d0d6.png",
+    "static/media/img3.png": "/static/media/img3.9fdd09332d8d322bbf52.png",
+    "static/media/location.gif": "/static/media/location.27382130549650631402.gif",
+    "static/media/img2.png": "/static/media/img2.833da08291b74ea7f6a8.png",
+    "static/media/lightlogo.png": "/static/media/lightlogo.fb118e22a827338d886a.png",
+    "static/media/darklogo.png": "/static/media/darklogo.37d62f1809bbdf9d39d0.png",
+    "index.html": "/index.html",
+    "main.3296a44b.css.map": "/static/css/main.3296a44b.css.map",
+    "main.73e6a1e2.js.map": "/static/js/main.73e6a1e2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3296a44b.css",
+    "static/js/main.73e6a1e2.js"
+  ]
+}

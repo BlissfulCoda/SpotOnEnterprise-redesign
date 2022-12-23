@@ -1,14 +1,14 @@
-// LOGOS
+//LOGOS
 import DarkLogo from "../Components/assets/logos/darklogo.png";
 import LightLogo from "../Components/assets/logos/lightlogo.png";
 
-// GIFS
+//GIFS
 import Location from "../Components/assets/gifs/location.gif";
 import Night from "../Components/assets/gifs/night.gif";
 import Instagram from "../Components/assets/gifs/instagram.gif";
 import FingerPrint from "../Components/assets/gifs/fingerprint.gif";
 
-// IMAGE GALLERY
+//IMAGE GALLERY
 import img1 from "../Components/assets/images/img1.png";
 import img2 from "../Components/assets/images/img2.png";
 import img3 from "../Components/assets/images/img3.png";
@@ -18,7 +18,7 @@ import img6 from "../Components/assets/images/img6.png";
 import img7 from "../Components/assets/images/img7.png";
 import img8 from "../Components/assets/images/img8.png";
 
-// NAV LINKS
+//NAV LINKS
 export interface NavLinkInterface {
   id: number;
   title: string;
