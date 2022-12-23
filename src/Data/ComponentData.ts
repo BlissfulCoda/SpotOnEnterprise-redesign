@@ -2,7 +2,7 @@
 import DarkLogo from "../Components/assets/logos/darklogo.png";
 import LightLogo from "../Components/assets/logos/lightlogo.png";
 
-//GIFS
+// GIFS
 import Location from "../Components/assets/gifs/location.gif";
 import Night from "../Components/assets/gifs/night.gif";
 import Instagram from "../Components/assets/gifs/instagram.gif";
