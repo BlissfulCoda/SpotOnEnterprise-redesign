@@ -1,10 +1,10 @@
-import DarkLogo from "../Components/assets/Logos/DarkLogo.png";
-import LightLogo from "../Components/assets/Logos/LightLogo.png";
+import DarkLogo from "../Components/assets/Logos/darkLogo.png";
+import LightLogo from "../Components/assets/Logos/lightLogo.png";
 
-import Location from "../Components/assets/Gifs/Location.gif";
-import Night from "../Components/assets/Gifs/Night.gif";
-import Instagram from "../Components/assets/Gifs/Instagram.gif";
-import FingerPrint from "../Components/assets/Gifs/Fingerprint.gif";
+import Location from "../Components/assets/Gifs/location.gif";
+import Night from "../Components/assets/Gifs/night.gif";
+import Instagram from "../Components/assets/Gifs/instagram.gif";
+import FingerPrint from "../Components/assets/Gifs/fingerprint.gif";
 
 // images
 import img1 from "../Components/assets/Images/img1.png";

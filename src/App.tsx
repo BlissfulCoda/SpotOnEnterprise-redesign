@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import toast, { Toaster } from "react-hot-toast";
+import { Toaster } from "react-hot-toast";
 import Components from "./Components/Components";
 
 
