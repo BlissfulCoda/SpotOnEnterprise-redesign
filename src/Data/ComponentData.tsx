@@ -1,12 +1,14 @@
+// LOGOS
 import DarkLogo from "../Components/assets/Logos/darkLogo.png";
 import LightLogo from "../Components/assets/Logos/lightLogo.png";
 
+// GIFS
 import Location from "../Components/assets/Gifs/location.gif";
 import Night from "../Components/assets/Gifs/night.gif";
 import Instagram from "../Components/assets/Gifs/instagram.gif";
 import FingerPrint from "../Components/assets/Gifs/fingerprint.gif";
 
-// images
+// IMAGE GALLERY
 import img1 from "../Components/assets/Images/img1.png";
 import img2 from "../Components/assets/Images/img2.png";
 import img3 from "../Components/assets/Images/img3.png";
