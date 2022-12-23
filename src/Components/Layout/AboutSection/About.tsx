@@ -1,4 +1,4 @@
-import ladyLight from "../../assets/Images/ladyLight.png";
+import ladyLight from "../../assets/images/ladyLight.png";
 
 function About(): JSX.Element {
   return (

@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import {Animations} from '../../Shared/Animation'
 
-import HeroImage from '../../../assets/Images/HeroImage.png';
+import HeroImage from '../../../assets/images/HeroImage.png';
 
 export default function MainImage(): JSX.Element {
   return (

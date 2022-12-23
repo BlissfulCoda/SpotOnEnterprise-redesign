@@ -37,7 +37,7 @@ module.exports = {
         "3xl": "5px 5px 23px rgba(0, 0, 0, 0.2)",
       },
       backgroundImage: (theme) => ({
-        photo: "url('/src/Components/assets/Images/HeroImage.png')",
+        photo: "url('/src/Components/assets/images/HeroImage.png')",
       }),
       animation: {
         loader: "loader 1.2s ease-in-out forwards",
