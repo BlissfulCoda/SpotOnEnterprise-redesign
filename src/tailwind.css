@@ -161,7 +161,7 @@ body {
 }
 
 .form-input {
-  @apply block w-full px-2 py-0 pb-1 text-xs bg-white border rounded-sm  focus:outline-none dark-color dark:border-b-slate-800 text-slate-700 dark:text-slate-200 border-b-slate-300 border-l-transparent border-t-transparent border-r-transparent pl-0 focus:border-blue-400 focus:border-t-transparent  dark:focus:border-b-indigo-700 focus:border-r-transparent focus:border-l-transparent;
+  @apply block w-full px-2 py-0 pb-1 text-base bg-white border rounded-sm  focus:outline-none dark-color dark:border-b-slate-800 text-slate-700 dark:text-slate-200 border-b-slate-300 border-l-transparent border-t-transparent border-r-transparent pl-0 focus:border-blue-400 focus:border-t-transparent  dark:focus:border-b-indigo-700 focus:border-r-transparent focus:border-l-transparent;
 }
 
 /*-------------- FOOTER -------------*/
