@@ -139,16 +139,8 @@ body {
 }
 
 /*---------------- TESTIMONIALS ------------*/
-.testimonial-container {
-  @apply w-full h-[350px] tablet:overflow-hidden mx-auto mb-6 sm:h-[450px] sm:mb-6 tablet:w-[270px] tablet:h-[360px] tablet:ml-12 tablet:mb-2 laptop:w-[330px] laptop:ml-6 laptop:h-[430px] desktop:h-[460px] desktop:ml-4 desktop:w-[360px] biggest:h-[490px];
-}
-
-.testimonial-carousel {
-  @apply h-full w-full overflow-hidden  flex justify-start flex-col ml-4 sm:ml-0 sm:pt-5 sm:mb-2 tablet:h-[330px] tablet:w-[280px] tablet:ml-0 tablet:mb-0 tablet:pt-4 laptop:w-[340px] laptop:pt-2 laptop:h-[400px] desktop:pt-5 desktop:w-[360px] desktop:h-[430px] laptop:pl-14 desktop:pl-6 desktop:mb-2 biggest:pt-5;
-}
-
 .testimonial-slider {
-  @apply h-full w-[390%] flex relative items-center transition duration-1000 delay-300 ease-linear shrink-0 items-center justify-center space-x-8 ml-2 sm:-ml-5  pl-4 tablet:pl-0 laptop:ml-0 desktop:space-x-20  desktop:pl-32 transition duration-1000 delay-150;
+  @apply h-[350px] w-full overflow-hidden mb-2 flex relative items-center transition duration-1000 delay-300 ease-linear shrink-0 justify-center sm:-ml-5  tablet:pl-0 laptop:ml-0 desktop:space-x-20  desktop:pl-32;
 }
 
 .slider-section {
@@ -185,7 +177,6 @@ body {
   @apply text-[10px] tablet:text-[11px];
 }
 
-
 .no-scroll {
-  @apply relative overflow-hidden 
+  @apply relative overflow-hidden;
 }

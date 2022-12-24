@@ -183,7 +183,7 @@ const TestimonialData: Testimonial[] = [
     text: "Turay and Neka have an amazing level of service and a very friendly approach. Very professional &amp; their attention to details and patience really made the whole experience worth while was great. Absolutely recommend them to anyone. our wedding attires were great and the experience we recieved from Neka and Turay.",
     date: "November 21, 2020",
     img: img1,
-    version: "slider-section pl-2 ",
+    version: "slider-section ",
   },
   {
     id: 3,

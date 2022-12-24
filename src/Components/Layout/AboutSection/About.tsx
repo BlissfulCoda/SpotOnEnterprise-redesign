@@ -29,7 +29,7 @@ function About(): JSX.Element {
               data-aos-duration="1500"
               data-aos-delay="200"
               data-aos-once="true"
-              className="text-center duration-500 sm:px-0 desktop:px-12 opacity-60"
+              className="text-center duration-500 sm:px-0 desktop:px-12 opacity-80"
             >
               We are experienced in delivering a diversity of attractive
               products and quality design that ensure maximum client
@@ -68,7 +68,7 @@ function About(): JSX.Element {
                       <div className="footer-border"></div>
                       <h3>SERVICES</h3>
                     </div>
-                    <p className=" opacity-60">
+                    <p className="tracking-wide opacity-80">
                       We design all our garments from scratch, using our
                       expertise to offer our clients affordable tailor-made
                       garments for special occasions, that are not at a premium

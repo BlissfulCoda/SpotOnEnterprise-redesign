@@ -91,11 +91,11 @@ function OurWork(): JSX.Element {
     <section
       id="work"
       ref={imageRef}
-      className="container relative px-6 mx-auto mb-20 space-y-3 overflow-hidden duration-1000 progressy-12 sm:p-2 laptop:-space-y-4 biggest:max-w-6xl"
+      className="container relative px-6 mx-auto mb-20 space-y-3 overflow-hidden duration-500 progressy-12 sm:p-2 laptop:-space-y-4 biggest:max-w-6xl"
     >
       <motion.div
         style={{ translateY: up }}
-        className="container mx-auto duration-100 tablet:px-40 laptop:px-56"
+        className="container mx-auto duration-400 tablet:px-40 laptop:px-56"
       >
         <h2>WHAT WE OFFER</h2>
       </motion.div>

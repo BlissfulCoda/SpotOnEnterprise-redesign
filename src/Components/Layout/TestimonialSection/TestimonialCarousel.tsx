@@ -68,7 +68,7 @@ export default function TestimonialCarousel(): JSX.Element {
             onTransitionEnd={handleAppend}
             className="testimonial-slider"
           >
-            <AnimatePresence>
+            {/* <AnimatePresence>
               {TestimonialData.map((review) => (
                 <motion.div
                   key={review.id}
@@ -80,7 +80,7 @@ export default function TestimonialCarousel(): JSX.Element {
                   <TestimonialSlides key={count} review={review} />
                 </motion.div>
               ))}
-            </AnimatePresence>
+            </AnimatePresence> */}
           </div>
         </div>
         {/*----------- BUTTONS ----------*/}
@@ -91,7 +91,7 @@ export default function TestimonialCarousel(): JSX.Element {
             onClick={handlePrevious}
             className={leftClicked ? "animate-pulse " : ""}
           >
-            <FaLongArrowAltLeft size={22} />
+            <FaLongArrowAltLeft size={25} />
           </motion.button>
           <motion.button
             initial={{ opacity: 0.2 }}
@@ -99,7 +99,7 @@ export default function TestimonialCarousel(): JSX.Element {
             onClick={handleNext}
             className={rightClicked ? "animate-pulse " : ""}
           >
-            <FaLongArrowAltRight size={22} />
+            <FaLongArrowAltRight size={25} />
           </motion.button>
         </div>
       </div>
