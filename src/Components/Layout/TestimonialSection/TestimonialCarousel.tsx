@@ -42,7 +42,7 @@ export default function TestimonialCarousel(): JSX.Element {
     event.target.style.transition = "none";
     event.target.style.transform = "translate(0)";
     setTimeout(() => {
-      event.target.style.transition = "all 0.9s linear";
+      event.target.style.transition = "all 1s ease-in-out";
     });
   };
 

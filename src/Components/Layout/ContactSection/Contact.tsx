@@ -79,7 +79,7 @@ function Contact(): JSX.Element {
     inputField.current!.style.opacity = opacity;
     inputField.current!.style.transform = transform;
     inputField.current!.style.fontSize = fontSize;
-    inputField.current!.style.transition = "all 1s linear";
+    inputField.current!.style.transition = "all 1s ease-in";
   };
   // HANDLE FORM SUBMIT
   const handleFormSubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -107,13 +107,13 @@ function Contact(): JSX.Element {
   ) => {
     switch (event.currentTarget.name) {
       case "userName":
-        resetFormLabel(nameRef, "0.3", "translateY(-1ch)", "8px");
+        resetFormLabel(nameRef, "0.25", "translateY(-1ch)", "8px");
         break;
       case "email":
-        resetFormLabel(emailRef, "0.3", "translateY(-1ch)", "8px");
+        resetFormLabel(emailRef, "0.25", "translateY(-1ch)", "8px");
         break;
       case "message":
-        resetFormLabel(messageRef, "0.3", "translateY(-1ch)", "8px");
+        resetFormLabel(messageRef, "0.25", "translateY(-1ch)", "8px");
         break;
     }
   };
@@ -145,10 +145,14 @@ function Contact(): JSX.Element {
       id="contact"
       className="space-y-3 outline-none mb-28 tablet:space-y-6 section-container"
     >
-      <h2 data-aos="fade-zoom-in">CONTACT</h2>
+      <h2 data-aos="fade-zoom-in" data-aos-once="true">
+        CONTACT
+      </h2>
       <div className="relative flex flex-col p-4 mx-auto tablet:flex-row tablet:py-0 tablet:p-4 tablet:max-w-2xl tablet:min-h-[600px] laptop:max-w-5xl desktop:max-w-6xl laptop:px-32 sm:p-0 ">
         {/* FORM */}
         <form
+          name="contact"
+          data-netlify="true"
           data-aos="zoom-down"
           data-aos-easing="ease-in-sine"
           data-aos-duration="1000"
@@ -161,8 +165,8 @@ function Contact(): JSX.Element {
           <h3 className="text-sm text-center opacity-90 ">SEND A MESSAGE</h3>
           <div className="space-y-7 tablet:space-y-3 ">
             {/* NAME */}
-            <div className="duration-500">
-              <h5 className={`form-input-title duration-1000`} ref={nameRef}>
+            <div>
+              <h5 className={`form-input-title `} ref={nameRef}>
                 Full Name
               </h5>
               <input
@@ -189,7 +193,7 @@ function Contact(): JSX.Element {
 
             {/* EMAIL */}
             <div>
-              <h5 className="duration-1000 form-input-title" ref={emailRef}>
+              <h5 className=" form-input-title" ref={emailRef}>
                 Email
               </h5>
               <input
@@ -206,8 +210,8 @@ function Contact(): JSX.Element {
             </div>
 
             {/* TEXTAREA */}
-            <div className="duration-1000">
-              <h5 className="duration-1000 form-input-title" ref={messageRef}>
+            <div>
+              <h5 className="form-input-title" ref={messageRef}>
                 Message
               </h5>
               <textarea

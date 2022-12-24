@@ -1,5 +1,3 @@
-import { motion as m } from "framer-motion";
-
 import { useContext } from "react";
 import { DarkModeDataInterface } from "../../../../Data/DarkModeData";
 import DarkModeContext from "../../../../Context/DarkModeContext";
@@ -12,8 +10,6 @@ import {
 } from "../../../../Data/ComponentData";
 
 import HamburgeMenu from "../../Shared/HamburgeMenu";
-
-import TailorMade from "../../Shared/TailorMade";
 
 export default function MobileMenu(): JSX.Element {
   const { theme, handleChange, gif, handleNavRemove } = useContext(
@@ -29,15 +25,11 @@ export default function MobileMenu(): JSX.Element {
   const year: number = new Date().getUTCFullYear();
 
   return (
-    <m.section
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 1, ease: "easeInOut" }}
+    <section
       id="mobile-menu"
-      className="container relative flex flex-col justify-center w-full h-screen mx-auto laptop:hidden section-container "
+      className="container relative flex flex-col justify-center w-full min-h-screen mx-auto laptop:hidden section-container "
     >
       <HamburgeMenu />
-      <TailorMade />
       <div className="min-h-screen p-2 ">
         <img
           src={theme ? DarkLogo : LightLogo}
@@ -136,6 +128,6 @@ export default function MobileMenu(): JSX.Element {
           </h5>
         </div>
       </div>
-    </m.section>
+    </section>
   );
 }

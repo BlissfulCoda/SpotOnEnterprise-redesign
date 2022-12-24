@@ -18,7 +18,7 @@ export default function TestimonialSlides({
   return (
     <motion.section className={review.version}>
       {/*------ HIDDEN UNDERLAY ------*/}
-      <div className="w-64 h-[320px] sm:w-80 sm:h-[420px] ml-6 sm:ml-3 tablet:ml-0 space-y-5 rounded-tl-[50px] rounded-br-[60px] bg-gradient-to-r from-[#E34CCE] to-[#E39B57] tablet:h-[290px] tablet:w-56 tablet:ml-13 opacity-10 dark:opacity-100 laptop:h-[370px] laptop:w-[260px] desktop:h-[400px] desktop:w-[310px] desktop:-ml-4 biggest:h-[410px] destop:w-[320px] biggest:px-4 biggest:-ml-3 dark:from-[#151D34] dark:to-[#151D34]"></div>
+      <div className="w-64 h-[320px] sm:w-80 sm:h-[420px] ml-6 sm:ml-3 tablet:ml-0 space-y-5 rounded-tl-[50px] rounded-br-[60px] bg-gradient-to-r from-[#E34CCE] to-[#E39B57] tablet:h-[290px] tablet:w-56 tablet:ml-13 opacity-5 dark:opacity-100 laptop:h-[370px] laptop:w-[260px] desktop:h-[400px] desktop:w-[310px] desktop:-ml-4 biggest:h-[410px] destop:w-[320px] biggest:px-4 biggest:-ml-3 dark:from-[#151D34] dark:to-[#151D34]"></div>
 
       {/*------ MAIN SECTION ------*/}
       <div className="absolute w-64 h-[320px] sm:w-80 sm:h-[420px]  p-5 sm:p-6 ml-10 sm:ml-8 space-y-5 sm:space-y-7 shadow shadow-lg rounded-tl-[50px] rounded-br-[60px] border border-slate-100 dark:border-slate-900 top-0 sm:-top-4 tablet:-top-1 z-20 bg-white dark:bg-darkMode tablet:h-[290px] tablet:w-56 tablet:ml-4 tablet:py-5 tablet:px-4 laptop:h-[370px] laptop:w-[265px] laptop:py-6 laptop:px-4 laptop:-top-1 laptop:ml-5 desktop:h-[400px] desktop:w-[310px] desktop:ml-2 desktop:-top-4 desktop:px-4 biggest:h-[410px] biggest:w-[320px] biggest:px-5 desktop:py-8 biggest:ml-2 biggest:-top-5 dark:shadow-slate-300/5">

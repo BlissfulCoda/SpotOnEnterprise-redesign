@@ -23,7 +23,7 @@ input:-webkit-autofill:focus {
 
 html,
 body {
-  @apply relative h-screen;
+  @apply relative h-screen scroll-smooth;
 }
 
 @layer base {
@@ -82,7 +82,7 @@ body {
 
 /* PROGRESS */
 .drag-progress-background {
-  @apply w-full h-[2px] relative tablet:hidden dark:bg-slate-800 z-30;
+  @apply w-full h-[1px] relative tablet:hidden dark:bg-slate-800 z-30;
 }
 
 .drag-progress {
@@ -157,11 +157,11 @@ body {
 
 /*---------------- FORM ------------*/
 .form-input-title {
-  @apply text-[10px] dark:text-slate-100 opacity-60 pl-0;
+  @apply text-[10px] dark:text-slate-100 opacity-60 pl-0 transition ease-out delay-150 duration-1000;
 }
 
 .form-input {
-  @apply block w-full px-2 py-0 pb-1 text-base bg-white border rounded-sm  focus:outline-none dark-color dark:border-b-slate-800 text-slate-700 dark:text-slate-200 border-b-slate-300 border-l-transparent border-t-transparent border-r-transparent pl-0 focus:border-blue-400 focus:border-t-transparent  dark:focus:border-b-indigo-700 focus:border-r-transparent focus:border-l-transparent;
+  @apply block w-full px-2 py-0 pb-2 text-base bg-white border rounded-sm  focus:outline-none dark-color dark:border-b-slate-800 text-slate-700 dark:text-slate-200 border-b-slate-300 border-l-transparent border-t-transparent border-r-transparent pl-0 focus:border-blue-400 focus:border-t-transparent  dark:focus:border-b-indigo-700 focus:border-r-transparent focus:border-l-transparent;
 }
 
 /*-------------- FOOTER -------------*/
@@ -183,4 +183,9 @@ body {
 
 .footer-link {
   @apply text-[10px] tablet:text-[11px];
+}
+
+
+.no-scroll {
+  @apply relative overflow-hidden 
 }

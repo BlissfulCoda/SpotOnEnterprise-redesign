@@ -7,7 +7,7 @@ function About(): JSX.Element {
       data-aos-easing="linear"
       data-aos-duration="1000"
       data-aos-once="true"
-      className="w-full py-20 mb-16 border bg-zinc-50 dark-color dark:border-y-slate-800 dark:border-x-0 dark:shadow dark:bg-shadow-xl border-y-slate-100 tablet:mb-40"
+      className="w-full py-20 mb-16 border bg-zinc-50 dark-color dark:border-y-slate-800 dark:border-x-0 dark:shadow dark:bg-shadow-xl border-y-slate-100 tablet:mb-40 "
     >
       <section id="about" className="container p-4 mx-auto max-w-7xl sm:p-6">
         <div className=" tablet:space-y-6">

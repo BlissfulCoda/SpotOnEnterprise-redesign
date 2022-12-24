@@ -11,7 +11,6 @@ import OurWork from "./Layout/OurWorkSection/OurWork";
 import Testimonials from "./Layout/TestimonialSection/Testimonials";
 import Contact from "./Layout/ContactSection/Contact";
 import Footer from "./Layout/FooterSection/FooterSection";
-import PageIndicator from "./Layout/Shared/PageIndicator";
 
 import MobileMenu from "./Layout/Home/HomeComponents/MobileMenu";
 
@@ -32,7 +31,7 @@ function Components(): JSX.Element {
       {loading ? (
         <Loader />
       ) : (
-        <div className="space-y-6 overflow-hidden text-black ease-in-out bg-white tablet:space-y-20 laptop:space-y-16 dark:bg-darkMode dark:text-white scroll-smooth">
+        <div className="space-y-6 text-black ease-in-out bg-white tablet:space-y-20 laptop:space-y-16 dark:bg-darkMode dark:text-white ">
           {checked ? (
             <MobileMenu />
           ) : (

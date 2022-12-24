@@ -73,7 +73,7 @@ export const ImageList: ImageInterface[] = [
     id: 1,
     imageUrl: img2,
     alt: "Celebration Event Image",
-    version: "image",
+    version: "image ",
     loading: "lazy",
   },
   {
