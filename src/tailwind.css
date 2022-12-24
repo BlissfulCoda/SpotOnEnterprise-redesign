@@ -140,7 +140,7 @@ body {
 
 /*---------------- TESTIMONIALS ------------*/
 .testimonial-slider {
-  @apply h-[350px] w-full overflow-hidden mb-2 flex relative items-center transition duration-1000 delay-300 ease-linear shrink-0 justify-center sm:-ml-5  tablet:pl-0 laptop:ml-0 desktop:space-x-20  desktop:pl-32;
+  @apply h-[370px] w-full overflow-hidden mb-2 flex relative items-center transition duration-1000 delay-300 ease-linear shrink-0 justify-center sm:-ml-5  tablet:pl-0 laptop:ml-0 desktop:space-x-20  desktop:pl-32  pt-1;
 }
 
 .slider-section {
