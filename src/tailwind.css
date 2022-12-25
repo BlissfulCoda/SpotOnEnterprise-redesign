@@ -77,7 +77,7 @@ body {
 }
 
 .background {
-  @apply fixed h-screen w-full bg-slate-900 opacity-10 dark:bg-slate-900 top-0 left-0 bottom-0 z-30 opacity-100 will-change-transform tablet:hidden;
+  @apply fixed h-screen w-full bg-slate-900 opacity-100 dark:bg-slate-900 top-0 left-0 bottom-0 z-30  will-change-transform tablet:hidden;
 }
 
 /* PROGRESS */

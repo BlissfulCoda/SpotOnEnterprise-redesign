@@ -125,7 +125,7 @@ export default function TestimonialCarousel(): JSX.Element {
                   <div className="space-y-3">
                     <div className="w-full border-b-[1px] border-b-slate-200 dark:border-b-gray-800"></div>
                     {/*------ PARAGRAPH ------*/}
-                    <p className="font-serif font-light text-[8px] sm:text-[10px] leading-4 tracking-normal sm:tracking-tight sm:leading-5 tablet:leading-4 tablet:tracking-tight tablet:text-[8px] laptop:text-[11px] laptop:leading-5 laptop:tracking-tighter desktop:text-[12px] desktop:leading-5 desktop:tracking-tight biggest:text-[13px] biggest:leading-5 biggest:tracking-normal">
+                    <p className="font-serif font-light text-[8px] sm:text-[10px] leading-4 opacity-60 tracking-normal sm:tracking-tight sm:leading-5 tablet:leading-4 tablet:tracking-tight tablet:text-[8px] laptop:text-[11px] laptop:leading-5 laptop:tracking-tighter desktop:text-[12px] desktop:leading-5 desktop:tracking-tight biggest:text-[13px] biggest:leading-5 biggest:tracking-normal">
                       {TestimonialData[reviewIndex]["text"]}
                     </p>
                   </div>

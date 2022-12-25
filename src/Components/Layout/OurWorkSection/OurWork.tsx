@@ -148,7 +148,13 @@ function OurWork(): JSX.Element {
           <AnimatePresence></AnimatePresence>
         )}
 
-        <div className="w-[2500px] h-[430px] relative tablet:hidden">
+        <div
+          data-aos="fade-in"
+          data-aos-easing="linear"
+          data-aos-duration="2000"
+          data-aos-delay="300"
+          className="w-[2500px] h-[430px] relative tablet:hidden z-40"
+        >
           <motion.div
             style={scrollYPosition ? { x, scale, cursor: "grab" } : {}}
             drag={scrollYPosition && "x"}
@@ -157,10 +163,10 @@ function OurWork(): JSX.Element {
             dragConstraints={{ left: START_INDEX, right: 0 }}
             dragElastic={0.06}
             whileTap={{ cursor: "grabbing" }}
-            className="w-full h-[420px] sm:h-[420px] flex space-x-3 p-2 absolute z-40"
+            className="w-full h-[420px] sm:h-[420px] flex space-x-3 p-2 absolute z-40 "
           >
             {Images.map((image, i) => (
-              <span className={`w-full h-full `} key={i}>
+              <span className={`w-full h-full`} key={i}>
                 <img
                   key={i}
                   src={image.imageUrl}
