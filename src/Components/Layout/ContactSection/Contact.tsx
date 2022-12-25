@@ -221,7 +221,7 @@ function Contact(): JSX.Element {
                 onChange={handleInputChange}
                 onFocus={handleInputText}
                 onBlur={handleRemoveText}
-                rows={6}
+                rows={5}
                 className={`form-input  ${
                   messageText
                     ? "dark:focus:border-b-emerald-600 dark:border-b-emerald-600"

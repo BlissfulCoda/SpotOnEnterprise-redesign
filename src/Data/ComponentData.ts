@@ -191,7 +191,7 @@ const TestimonialData: Testimonial[] = [
     text: "I would highly recommend Neka and Turay for any type of tailored occasion purely because of the quality of their services, how patient they are and the fact that they would go far and beyond to meet your needs. Their work speaks for them and they are skilled and passionate at what they do.",
     date: "October 25, 2018",
     img: img7,
-    version: "slider-section pl-2 ",
+    version: "slider-section",
   },
   {
     id: 4,
@@ -199,7 +199,7 @@ const TestimonialData: Testimonial[] = [
     text: "It was a pleasure working with SpotOnEnteprise. The girl's dresses fit them perfectly and we all had such a great time in them. Neka made the right alterations and was very patient even with difficult requests. i would highly recommend them to anyone.",
     date: "October 25, 2019",
     img: img6,
-    version: "slider-section pl-2",
+    version: "slider-section",
   },
 ];
 

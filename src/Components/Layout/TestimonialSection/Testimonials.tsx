@@ -2,8 +2,6 @@ import { RiDoubleQuotesR } from "react-icons/ri";
 import Card from "../Shared/Card";
 
 import TestimonialCarousel from "./TestimonialCarousel";
-import Carousel from "./Carousel1";
-import TestimonialData from "../../../Data/ComponentData";
 
 function Testimonials(): JSX.Element {
   return (
@@ -54,10 +52,9 @@ function Testimonials(): JSX.Element {
             data-aos-delay="500"
             data-aos-once="true"
           >
-            <Carousel />
+            <TestimonialCarousel />
           </div>
         </Card>
-        
       </Card>
     </section>
   );
