@@ -163,10 +163,17 @@ function OurWork(): JSX.Element {
             dragConstraints={{ left: START_INDEX, right: 0 }}
             dragElastic={0.06}
             whileTap={{ cursor: "grabbing" }}
-            className="w-full h-[420px] sm:h-[420px] flex space-x-3 p-2 absolute z-40 "
+            className="flex space-x-3 p-2 absolute z-40 w-full h-[420px] sm:h-[420px]"
           >
             {Images.map((image, i) => (
-              <span className={`w-full h-full`} key={i}>
+              <span
+                className={` duration-1000 ${
+                  scrollYPosition
+                    ? "blur-none w-full h-full"
+                    : "blur w-full h-[380px] sm:h-[420px]"
+                } `}
+                key={i}
+              >
                 <img
                   key={i}
                   src={image.imageUrl}

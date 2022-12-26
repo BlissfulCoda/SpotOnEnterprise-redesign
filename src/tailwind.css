@@ -140,7 +140,7 @@ body {
 
 /*---------------- TESTIMONIALS ------------*/
 .testimonial-slider {
-  @apply mb-2 relative flex justify-center items-center overflow-hidden duration-1000 delay-300 ease-linear shrink-0 pt-1 sm:pt-4 ml-1 h-[370px] w-full sm:ml-5 sm:h-[430px] sm:w-[360px] tablet:h-[345px] tablet:w-[280px] tablet:ml-3 tablet:mb-0 tablet:pl-2 tablet:pt-2 laptop:h-[410px] laptop:w-[360px] desktop:h-[450px] desktop:w-[400px] biggest:w-[430px] biggest:h-[470px] laptop:pt-5 laptop:ml-8 laptop:pl-0 desktop:pt-6 desktop:ml-10 desktop:pl-4 biggest:ml-14 biggest:pt-3 laptop:space-x-5;
+  @apply mb-2 relative flex justify-center items-center overflow-hidden duration-1000 delay-300 ease-linear shrink-0 pt-1 sm:pt-4 ml-1 h-[370px] w-full sm:ml-5 sm:h-[430px] sm:w-[360px] tablet:h-[340px] tablet:w-[280px] tablet:ml-8 tablet:mb-0 tablet:pl-2 tablet:pt-2 laptop:h-[410px] laptop:w-[360px] desktop:h-[450px] desktop:w-[400px] biggest:w-[430px] biggest:h-[470px] laptop:pt-5 laptop:ml-8 laptop:pl-0 desktop:pt-6 desktop:ml-4 desktop:pl-4 biggest:ml-0 biggest:pt-3;
 }
 
 .slider-section {
