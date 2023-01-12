@@ -213,7 +213,7 @@ function OurWork(): JSX.Element {
                   : "font-black text-right opacity-30 text-[9px] pt-4 duration-500"
               }
             >
-              Click to Drag
+              Drag to scroll
             </button>
           </motion.div>
           {/* PROGESS BAR */}

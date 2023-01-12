@@ -33,7 +33,7 @@ export default function Home(): JSX.Element {
       id="home"
       className="px-2 tablet:mb-28 change-transitions"
     >
-      <div className="relative h-screen py-5 section-container overflow-hidden h-[930px] tablet:h-[650px] laptop:h-[800px] laptop:p-4 desktop:p-6">
+      <div className="relative h-screen w-screen py-5 section-container overflow-hidden h-[930px] tablet:h-[650px] laptop:h-[800px] laptop:p-4 desktop:p-6">
         {checked ? (
           <MobileMenu />
         ) : (

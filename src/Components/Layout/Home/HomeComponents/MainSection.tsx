@@ -33,18 +33,18 @@ export default function MainSection(): JSX.Element {
         <div className="space-y-20 tablet:space-y-12 laptop:space-y-10 ">
           <motion.div
             variants={Animations.container}
-            className="flex flex-col space-y-3 sm:px-4 tablet:px-0 sm:space-y-3 tablet:space-y-6 laptop:space-y-12"
+            className="flex flex-col space-y-3 sm:px-4 tablet:px-0 sm:space-y-3 tablet:space-y-6 laptop:space-y-12 sm:pt-4"
           >
             {/* SMALL - white: small - screen */}
             <BespokeGarmentsMobile
-              styling="tablet:hidden text-white max-w-xs font-serif text-5xl font-semibold leading-7"
+              styling="tablet:hidden text-white max-w-xs font-serif text-5xl font-semibold leading-7 sm:text-[55px] sm:leading-[0] sm:pt-8"
               title="Bespoke Garments"
             />
 
             {/*  SMALL - screen */}
             <motion.p
               variants={Animations.mobileTitle}
-              className="text-white pt-2 tablet:hidden tablet:flex font-serif tracking-tighter w-[190px] leading-4 opacity-40"
+              className="text-white pt-2 tablet:hidden tablet:flex font-serif tracking-tighter w-[190px] leading-4 opacity-40 sm:w-[220px] sm:leading-4 sm:tracking-wide sm:pt-6"
             >
               We Specialise in producing bespoke, custom made garments for every
               special occasion, with the best customer service next to none.

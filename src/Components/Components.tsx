@@ -31,7 +31,7 @@ function Components(): JSX.Element {
       {loading ? (
         <Loader />
       ) : (
-        <div className="space-y-6 text-black ease-in-out bg-white tablet:space-y-20 laptop:space-y-16 dark:bg-darkMode dark:text-white ">
+        <div className="space-y-6 overflow-hidden text-black ease-in-out bg-white tablet:space-y-20 laptop:space-y-16 dark:bg-darkMode dark:text-white">
           {checked ? (
             <MobileMenu />
           ) : (

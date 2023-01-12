@@ -14,7 +14,7 @@ export default function HamburgeMenu(): JSX.Element {
   ) as DarkModeDataInterface;
 
   return (
-    <motion.label variants={Animations.DisplayHamburgMenu} className="bg-gradient-to-r from-[#E34CCE] to-[#E39B57] border-none top-6 right-0 z-30 text-white btn btn-circle swap swap-rotate sm:right-16 tablet:right-24 laptop:hidden shadow drop-shadow-xl absolute cursor-pointer ">
+    <motion.label variants={Animations.DisplayHamburgMenu} className="bg-gradient-to-r from-[#E34CCE] to-[#E39B57] border-none top-6 right-2 z-30 text-white btn btn-circle swap swap-rotate sm:right-0 tablet:right-20 laptop:hidden shadow drop-shadow-xl absolute cursor-pointer ">
       
       <input type="checkbox" onChange={handleMenu} checked={checked} />
       <svg
