@@ -91,7 +91,7 @@ function OurWork(): JSX.Element {
     <section
       id="work"
       ref={imageRef}
-      className="container relative px-6 mx-auto mb-20 space-y-3 overflow-hidden duration-500 progressy-12 sm:p-2 laptop:-space-y-4 biggest:max-w-6xl"
+      className="container relative px-6 mx-auto mb-20 space-y-3 duration-500 progressy-12 sm:p-2 laptop:-space-y-4 biggest:max-w-6xl"
     >
       <motion.div
         style={{ translateY: up }}
@@ -163,14 +163,14 @@ function OurWork(): JSX.Element {
             dragConstraints={{ left: START_INDEX, right: 0 }}
             dragElastic={0.06}
             whileTap={{ cursor: "grabbing" }}
-            className="flex space-x-3 p-2 absolute z-40 w-full h-[420px] sm:h-[420px]"
+            className="flex space-x-3 p-2 absolute z-40 w-full h-[420px] sm:h-[420px] sm:w-[2580px]"
           >
             {Images.map((image, i) => (
               <span
                 className={` duration-1000 ${
                   scrollYPosition
-                    ? "blur-none w-full h-full"
-                    : "blur w-full h-[380px] sm:h-[420px]"
+                    ? "blur-none w-full h-full sm:h-[400px] sm:w-[500px]"
+                    : "blur w-full h-[380px] sm:h-[380px]"
                 } `}
                 key={i}
               >
@@ -213,7 +213,7 @@ function OurWork(): JSX.Element {
                   : "font-black text-right opacity-30 text-[9px] pt-4 duration-500"
               }
             >
-              Drag to scroll
+              Drag To Scroll
             </button>
           </motion.div>
           {/* PROGESS BAR */}
